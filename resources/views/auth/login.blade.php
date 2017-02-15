@@ -21,7 +21,7 @@
                     <form class="form-horizontal"
                           role="form"
                           method="POST"
-                          action="{{ url('login') }}">
+                          action="{{ route('post.login') }}">
                         <input type="hidden"
                                name="_token"
                                value="{{ csrf_token() }}">
@@ -71,4 +71,4 @@
         </div>
     </div>
 </div>
-@include('admin.partials.footer')
+

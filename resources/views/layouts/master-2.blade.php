@@ -23,7 +23,7 @@
 </div>
 @include('layouts.header')
 
-<div class="container">
+<div class="container content">
   <section id="mainContent">
     @yield('content')
   </section>

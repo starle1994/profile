@@ -47,8 +47,13 @@ class BannersController extends Controller {
 	 */
 	public function store(CreateBannersRequest $request)
 	{
+		$banner = Banners::orderBy('id','desc')->first();
 	    $request = $this->saveFiles($request);
-		Banners::create($request->all());
+	    $input = $request->all();
+	    $number = $banner->id+1;
+	    $input['alias'] = 'list-'.$number;
+
+		Banners::create($input);
 
 		return redirect()->route(config('quickadmin.route').'.banners.index');
 	}

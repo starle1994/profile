@@ -61,7 +61,7 @@ img:hover{opacity:0.75}
 .navbar-default .navbar-toggle .icon-bar{background-color:#fff}
 #mainContent{ display:inline; float:left; width:100%}
 .content_top{float:left; display:inline; width:100%}
-.latest_slider{float:left; display:inline; width:100%; padding-left:10px}
+.latest_slider{float:left; display:inline; width:100%;}
 .single_iteam{position:relative}
 .single_iteam img{width:100%}
 .single_iteam h2{display:inline-block; left:0; position:absolute; right:0; font-size:20px; text-align:center; top:45%}
@@ -84,7 +84,7 @@ img:hover{opacity:0.75}
 .title_text{background-color:#f6f6f6; display:inline-block; padding:0 10px; position:relative; top:5px; z-index:1}
 .catg1_nav{}
 .catg1_nav li{float:left; display:inline; width:100%; margin-bottom:30px}
-.catg1_nav li a{}
+#app .catg1_nav li {margin-bottom:10px}
 .catgimg_container{height:150px; overflow:hidden; width:100%; overflow:hidden}
 .catg1_img img{height:100%; width:100%; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .catg1_img:hover img{ -webkit-transform:scale(1.1); -moz-transform:scale(1.1); -ms-transform:scale(1.1); -o-transform:scale(1.1); transform:scale(1.1)}

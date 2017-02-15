@@ -15,13 +15,12 @@ class Language  {
     {
         // Make sure current locale exists.
         $locale = $request->segment(1);
-
         if ( ! in_array($locale, Config('app.locales'))) {
             $segments = $request->segments();
             $segments[0] = Config('app.fallback_locale');
             return redirect(implode('/', $segments));
         }
-   
+        
         App::setLocale($locale);
         return $next($request);
     }

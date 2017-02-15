@@ -22,7 +22,7 @@
   <div id="status">&nbsp;</div>
 </div>
     @include('layouts.header')
-<div class="container">
+<div class="container content">
 
     
     <div class="slider-wrapper">

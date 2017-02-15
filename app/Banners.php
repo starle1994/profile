@@ -25,7 +25,8 @@ class Banners extends Model {
           'name',
           'descrition',
           'image',
-          'text'
+          'text',
+          'alias',
     ];
     
 
