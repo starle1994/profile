@@ -39,7 +39,7 @@
 }
 
 </style>
-<link rel="stylesheet" href="dist/css/lightbox.min.css">
+
 <div class="company_image">
     <div class="archive_style_1" style="margin-bottom: 20px;">
              
@@ -49,7 +49,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
              @foreach($company_images as $image)
          <div class="col-md-3 col-sm-4 col-xs-6 tilt">
-            <a class="example-image-link" href="{!! asset('uploads/'.$image->image) !!}" data-lightbox="example-set" data-title="{{$image->name}}">
+            <a class="example-image-link" href="{!! asset('uploads/'.$image->image) !!}" data-lightbox="example-set" data-title="{{$image->description}}">
                 <img class="img-responsive example-image" src="{!! asset('uploads/thumb/'.$image->image) !!}"  />
             </a>
         </div>

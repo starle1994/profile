@@ -1828,3 +1828,13 @@ form#newsletter input[type=submit] {
   .lang .jp{
  	width: 40px;
  }
+
+ .lb-details{
+ 	text-align: center !important;
+ 	font-size: 14px !important;
+ }
+
+  .lb-details .lb-caption{
+  	color: black;
+  	text-align: center;
+  }
