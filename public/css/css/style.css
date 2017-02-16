@@ -1842,6 +1842,7 @@ form#newsletter input[type=submit] {
   .lb-details .lb-caption{
   	color: black;
   	text-align: center;
+
   }
 
  #app .panel-body{
@@ -1851,3 +1852,4 @@ form#newsletter input[type=submit] {
  #image-right{
  	padding-left: 0px !important;
  }
+

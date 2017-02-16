@@ -32,7 +32,7 @@
                 </li>
              <li>
                   <div class="catgimg_container" style="height: 137px"> <a href="pages/single.html" class="catg1_img"><img alt="" src="{!! asset('css/img/app/uranai.png') !!}"></a></div>
-                
+
                 </li >
               </ul>
       
