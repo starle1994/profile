@@ -22,12 +22,7 @@
   <div id="status">&nbsp;</div>
 </div>
     @include('layouts.header')
-<div class="container">
-
-    
-    <div class="slider-wrapper">
-        @include('layouts.banner')
-    </div>
+<div class="container content">
   <section id="mainContent">
     @yield('content')
   </section>

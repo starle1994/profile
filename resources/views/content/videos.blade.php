@@ -1,8 +1,8 @@
-<div class="col-lg-9 col-md-9 col-sm-9 video">
+<div class="col-lg-12 col-md-12 col-sm-12 video">
   <div class="row">
     @if($videos->isEmpty() == false)
       @foreach($videos as $video)
-        <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 list-video">
           <div class="content_middle_leftbar">
             <div class="single_category wow fadeInDown">
               <h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span>  </h2>
@@ -39,24 +39,6 @@
     @endif
   </div>
 </div>
-<div class="col-lg-3 col-md-3 col-sm-3 app">
-    <div class="content_middle_rightbar">
-      <div class="single_category wow fadeInDown">
-        <ul class="catg1_nav">
-       
-          <li class="item-video">
-            <div class="catgimg_container" style="height: 200px"> <a href="pages/single.html" class="catg1_img"><img alt="" src="{!! asset('css/img/app/uranai.png') !!}"></a></div>
-          
-          </li class="item-video">
-          <li>
-            <div class="catgimg_container" style="height: 200px"> <a href="pages/single.html" class="catg1_img"><img alt="" src="{!! asset('css/img/app/rino.png') !!}"></a></div>
-          
-          </li>
-       
-        </ul>
-      </div>
-    </div>
-  </div>
 
 
  

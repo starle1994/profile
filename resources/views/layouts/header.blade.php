@@ -13,18 +13,28 @@
           </div>
           <!--end: Logo -->
           <!--start: Logo -->
-          <div class="col-lg-9 col-md-9" style="text-align: right; ">
+          <div class="col-lg-9 col-md-9" style="text-align: right;margin-top: 10px; ">
                   
               <?php 
             $name   = '';
             $arr = explode('/', Request::path());
+
             for($i = 1; $i<count($arr); $i++){
                $name .= '/'.$arr[$i];
             }
+            $lang = app()->getLocale();
+            $jp= '';
+            $en= '';
+            if ($lang =='en') {
+              $en = 'en';
+            } else {
+              $jp = 'jp';
+            }
+            
          ?>
         
-                <span class="lang"><a href="/en{{$name}}"><img src="{{ asset('css/img/en.gif') }}" /> </a></span>
-                <span class="lang"><a href="/jp{{$name}}"><img src="{{ asset('css/img/ja.gif') }}" /> </a></span>
+                <span class="lang"><a href="/en{{$name}}"><img class="<?php echo $en ?>" src="{{ asset('css/img/en.gif') }}" /> </a></span>
+                <span class="lang"><a href="/jp{{$name}}"><img class="<?php echo $jp ?>" src="{{ asset('css/img/ja.gif') }}" /> </a></span>
                   
           </div>
        
@@ -37,9 +47,7 @@
 
 <header>
   <div class="container" id="topbar">
-      
-  
-      
+    
               
         <div id="navarea">
           @include('layouts.topbar')
@@ -49,5 +57,7 @@
       
   </div>
   <!--end: Container-->           
-            
+   <div class="slider-wrapper">
+      @include('layouts.banner')
+   </div>         
 </header>

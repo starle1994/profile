@@ -5,7 +5,7 @@
   <div class="row">
     <div class="archive_style_1" style="margin-bottom: 20px;">
              
-      <h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span> <span class="title_text">Shoooo Vlog</span> </h2>
+      <h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span> <span class="title_text">It's my shooow</span> </h2>
     </div>
     @if($videos->isEmpty() == false)
       @foreach($videos as $video)

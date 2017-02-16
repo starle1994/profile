@@ -1,17 +1,17 @@
 
   <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm6">
+    <div class="col-lg-6 col-md-6 col-sm-6">
       <div class="latest_slider ">
         <div class="slick_slider item-video">
           @foreach($company_images as $image)
           <div class="single_iteam">
-              <img src="{!! asset('uploads/'.$image->image) !!}" alt="{{$image->name}}" width="550px" height="400px">   
+              <img src="{!! asset('uploads/'.$image->image) !!}" alt="{{$image->name}}" height="400px">   
           </div>
           @endforeach
         </div>
       </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm6">
+    <div class="col-lg-6 col-md-6 col-sm-6" id="image-right">
       <div class="content_top_right">
         <ul class="featured_nav wow fadeInDown">
           @foreach($company_images as $image)
