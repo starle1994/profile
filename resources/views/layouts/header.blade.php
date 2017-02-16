@@ -1,19 +1,20 @@
-<div class="logo-bg" style="background-color: #fff">
-  <!--start: Container -->
-  <div class="container logo">
+
+
+<header>
+
       
       <!--start: Row -->
       <div  style="padding-right: 0px, padding-left:0px;">
               
           <!--start: Logo -->
-          <div class="logo col-lg-3 col-md-3">
+          <div class="logo col-lg-3 col-md-3 col-sm-6">
                   
-              <a class="brand" href="#"><img src="{!! asset('css/img/up.png') !!}" alt="Logo"></a>
+              <a class="brand" href="#"><img src="{!! asset('css/img/up.png') !!}" alt="Logo" class="logo"></a>
                   
           </div>
           <!--end: Logo -->
           <!--start: Logo -->
-          <div class="col-lg-9 col-md-9" style="text-align: right;margin-top: 10px; ">
+          <div class="col-lg-9 col-md-9 col-ms-6 image-lang" >
                   
               <?php 
             $name   = '';
@@ -41,23 +42,19 @@
       </div>
       <!--end: Row -->
       
-  </div>
 
-</div>
-
-<header>
-  <div class="container" id="topbar">
-    
-              
-        <div id="navarea">
-          @include('layouts.topbar')
-        </div>
-              
-    
+  <div style="clear: both;"></div>
+  <div class="slider-wrapper">
+        @include('layouts.banner')
+  </div> 
+  <div id="topbar">
+    <div id="navarea">  
+      <div class="container">
       
+        @include('layouts.topbar')
+      </div>
+    </div>        
   </div>
-  <!--end: Container-->           
-   <div class="slider-wrapper">
-      @include('layouts.banner')
-   </div>         
+  <!--end: Container-->   
+  
 </header>

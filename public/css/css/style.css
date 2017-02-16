@@ -26,9 +26,11 @@ body {
 	font-family: 'Droid Sans';
 	font-size: 12px;
 	color: #666;
+	background-color: #fff;
+}
+.body-content{
 	background-color: #EAEAEA;
 }
-
 .contact h1, h2, h3, h4, h5, h6 {
 	font-family: "Boogaloo" !important;
 	font-weight: normal !important;
@@ -75,11 +77,7 @@ body {
 =================================================================== */
 	
 header {
-	background: #262626;
-}
-
-.logo img {
-	margin-top:8px;
+	background: #fff;
 }
 
 #social-links {
@@ -94,7 +92,7 @@ header {
 .navbar-inner, 
 .nav {
 	float: right;
-	background: #262626 !important;
+	background: #E93E33 !important;
 	border: none;
 	-webkit-box-shadow: none;
      -moz-box-shadow: none;
@@ -113,7 +111,8 @@ header {
 	text-shadow: none;
 	font-size: 14px;
 	padding: 19px;
-
+	font-weight: bold;
+	    border-right: 1px dotted #fff;
 }
 
 .navbar .nav > li > a:focus,
@@ -1509,6 +1508,10 @@ form#newsletter input[type=submit] {
 	#app{
 		margin-top: 35px;
 	}
+	.image-lang{
+		text-align: right;
+		margin-top: 40px; 
+	}
 }
 
 /* Tablet Portrait (devices and browsers)
@@ -1546,6 +1549,10 @@ form#newsletter input[type=submit] {
 	.img-cate{
 		width: 70px;
 	}
+		.image-lang{
+		text-align: right;
+		margin-top: 40px; 
+	}
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
@@ -1559,7 +1566,11 @@ form#newsletter input[type=submit] {
 		width: 60px;
 	}
 }
-
+	.image-lang{
+		text-align: right;
+		margin-top: 40px; 
+	}
+}
 	.catg1_nav li {
 	background-color: #ffffff;
 	text-align: center;
@@ -1734,10 +1745,10 @@ form#newsletter input[type=submit] {
 	padding-right: 5px !important;
 }
 .baner{
-	margin-top: 10px;
+	margin-top: 5px;
 }
 .baner .slick_slider {
-	box-shadow: 0 10px 18px -10px #666666;
+	
 	    background-color: #fff;
     	padding: 1px 1px 1px 1px;
 }
@@ -1853,3 +1864,15 @@ form#newsletter input[type=submit] {
  	padding-left: 0px !important;
  }
 
+#topbar #navarea{
+	margin-top: -20px;
+}
+
+#topbar .container{
+	padding-right: 0px !important;
+	padding-left:  0px !important;
+}
+
+.logo{
+	height: 100px;
+}

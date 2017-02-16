@@ -22,11 +22,16 @@
   <div id="status">&nbsp;</div>
 </div>
     @include('layouts.header')
-<div class="container content">
+  <div style="clear: both;"></div>
+  <div class="body-content">
+    <div class="container content">
+
   <section id="mainContent">
     @yield('content')
   </section>
-</div>
+</div
+  </div>
+>
 <footer id="footer">
   @include('layouts.footer')
 </footer>
