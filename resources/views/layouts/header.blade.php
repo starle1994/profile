@@ -4,17 +4,26 @@
 
       
       <!--start: Row -->
-      <div  style="padding-right: 0px, padding-left:0px;">
+      <div  style="margin-top: 10px;">
               
           <!--start: Logo -->
-          <div class="logo col-lg-3 col-md-3 col-sm-6">
+          <div class="logo col-lg-2 col-md-2 col-sm-2">
                   
-              <a class="brand" href="#"><img src="{!! asset('css/img/up.png') !!}" alt="Logo" class="logo"></a>
+              <a class="brand" href="#"><img src="{!! asset('css/img/logo-group.png') !!}" alt="Logo" class="logo"></a>
                   
-          </div>
+          </div >
           <!--end: Logo -->
+          <div class="app-logo col-lg-9 col-md-9 col-sm-9" >
+            <img class="letgo" alt="" src="{!! asset('css/img/letgo.png') !!}" >
+            <img class="img" alt="" src="{!! asset('css/img/app/uranai.png') !!}" >
+            <img class="img" alt="" src="{!! asset('css/img/app/rino.png') !!}" >
+            <img class="img" alt="" src="{!! asset('css/img/app/uranai.png') !!}" >
+            <img class="img" alt="" src="{!! asset('css/img/app/rino.png') !!}" >
+            <img class="img" alt="" src="{!! asset('css/img/app/uranai.png') !!}" >
+      
+          </div>
           <!--start: Logo -->
-          <div class="col-lg-9 col-md-9 col-ms-6 image-lang" >
+          <div class="col-lg-1 col-md-1 col-ms-1 image-lang" >
                   
               <?php 
             $name   = '';
@@ -33,9 +42,9 @@
             }
             
          ?>
-        
+                 <span class="lang"><a href="/jp{{$name}}"><img class="<?php echo $jp ?>" src="{{ asset('css/img/ja.gif') }}" /> </a></span>   
                 <span class="lang"><a href="/en{{$name}}"><img class="<?php echo $en ?>" src="{{ asset('css/img/en.gif') }}" /> </a></span>
-                <span class="lang"><a href="/jp{{$name}}"><img class="<?php echo $jp ?>" src="{{ asset('css/img/ja.gif') }}" /> </a></span>
+                
                   
           </div>
        

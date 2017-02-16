@@ -1478,10 +1478,7 @@ form#newsletter input[type=submit] {
 .btn-inverse.active {
   background-color: #080808 \9;
 }
-
-/* Higher than 960 (desktop devices)
-====================================================================== */
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1300px){
 	
 	header {
 		height: 64px;
@@ -1512,11 +1509,94 @@ form#newsletter input[type=submit] {
 		text-align: right;
 		margin-top: 40px; 
 	}
+	.app-logo .img{
+		width: 150px;
+		height: 100px;
+		margin-right: 10px;
+	}
+
+	.app-logo .letgo{
+		width: 250px;
+	}
+
+	.lang img{
+	    width: 35px;
+	    background-color: black;
+	    padding: 2px;
+	 }
+	
+	.lang .en{
+	 	width: 40px;
+	 }
+
+	.lang .jp{
+		 	    width: 40px;
+	}
+	  
+
+}
+
+/* Higher than 960 (desktop devices)
+====================================================================== */
+@media only screen and (min-width: 990px) and (max-width: 1300px){
+	
+	header {
+		height: 64px;
+	}
+	
+	#wrapper {
+
+	}
+	
+	#footer-menu {
+
+	}
+	
+	#footer {
+
+	}
+	
+	.flexslider.home {
+		min-height: 300px;
+	}
+	.img-cate{
+		width: 80px;
+	}
+	#app{
+		margin-top: 35px;
+	}
+	.image-lang{
+		text-align: right;
+		margin-top: 35px; 
+	}
+	.app-logo .img{
+		width: 80px;
+		height: 80px;
+		margin-right: 5px;
+	}
+
+	.app-logo .letgo{
+		width: 200px;
+	}
+
+	.lang img{
+	    width: 20px;
+	    background-color: black;
+	    padding: 2px;
+	 }
+	
+	.lang .en{
+	 	width: 30px;
+	 }
+
+	.lang .jp{
+		width: 30px;
+	}
 }
 
 /* Tablet Portrait (devices and browsers)
 ====================================================================== */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 768px) and (max-width: 990px) {
 	
 	header {
 		min-height: 64px;
@@ -1524,7 +1604,28 @@ form#newsletter input[type=submit] {
 	.img-cate{
 		width: 8px;
 	}
+	.app-logo .img{
+		width: 65px;
+		height: 65px;
+		margin-right: 5px;
+	}
+	.app-logo .letgo{
+		width: 135px;
+	}
 	
+	.lang img{
+	    width: 20px;
+	    background-color: black;
+	    padding: 2px;
+	 }
+	
+	.lang .en{
+	 	width: 30px;
+	 }
+
+	.lang .jp{
+		 	    width: 30px;
+	}
 }
 
 /* All Mobile Sizes (devices and browser)
@@ -1536,6 +1637,11 @@ form#newsletter input[type=submit] {
 	}
 	.img-cate{
 		width: 70px;
+	}
+	.app-logo .img{
+		width: 70px;
+		height: 70px;
+
 	}
 }
 
@@ -1551,7 +1657,11 @@ form#newsletter input[type=submit] {
 	}
 		.image-lang{
 		text-align: right;
-		margin-top: 40px; 
+		
+	}
+	.app-logo .img{
+		width: 70px;
+		height: 70px;
 	}
 }
 
@@ -1565,10 +1675,14 @@ form#newsletter input[type=submit] {
 	.img-cate{
 		width: 60px;
 	}
+	.app-logo .img{
+		width: 50px;
+		height: 50px;
+		}
 }
 	.image-lang{
 		text-align: right;
-		margin-top: 40px; 
+		
 	}
 }
 	.catg1_nav li {
@@ -1831,20 +1945,9 @@ form#newsletter input[type=submit] {
  	text-align: center;
  	margin-top: 10px;
  }
- .lang img{
-    width: 30px;
-    background-color: black;
-    padding: 2px;
- }
 
- .lang .en{
- 	width: 50px;
- }
 
-  .lang .jp{
- 	width: 40px;
- }
-
+ 
  .lb-details{
  	text-align: center !important;
  	font-size: 14px !important;
@@ -1875,4 +1978,8 @@ form#newsletter input[type=submit] {
 
 .logo{
 	height: 100px;
+}
+
+.app-logo{
+	text-align:right; margin-top: 10px;
 }
