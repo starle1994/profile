@@ -13,17 +13,15 @@
                   
           </div >
           <!--end: Logo -->
-          <div class="app-logo col-lg-9 col-md-9 col-sm-9" >
+          <div class="app-logo col-lg-9 col-md-8 col-sm-8" >
             <img class="letgo" alt="" src="{!! asset('css/img/letgo.png') !!}" >
             <img class="img" alt="" src="{!! asset('css/img/app/uranai.png') !!}" >
             <img class="img" alt="" src="{!! asset('css/img/app/rino.png') !!}" >
             <img class="img" alt="" src="{!! asset('css/img/app/uranai.png') !!}" >
             <img class="img" alt="" src="{!! asset('css/img/app/rino.png') !!}" >
-            <img class="img" alt="" src="{!! asset('css/img/app/uranai.png') !!}" >
-      
           </div>
           <!--start: Logo -->
-          <div class="col-lg-1 col-md-1 col-ms-1 image-lang" >
+          <div class="col-lg-1 col-md-1 col-ms-2 image-lang" >
                   
               <?php 
             $name   = '';

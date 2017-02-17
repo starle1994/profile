@@ -1478,7 +1478,7 @@ form#newsletter input[type=submit] {
 .btn-inverse.active {
   background-color: #080808 \9;
 }
-@media only screen and (min-width: 1300px){
+@media only screen and (min-width: 1480px){
 	
 	header {
 		height: 64px;
@@ -1535,10 +1535,7 @@ form#newsletter input[type=submit] {
 	  
 
 }
-
-/* Higher than 960 (desktop devices)
-====================================================================== */
-@media only screen and (min-width: 990px) and (max-width: 1300px){
+@media only screen and (min-width: 1370px) and (max-width: 1480px){
 	
 	header {
 		height: 64px;
@@ -1570,13 +1567,126 @@ form#newsletter input[type=submit] {
 		margin-top: 35px; 
 	}
 	.app-logo .img{
-		width: 80px;
-		height: 80px;
+		width: 150px;
+		height: 100px;
 		margin-right: 5px;
 	}
 
 	.app-logo .letgo{
-		width: 200px;
+		width: 150px;
+	}
+
+	.lang img{
+	    width: 20px;
+	    background-color: black;
+	    padding: 2px;
+	 }
+	
+	.lang .en{
+	 	width: 30px;
+	 }
+
+	.lang .jp{
+		width: 30px;
+	}
+	
+}
+@media only screen and (min-width: 1240px) and (max-width: 1370px){
+	
+	header {
+		height: 64px;
+	}
+	
+	#wrapper {
+
+	}
+	
+	#footer-menu {
+
+	}
+	
+	#footer {
+
+	}
+	
+	.flexslider.home {
+		min-height: 300px;
+	}
+	.img-cate{
+		width: 80px;
+	}
+	#app{
+		margin-top: 35px;
+	}
+	.image-lang{
+		text-align: right;
+		margin-top: 35px; 
+	}
+	.app-logo .img{
+		width: 120px;
+		height: 100px;
+		margin-right: 5px;
+	}
+
+	.app-logo .letgo{
+		width: 150px;
+	}
+
+	.lang img{
+	    width: 20px;
+	    background-color: black;
+	    padding: 2px;
+	 }
+	
+	.lang .en{
+	 	width: 30px;
+	 }
+
+	.lang .jp{
+		width: 30px;
+	}
+}
+/* Higher than 960 (desktop devices)
+====================================================================== */
+@media only screen and (min-width: 990px) and (max-width: 1240px){
+	
+	header {
+		height: 64px;
+	}
+	
+	#wrapper {
+
+	}
+	
+	#footer-menu {
+
+	}
+	
+	#footer {
+
+	}
+	
+	.flexslider.home {
+		min-height: 300px;
+	}
+	.img-cate{
+		width: 80px;
+	}
+	#app{
+		margin-top: 35px;
+	}
+	.image-lang{
+		text-align: right;
+		margin-top: 35px; 
+	}
+	.app-logo .img{
+		width: 110px;
+		height: 100px;
+		margin-right: 5px;
+	}
+
+	.app-logo .letgo{
+		width: 150px;
 	}
 
 	.lang img{
@@ -1596,7 +1706,7 @@ form#newsletter input[type=submit] {
 
 /* Tablet Portrait (devices and browsers)
 ====================================================================== */
-@media only screen and (min-width: 768px) and (max-width: 990px) {
+@media only screen and (min-width: 850px) and (max-width: 990px) {
 	
 	header {
 		min-height: 64px;
@@ -1605,12 +1715,12 @@ form#newsletter input[type=submit] {
 		width: 8px;
 	}
 	.app-logo .img{
-		width: 65px;
-		height: 65px;
+		width: 100px;
+		height: 100px;
 		margin-right: 5px;
 	}
 	.app-logo .letgo{
-		width: 135px;
+		width: 100px;
 	}
 	
 	.lang img{
@@ -1618,7 +1728,7 @@ form#newsletter input[type=submit] {
 	    background-color: black;
 	    padding: 2px;
 	 }
-	
+
 	.lang .en{
 	 	width: 30px;
 	 }
@@ -1630,7 +1740,7 @@ form#newsletter input[type=submit] {
 
 /* All Mobile Sizes (devices and browser)
 ====================================================================== */
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 810px) and (max-width: 850px) {
 	
 	header {
 		min-height: 64px;
@@ -1639,15 +1749,31 @@ form#newsletter input[type=submit] {
 		width: 70px;
 	}
 	.app-logo .img{
-		width: 70px;
-		height: 70px;
+		width: 80px;
+		height: 80px;
 
+	}
+	.app-logo .letgo{
+		width: 100px;
+	}
+	.lang img{
+	    width: 15px;
+	    background-color: black;
+	    padding: 2px;
+	 }
+
+	.lang .en{
+	 	width: 20px;
+	 }
+
+	.lang .jp{
+		 	    width: 20px;
 	}
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers)
 ====================================================================== */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 810px) {
 	
 	header {
 		min-height: 64px;
@@ -1662,6 +1788,31 @@ form#newsletter input[type=submit] {
 	.app-logo .img{
 		width: 70px;
 		height: 70px;
+	}
+	
+
+	.lang .en{
+	 	width: 20px;
+	 }
+
+	.lang .jp{
+		 	    width: 20px;
+	}
+	.app-logo .letgo{
+		width: 150px;
+	}
+	.lang img{
+	    width: 10px;
+	    background-color: black;
+	    padding: 2px;
+	 }
+
+	.lang .en{
+	 	width: 15px;
+	 }
+
+	.lang .jp{
+		 	    width: 15px;
 	}
 }
 
@@ -1682,7 +1833,7 @@ form#newsletter input[type=submit] {
 }
 	.image-lang{
 		text-align: right;
-		
+		    padding-top: 50px;
 	}
 }
 	.catg1_nav li {
@@ -1729,9 +1880,10 @@ form#newsletter input[type=submit] {
     padding: 15px 8px;
     color: #fff;
     text-align: center;
-    background-color: #7d7d7d;
+    background-color: #E93E33;
     border-radius: 4px;
     font-size: 14px;
+    font-weight: bold;
     font-family: "Oswald",sans-serif;
     text-decoration: none;
     text-transform: uppercase;
@@ -1741,7 +1893,7 @@ form#newsletter input[type=submit] {
     left: 0;
     margin-top: -5px;
     border-width: 5px 5px 5px 0;
-    border-right-color: #000;
+    border-right-color: #E93E33;
 }
 
 .tooltip-arrow {
@@ -1800,12 +1952,12 @@ form#newsletter input[type=submit] {
     .item-video{
     	box-shadow: 0 10px 18px -10px #666666;
 
-    	border: 1px solid #fff;
+    	border: 1px solid #E93E33;
 
     }
 
     #schedule .panel-heading{
-    	background-color: #7d7d7d;
+    	background-color: #E93E33;
     	color: #fff;
     	font-weight: bold;
     	font-size: 16;
@@ -1813,7 +1965,7 @@ form#newsletter input[type=submit] {
     } 
 
      #app .panel-heading{
-    	background-color: #7d7d7d;
+    	background-color: #E93E33;
     	color: #fff;
     	font-weight: bold;
     	font-size: 16;
@@ -1920,7 +2072,7 @@ form#newsletter input[type=submit] {
 }
 
 .content_bottom_right li{
-	border-bottom: 1px dotted #e5e5e5;
+	border-bottom: 1px dotted #E93E33;
 }
 
 .content {
@@ -1982,4 +2134,14 @@ form#newsletter input[type=submit] {
 
 .app-logo{
 	text-align:right; margin-top: 10px;
+}
+
+#app .modal-dialog {
+  width: 98%;
+  height: auto;
+  padding: 0;
+}
+
+#app .modal-content {
+  height: auto;
 }

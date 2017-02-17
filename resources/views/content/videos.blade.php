@@ -8,9 +8,9 @@
               <h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span>  </h2>
               <ul class="catg1_nav">
                 <li class="item-video">
-                    
-                  <div class="catgimg_container" data-toggle="modal" data-target="#myModal">
-                    <img src="{!! asset('uploads/'.$video->image) !!}">
+                    <?php $target = 'myModal-'.$video->id ; $target_1= '#'.$target ?>
+                  <div class="catgimg_container" data-toggle="modal" data-target="{{$target_1}}">
+                    <img src="{!! asset('uploads/thumb/'.$video->image) !!}">
                   </div>
                  <div class="title-image">
                     <h3 class="post_titile"><a href="pages/single.html">{{$video->name}}</a></h3>
@@ -22,30 +22,30 @@
             </div>
           </div>
         </div>
-        <div id="myModal" class="modal fade" >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">{{$video->name}}</h4>
-          </div>
-          <div class="embed-responsive embed-responsive-16by9" class="modal-body" >
-            <iframe  src="{{$video->link}}" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
+        <div id="{{$target}}" class="modal fade in" data-keyboard="false" data-backdrop="static" >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">{{$video->name}}</h4>
+              </div>
+              <div class="embed-responsive embed-responsive-16by9" class="modal-body" id="yt-player">
+                <iframe  src="{{$video->link}}" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
+            </div>
+          </div>
     </div>  
       @endforeach
     @endif
   </div>
 </div>
-
-
- 
-
- <script>
-$('.close').click(function () {
-  $('#myModal').hide();
-  $('#myModal iframe').attr("src", jQuery("#myModal iframe").attr("src"));
-});
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $('#myModal').on('hidden.bs.modal', function () {
+        callPlayer('yt-player', 'stopVideo');
+    });
 </script>

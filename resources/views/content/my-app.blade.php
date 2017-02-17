@@ -14,24 +14,24 @@
              
               <ul class="catg1_nav">
              
-                <li>
-                  <div class="catgimg_container" style="height: 137px"> <a href="pages/single.html" class="catg1_img"><img alt="" src="{!! asset('css/img/app/uranai.png') !!}"></a></div>
+                <li  data-toggle="modal" data-target="#image_sample">
+                  <div class="catgimg_container" style="height: 200px"> <a class="catg1_img"><img alt="" src="{!! asset('css/img/app/uranai.png') !!}"></a></div>
                 
                 </li >
                 <li>
-                  <div class="catgimg_container" style="height: 137px"> <a href="pages/single.html" class="catg1_img"><img alt="" src="{!! asset('css/img/app/rino.png') !!}"></a></div>
+                  <div class="catgimg_container" style="height: 200px"> <a class="catg1_img"><img alt="" src="{!! asset('css/img/app/rino.png') !!}"></a></div>
                 
                 </li>
                 <li>
-                  <div class="catgimg_container" style="height: 137px"> <a href="pages/single.html" class="catg1_img"><img alt="" src="{!! asset('css/img/app/uranai.png') !!}"></a></div>
+                  <div class="catgimg_container" style="height: 200px"> <a class="catg1_img"><img alt="" src="{!! asset('css/img/app/uranai.png') !!}"></a></div>
                 
                 </li>
                 <li>
-                  <div class="catgimg_container" style="height: 137px"> <a href="pages/single.html" class="catg1_img"><img alt="" src="{!! asset('css/img/app/rino.png') !!}"></a></div>
+                  <div class="catgimg_container" style="height: 200px"> <a class="catg1_img"><img alt="" src="{!! asset('css/img/app/rino.png') !!}"></a></div>
                 
                 </li>
              <li>
-                  <div class="catgimg_container" style="height: 137px"> <a href="pages/single.html" class="catg1_img"><img alt="" src="{!! asset('css/img/app/uranai.png') !!}"></a></div>
+                  <div class="catgimg_container" style="height: 200px"> <a class="catg1_img"><img alt="" src="{!! asset('css/img/app/uranai.png') !!}"></a></div>
 
                 </li >
               </ul>
@@ -41,4 +41,6 @@
         </div>
       </div>
     </div>
+   
   </div>
+  
