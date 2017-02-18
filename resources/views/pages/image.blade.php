@@ -37,7 +37,16 @@
          -o-transition-duration: 500ms;
             transition-duration: 500ms;
 }
+.thumb {
+    width: 250px;
+    height: 200px;
 
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
 </style>
 
 <div class="company_image">
@@ -48,11 +57,12 @@
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
              @foreach($company_images as $image)
-         <div class="col-md-3 col-sm-4 col-xs-6 tilt">
-            <a class="example-image-link" href="{!! asset('uploads/'.$image->image) !!}" data-lightbox="example-set" data-title="{{$image->description}}">
-                <img class="img-responsive example-image" src="{!! asset('uploads/thumb/'.$image->image) !!}"  />
-            </a>
-        </div>
+           <div class="col-md-3 col-sm-12 col-xs-12 tilt">
+              <a class="example-image-link" href="{!! asset('uploads/'.$image->image) !!}" data-lightbox="example-set" data-title="{{$image->description}}">
+                  
+                  <div class="thumb img-responsive example-image" style="background-image:url({!! asset('uploads/'.$image->image) !!});"></div>
+              </a>
+          </div>
             @endforeach
 
         </div>

@@ -16,7 +16,7 @@
         <div class="business_category_right wow fadeInDown">
           <ul class="small_catg">
 
-          <?php for ($i=1; $i <=3; $i++) {  ?>            
+          <?php for ($i=0; $i <3; $i++) {  ?>            
               <li>
                 <div class="media wow fadeInDown"> <a class="media-left" href="{{ route('show.blog.detail',$business[$i]->alias) }}"><img src="{!! asset('uploads/thumb/'.$business[$i]->images) !!}" alt=""></a>
                   <div class="media-body">
