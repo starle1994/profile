@@ -13,10 +13,11 @@ return [
     |
     */
 
-    'category1' => 'Company Images',
-    'category2' => 'video',
-    'category3' => 'My Blog',
-    'category4' => 'Our dream',
-    'category5' => 'contact',
+    'category1' => 'Images',
+    'category2' => 'videos',
+    'category3' => 'Blog',
+    'category4' => 'Dream',
+    'category5' => 'Contact',
     'read-more' => 'Read more',
+    'view_app'   => 'アプリケーション',
 ];

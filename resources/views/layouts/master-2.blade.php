@@ -12,6 +12,7 @@
 <link href='{!! url('css/assets/css/theme.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/assets/css/style.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/css/style.css') !!}' rel='stylesheet' type='text/css' />
+<link href='{!! url('dist/css/lightbox.min.css') !!}' rel='stylesheet' type='text/css' />
 <!--[if lt IE 9]>
 <script src="assets/js/html5shiv.min.js"></script>
 <script src="assets/js/respond.min.js"></script>
@@ -21,13 +22,16 @@
 <div id="preloader">
   <div id="status">&nbsp;</div>
 </div>
-@include('layouts.header')
+    @include('layouts.header-2')
+  <div style="clear: both;"></div>
+  <div class="body-content">
+    <div class="container content">
 
-<div class="container">
   <section id="mainContent">
     @yield('content')
   </section>
 </div>
+ </div>
 <footer id="footer">
   @include('layouts.footer')
 </footer>
@@ -41,5 +45,6 @@
     <script src='{!! url('js/jquery.cslider.js') !!}' type='text/javascript'></script>
     <script src='{!! url('js/slider.js') !!}' type='text/javascript'></script>
     <script src='{!! url('js/custom.js') !!}' type='text/javascript'></script>
+    <script src='{!! url('dist/js/lightbox-plus-jquery.min.js') !!}'></script>
 </body>
 </html>

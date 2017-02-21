@@ -22,16 +22,15 @@
   <div id="status">&nbsp;</div>
 </div>
     @include('layouts.header')
-<div class="container">
+  <div style="clear: both;"></div>
+  <div class="body-content">
+    <div class="container content">
 
-    
-    <div class="slider-wrapper">
-        @include('layouts.banner')
-    </div>
   <section id="mainContent">
     @yield('content')
   </section>
 </div>
+ </div>
 <footer id="footer">
   @include('layouts.footer')
 </footer>
@@ -45,5 +44,6 @@
     <script src='{!! url('js/jquery.cslider.js') !!}' type='text/javascript'></script>
     <script src='{!! url('js/slider.js') !!}' type='text/javascript'></script>
     <script src='{!! url('js/custom.js') !!}' type='text/javascript'></script>
+  
 </body>
 </html>
