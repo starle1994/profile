@@ -55,8 +55,8 @@ img:hover{opacity:0.75}
 .navbar-default{ border-radius:0; padding:0; margin-bottom:0px}
 .container-fluid{padding-left:0; padding-right:0}
 .navbar-collapse{padding-left:0; padding-right:0}
-.custom_nav{border:1px solid #fff; width:100%}
-.navbar-default .navbar-nav > li > a{color:#fff; display:block; font-family:"Oswald",sans-serif; font-size:15px; text-decoration:none; text-transform:uppercase; border-top:2px solid transparent; border-bottom:2px solid transparent; margin-top:-2px; margin-bottom:-2px; padding-bottom:17px; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
+.custom_nav{width:100%}
+.navbar-default .navbar-nav > li > a{border-right:1px dotted #fff; color:#fff; display:block; font-family:"Oswald",sans-serif; font-size:15px; text-decoration:none; text-transform:uppercase; border-top:2px solid transparent; border-bottom:2px solid transparent; margin-top:-2px; margin-bottom:-2px; padding-bottom:17px; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .dropdown-menu > li > a{color:#fff; font-family:"Oswald",sans-serif; padding:5px 15px; border-top:1px solid transparent; border-bottom:1px solid transparent; -webkit-transition:all 0.5s; -moz-transition:all 0.5s; -ms-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .navbar-default .navbar-toggle .icon-bar{background-color:#fff}
 #mainContent{ display:inline; float:left; width:100%}
