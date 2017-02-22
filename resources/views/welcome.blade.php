@@ -27,8 +27,9 @@
   
 </div>
 <div class="row">
+
   <div class="col-lg-12 col-md-12 col-sm-12">
-          <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="col-lg-3 col-md-3 col-sm-4">
             <a href="{{ route('categories.2') }}">
             <div class="bs-example bs-example-tooltip cate" data-example-id="static-tooltips">
               <img src="{!! asset('css/img/category/cate1.png') !!}" class="img-cate">
@@ -40,7 +41,7 @@
             </a>
           </div>
 
-           <div class="col-lg-9 col-md-9 col-sm-9">
+           <div class="col-lg-9 col-md-9 col-sm-8">
             <marquee direction="left"  style="font-size: 14px; margin-top: 25px;"><a href="" style=" color: #FFA500">RINO </a>-- <a href="" style=" color: #FFA500">URANAI</a> -- <a href="" style=" color: #FFA500">CONSULTANT </a>-- <a href="" style=" color: #FFA500">MATCHING</a></marquee>
           </div>
    
@@ -87,7 +88,6 @@
   </div>
 
   </div>
- 
 </div>
   
     <div class="content_top">

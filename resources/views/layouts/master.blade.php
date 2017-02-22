@@ -31,6 +31,7 @@
   </section>
 </div>
  </div>
+
 <footer id="footer">
   @include('layouts.footer')
 </footer>

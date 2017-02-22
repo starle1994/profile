@@ -7,6 +7,7 @@
       <div  style="margin-top: 10px;">
               
           <!--start: Logo -->
+
           <div class="logo col-lg-3 col-md-3 col-sm-3">
                   
               <a class="brand" href="#"><img src="{!! asset('css/img/logo-group.png') !!}" alt="Logo" class="logo"></a>
@@ -19,6 +20,7 @@
                   <img class="img" alt="" src="{!! asset('uploads/'.$app->logo) !!}" >
                 @endforeach
               @endif
+
           </div>
           <!--start: Logo -->
           <div class="col-lg-1 col-md-1 col-ms-2 image-lang" >

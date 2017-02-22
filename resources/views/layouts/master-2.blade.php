@@ -26,11 +26,10 @@
   <div style="clear: both;"></div>
   <div class="body-content">
     <div class="container content">
-
-  <section id="mainContent">
-    @yield('content')
-  </section>
-</div>
+      <section id="mainContent">
+        @yield('content')
+      </section>
+    </div>
  </div>
 <footer id="footer">
   @include('layouts.footer')

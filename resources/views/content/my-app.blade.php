@@ -1,6 +1,5 @@
 <style>
   .thumb-app{
-    width: 200px;
     height: 150px;
 
     background-color: #3e3e3e;
@@ -44,6 +43,7 @@
                 
                 @endforeach
               @endif
+
               </ul>
       
             </div>
@@ -63,5 +63,4 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
   </div>
-  
   

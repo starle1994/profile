@@ -27,13 +27,14 @@ Route::get('/dream-detail/{alias}' ,['as'=>'dream.detail','uses'=>'HomeControlle
 
 Route::get('/contact' ,['as'=>'categories.5','uses'=>'HomeController@contact']);
 
+
 Route::get('/project' ,['as'=>'categories.9','uses'=>'HomeController@showProject']);
 
 Route::get('/application' ,['as'=>'categories.10','uses'=>'HomeController@showApp']);
 Route::get('/application/{alias}' ,['as'=>'show.app.detail','uses'=>'HomeController@showAppdetail']);
 
-
 Route::get('/project/{alias}' ,['as'=>'show.project.detail','uses'=>'HomeController@showProjectDetail']);
+
 
 Route::group([ 'middleware' => 'auth'], function () {
 	Route::get(config('quickadmin.homeRoute'), 'QuickadminController@index');

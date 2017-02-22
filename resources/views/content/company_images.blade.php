@@ -15,7 +15,7 @@
       <div class="content_top_right">
         <ul class="featured_nav wow fadeInDown">
           @foreach($company_images as $image)
-          <li class="col-lg-3 col-md-3 col-sm-3">
+          <li>
              <div class="imgWrap text-center item-video">
               <div class="thumb-smaller" style="background-image:url({!! asset('uploads/'.$image->image) !!});"></div>
               <p class="imgDescription" style="padding-top: 70px;">{{$image->description}}</p>

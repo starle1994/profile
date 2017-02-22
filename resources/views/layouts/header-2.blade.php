@@ -1,5 +1,6 @@
 
 
+
 <header>
 
       
@@ -22,6 +23,7 @@
           </div>
           <!--start: Logo -->
           <div class="col-lg-1 col-md-1 col-ms-2 image-lang" >
+
                   
               <?php 
             $name   = '';
@@ -48,7 +50,6 @@
        
       </div>
       <!--end: Row -->
-      
 
   <div style="clear: both;"></div>
   <div >
@@ -60,5 +61,4 @@
     </div>        
   </div>
   <!--end: Container-->   
-  
 </header>
