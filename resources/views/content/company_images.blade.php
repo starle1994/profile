@@ -1,6 +1,6 @@
 
   <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-6" id="big-image">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="big-image">
       <div class="latest_slider ">
         <div class="slick_slider item-video">
           @foreach($company_images as $image)
@@ -15,13 +15,16 @@
       <div class="content_top_right">
         <ul class="featured_nav wow fadeInDown">
           @foreach($company_images as $image)
-          <li>
+          <div class="row">
+             <li class=" col-xs-3">
              <div class="imgWrap text-center item-video">
               <div class="thumb-smaller" style="background-image:url({!! asset('uploads/'.$image->image) !!});"></div>
               <p class="imgDescription" style="padding-top: 70px;">{{$image->description}}</p>
               <div class="title_caption">{{$image->name}}</div>
             </div>
           </li>
+          </div>
+         
           @endforeach
         </ul>
       </div>
