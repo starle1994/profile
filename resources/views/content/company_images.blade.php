@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6" id="image-right" style="color: #fff">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="image-right" style="color: #fff">
       <div class="content_top_right">
         <ul class="featured_nav wow fadeInDown">
           @foreach($company_images as $image)

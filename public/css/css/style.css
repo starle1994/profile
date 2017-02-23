@@ -1498,7 +1498,9 @@ form#newsletter input[type=submit] {
     background-position: center center;
     background-size: cover;
 }
-
+ #image-right{
+ 	padding-left: 0px !important;
+ }
 .content_middle_middle {
     height: 540px;
 }
@@ -1572,6 +1574,9 @@ form#newsletter input[type=submit] {
 
 
   }
+   #image-right{
+ 	padding-left: 0px !important;
+ }
   .thumb {
     width: 490px;
     height: 400px;
@@ -1613,7 +1618,9 @@ form#newsletter input[type=submit] {
 	#footer {
 
 	}
-	
+	 #image-right{
+ 	padding-left: 0px !important;
+ }
 	.flexslider.home {
 		min-height: 300px;
 	}
@@ -1733,7 +1740,9 @@ form#newsletter input[type=submit] {
 	.lang .en{
 	 	width: 30px;
 	 }
-
+	  #image-right{
+ 	padding-left: 0px !important;
+ }
 	.lang .jp{
 		width: 30px;
 	}
@@ -1804,7 +1813,9 @@ form#newsletter input[type=submit] {
 	.logo{
 	height: 100px;
 }
-
+ #image-right{
+ 	padding-left: 0px !important;
+ }
 }
 
 /* All Mobile Sizes (devices and browser)
@@ -1841,7 +1852,9 @@ form#newsletter input[type=submit] {
 	.logo{
 	height: 100px;
 }
-
+ #image-right{
+ 	padding-left: 0px !important;
+ }
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers)
@@ -1917,6 +1930,9 @@ form#newsletter input[type=submit] {
  a, h1, h2, h3, h4, h5, h6 {
     font-size: 14px !important;
 }
+ #image-right{
+ 	padding-left: 0px !important;
+ }
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
@@ -1980,8 +1996,8 @@ form#newsletter input[type=submit] {
 	    background-size: cover;
 	}
 	.thumb-smaller{
-	  width: 200px;
-	    height: 150px;
+	  width: 350px;
+	    height: 250px;
 
 	    background-color: #3e3e3e;
 	    background-image: none;
@@ -1992,7 +2008,9 @@ form#newsletter input[type=submit] {
 	#big-image{
 		padding-right: 0px !important;
 	}
-	
+	#image-right {
+    padding-left: 15px !important;
+}
 	.logo{
 	height: 100px;
 }	
@@ -2282,9 +2300,7 @@ form#newsletter input[type=submit] {
  	padding-bottom: 20px;
  }
 
- #image-right{
- 	padding-left: 0px !important;
- }
+
 
 #topbar #navarea{
 	margin-top: -20px;
