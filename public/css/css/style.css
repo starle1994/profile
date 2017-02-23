@@ -1760,12 +1760,11 @@ form#newsletter input[type=submit] {
 	#big-image{
 		padding-right: 0px !important;
 	}
-	._2p3a{
-		width: 210px;
-	}
+	
 	.logo{
 	height: 100px;
 }
+
 }
 .navbar-nav>li {
     float: right !important;
@@ -1805,6 +1804,7 @@ form#newsletter input[type=submit] {
 	.logo{
 	height: 100px;
 }
+
 }
 
 /* All Mobile Sizes (devices and browser)
@@ -1841,6 +1841,7 @@ form#newsletter input[type=submit] {
 	.logo{
 	height: 100px;
 }
+
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers)
@@ -1909,11 +1910,12 @@ form#newsletter input[type=submit] {
 	#big-image{
 		padding-right: 0px !important;
 	}
-	._2p3a{
-		width: 210px;
-	}
+	
 	.logo{
 	height: 100px;
+}
+ a, h1, h2, h3, h4, h5, h6 {
+    font-size: 14px !important;
 }
 }
 
@@ -1990,9 +1992,7 @@ form#newsletter input[type=submit] {
 	#big-image{
 		padding-right: 0px !important;
 	}
-	._2p3a{
-		width: 210px;
-	}
+	
 	.logo{
 	height: 100px;
 }	
