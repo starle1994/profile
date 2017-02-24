@@ -1490,7 +1490,7 @@ form#newsletter input[type=submit] {
 }
 .thumb-smaller{
 
-    height: 200px;
+    height: 194px;
 	width: 237px;
     background-color: #3e3e3e;
     background-image: none;
@@ -1510,6 +1510,23 @@ form#newsletter input[type=submit] {
 .logo{
 	height: 100px;
 }
+.thumb-app{
+    height: 150px;
+
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .modal.modal-wide .modal-dialog {
+  width: 100%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+#tallModal .modal-body p { margin-bottom: 900px }
 }
 @media only screen and (min-width: 1370px) and (max-width: 1480px){
 	
@@ -1600,6 +1617,23 @@ form#newsletter input[type=submit] {
 	.logo{
 	height: 100px;
 }
+.thumb-app{
+    height: 150px;
+
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .modal.modal-wide .modal-dialog {
+  width: 100%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+#tallModal .modal-body p { margin-bottom: 900px }
 }
 @media only screen and (min-width: 1240px) and (max-width: 1370px){
 	
@@ -1627,9 +1661,7 @@ form#newsletter input[type=submit] {
 	.img-cate{
 		width: 80px;
 	}
-	#app{
-		margin-top: 35px;
-	}
+	
 	.image-lang{
 		text-align: right;
 		margin-top: 35px; 
@@ -1667,7 +1699,7 @@ form#newsletter input[type=submit] {
 
   }
   .thumb {
-	    width: 469px;
+	    width: 472px;
 	    height: 313px;
 
 	    background-color: #3e3e3e;
@@ -1677,7 +1709,7 @@ form#newsletter input[type=submit] {
 	    background-size: cover;
 	}
 	.thumb-smaller{
-	  width: 215px;
+	  width: 240px;
 	    height: 150px;
 
 	    background-color: #3e3e3e;
@@ -1689,6 +1721,23 @@ form#newsletter input[type=submit] {
 	.logo{
 	height: 100px;
 }
+.thumb-app{
+    height: 125px;
+
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .modal.modal-wide .modal-dialog {
+  width: 100%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+#tallModal .modal-body p { margin-bottom: 900px }
 }
 /* Higher than 960 (desktop devices)
 ====================================================================== */
@@ -1773,7 +1822,23 @@ form#newsletter input[type=submit] {
 	.logo{
 	height: 100px;
 }
+.thumb-app{
+    height: 125px;
 
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .modal.modal-wide .modal-dialog {
+  width: 100%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+#tallModal .modal-body p { margin-bottom: 900px }
 }
 .navbar-nav>li {
     float: right !important;
@@ -1786,7 +1851,7 @@ form#newsletter input[type=submit] {
 		min-height: 64px;
 	}
 	.img-cate{
-		width: 8px;
+		width: 80px;
 	}
 	.app-logo .img{
 		width: 100px;
@@ -1816,6 +1881,26 @@ form#newsletter input[type=submit] {
  #image-right{
  	padding-left: 0px !important;
  }
+ .thumb {
+	    width: 469px;
+	    height: 313px;
+
+	    background-color: #3e3e3e;
+	    background-image: none;
+	    background-repeat: no-repeat;
+	    background-position: center center;
+	    background-size: cover;
+	}
+	.thumb-smaller{
+	  width: 162px;
+	    height: 150px;
+
+	    background-color: #3e3e3e;
+	    background-image: none;
+	    background-repeat: no-repeat;
+	    background-position: center center;
+	    background-size: cover;
+	} 
 }
 
 /* All Mobile Sizes (devices and browser)
@@ -1855,6 +1940,37 @@ form#newsletter input[type=submit] {
  #image-right{
  	padding-left: 0px !important;
  }
+ .thumb {
+	    width: 469px;
+	    height: 313px;
+
+	    background-color: #3e3e3e;
+	    background-image: none;
+	    background-repeat: no-repeat;
+	    background-position: center center;
+	    background-size: cover;
+	}
+	.thumb-smaller{
+	  width: 162px;
+	    height: 150px;
+
+	    background-color: #3e3e3e;
+	    background-image: none;
+	    background-repeat: no-repeat;
+	    background-position: center center;
+	    background-size: cover;
+	} 
+	#big-image{
+		padding-right: 0px !important;
+	}
+	
+	.logo{
+	height: 100px;
+}
+ a, h1, h2, h3, h4, h5, h6 {
+    font-size: 14px !important;
+}
+
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers)

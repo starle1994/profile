@@ -69,7 +69,7 @@ img:hover{opacity:0.75}
 .single_iteam h2 > a{background-color:rgba(0,0,0,0.4); color:#fff; display:inline-block; font-size:20px; padding:10px}
 .content_top_right{float:left; display:inline; width:100%}
 .featured_nav{}
-.featured_nav li{display:block; float:left; height:208px; margin-left:10px; position:relative; width:48%}
+.featured_nav li{display:block; float:left; margin-bottom: 10px; margin-left:10px; position:relative; width:48%}
 .featured_nav li img{width:100%; height:100%}
 .featured_nav li:hover .title_caption{}
 .title_caption{position:absolute; left:0; right:0; bottom:0; padding:10px; text-align:center; background-color:rgba(255, 0, 0, 0.7); -webkit-transition:all 0.5s; -moz-transition:all 0.5s; -ms-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
@@ -245,7 +245,6 @@ span.meta_more:before{content:" "; font-family:FontAwesome; font-style:normal
 @media(max-width:1199px ){.header_bottom_left{width:210px} .logo{width:210px} .featured_nav li {
     height: 100%;
     width: 47.7%;
-    padding-bottom: 10px;
 } .single_featured_slide > h2 a{font-size:20px} .media-left > img{width:100%; height:auto} .pagincontent{width:82%}}
 @media(max-width:991px ){.header_bottom_left{width:100%} .header_bottom_right{display:none} .featured_nav li{margin-left:5px; margin-right:0px; } .catgimg_container{height:105px} .flicker_nav li a{height:60px} .content_bottom_left{margin-left:0; padding-left:15px; padding-right:15px; width:100%} .media-left > img{width:100%; height:auto} .pagincontent{width:84%} .contact_us{margin-top:40px; width:100%} .our_office{width:100%}.navbar-default .navbar-nav > li > a { font-size: 12px !important;}.tooltip-inner { font-size: 12px !important;}._2p3a{
 		width: 150px;

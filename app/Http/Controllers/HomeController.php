@@ -32,9 +32,10 @@ class HomeController extends Controller
     public function index()
     {
 
-        $categories = Category::where('actived', 1)->get();
+        $categories = Category::where('actived', 1)->orderBy('id','desc')->get();
         $baners = Banners::all();
-        $company_images = CompanyImages::take(5)->orderBy('id','desc')->get();
+        $company_images = CompanyImages::take(4)->orderBy('id','desc')->get();
+
         $videos = Videos::take(5)->orderBy('id','desc')->get();
         $schedules = Schedule::orderBy('id', 'desc')->first();
         $new_blog = Blogs::take(3)->orderBy('id','desc')->get();
@@ -55,20 +56,22 @@ class HomeController extends Controller
     {
         $categories = Category::where('actived', 1)->get();
         $company_images = CompanyImages::orderBy('id','desc')->get();
-        return view('pages.image', compact('categories', 'baners', 'company_images'));
+         $apps = App::all();
+        return view('pages.image', compact('categories', 'baners','apps', 'company_images'));
     }
 
     public function showBlog()
     {
+       $apps = App::all();
         $categories = Category::where('actived', 1)->get();
         $new_blog = Blogs::orderBy('id','desc')->paginate(10);
-        return view('pages.blog', compact('categories','new_blog'));
+        return view('pages.blog', compact('categories','new_blog','apps'));
     }
 
     public function showBlogdetail($alias)
     {
         $categories = Category::where('actived', 1)->get();
-     
+      $apps = App::all();
         $get_blog = Blogs::where('alias',$alias)->first();
         $cate = [];
         if ($get_blog != null) {
@@ -76,64 +79,72 @@ class HomeController extends Controller
         }
         $recent_post = Blogs::orderBy('id','desc')->where('cate_id',$cate->id)->take(10)->get();
 
-        return view('pages.blog_detail', compact('categories','get_blog', 'cate', 'recent_post'));
+        return view('pages.blog_detail', compact('categories','get_blog', 'cate', 'recent_post','apps'));
     }
 
     public function contact()
     {
+       $apps = App::all();
         $categories = Category::where('actived', 1)->get();
-        return view('pages.contact',compact('categories'));
+        return view('pages.contact',compact('categories','apps'));
     }
 
     public function showVideo()
     {
+       $apps = App::all();
         $categories = Category::where('actived', 1)->get();
         $videos = Videos::take(5)->orderBy('id','desc')->get();
         $schedules = Schedule::orderBy('id', 'desc')->first();
-        return view('pages.videos',compact('categories','videos', 'schedules'));
+        return view('pages.videos',compact('categories','videos', 'schedules','apps'));
     }
 
     public function showAppdetail($alias)
     {
+       $apps = App::all();
         $categories = Category::where('actived', 1)->get();
         $banner = App::where('alias', $alias)->first();
-        return view('pages.app_detail',compact('categories','banner','images'));
+        return view('pages.app_detail',compact('categories','banner','images','apps'));
     }
 
     public function showApp()
     {
+       $apps = App::all();
         $apps = App::paginate(10);
         $categories = Category::where('actived', 1)->get();
-        return view('pages.view_app', compact('apps','categories'));
+        return view('pages.view_app', compact('apps','categories','apps'));
     }
      public function ourDream()
      {
+       $apps = App::all();
         $categories = Category::where('actived', 1)->get();
         $dreams = Dreams::all();
-        return view('pages.our-dream', compact('categories','dreams'));
+        return view('pages.our-dream', compact('categories','dreams','apps'));
      }
 
      public function dreamDetail($alias)
      {
+       $apps = App::all();
         $categories = Category::where('actived', 1)->get();
         $dreams = Dreams::where('alias', $alias)->first();
         $dreams_image = DreamImages::where('dreams_id', $dreams->id)->take(4)->get();
-        return view('pages.dream_detail',compact('categories','dreams','dreams_image'));
+        return view('pages.dream_detail',compact('categories','dreams','dreams_image','apps'));
      }
 
      public function showProject()
      {
+       $apps = App::all();
          $categories = Category::where('actived', 1)->get();
         $projects = Projects::all();
-        return view('pages.project', compact('categories','projects'));
+        return view('pages.project', compact('categories','projects','apps'));
      }
 
       public function showProjectDetail($alias)
      {
+       $apps = App::all();
         $categories = Category::where('actived', 1)->get();
         $projects = Projects::where('alias', $alias)->first();
         $projects_image = PicturesProject::where('projects_id', $projects->id)->take(4)->get();
-        return view('pages.project_images',compact('categories','projects','projects_image'));
+        return view('pages.project_images',compact('categories','projects','projects_image','apps'));
      }
 
 }

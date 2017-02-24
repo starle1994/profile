@@ -47,8 +47,18 @@ class AppController extends Controller {
 	 */
 	public function store(CreateAppRequest $request)
 	{
+	    $banner = App::orderBy('id','desc')->first();
 	    $request = $this->saveFiles($request);
-		App::create($request->all());
+		$input = $request->all();
+		if ($banner == null) {
+	    	$number = 1;
+	    }else{
+	    	$number = $banner->id+1;
+	    }
+
+	    $input['alias'] = 'list-'.$number;
+
+	    App::create($input);
 
 		return redirect()->route(config('quickadmin.route').'.app.index');
 	}

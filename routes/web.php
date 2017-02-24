@@ -25,12 +25,12 @@ Route::get('/our-dream' ,['as'=>'categories.4','uses'=>'HomeController@ourDream'
 
 Route::get('/dream-detail/{alias}' ,['as'=>'dream.detail','uses'=>'HomeController@dreamDetail']);
 
-Route::get('/contact' ,['as'=>'categories.5','uses'=>'HomeController@contact']);
+Route::get('/project' ,['as'=>'categories.5','uses'=>'HomeController@showProject']);
 
 
-Route::get('/project' ,['as'=>'categories.9','uses'=>'HomeController@showProject']);
+Route::get('/application' ,['as'=>'categories.9','uses'=>'HomeController@showApp']);
 
-Route::get('/application' ,['as'=>'categories.10','uses'=>'HomeController@showApp']);
+Route::get('/contact' ,['as'=>'categories.10','uses'=>'HomeController@contact']);
 Route::get('/application/{alias}' ,['as'=>'show.app.detail','uses'=>'HomeController@showAppdetail']);
 
 Route::get('/project/{alias}' ,['as'=>'show.project.detail','uses'=>'HomeController@showProjectDetail']);

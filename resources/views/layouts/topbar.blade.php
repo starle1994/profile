@@ -5,11 +5,12 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav custom_nav">
-        <li class=""><a href="{{ route('index') }}">{{trans('user.home')}}</a></li>
+        
         @foreach($categories as $cate)
          <?php $route = route('categories.'.$cate->id.'');?>
         <li><a href="{{ $route }}">{{trans($cate->name)}}</a></li>
         @endforeach
+        <li class=""><a href="{{ route('index') }}">{{trans('user.home')}}</a></li>
       </ul>
     </div>
   </div>

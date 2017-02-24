@@ -1,22 +1,3 @@
-<style>
-  .thumb-app{
-    height: 150px;
-
-    background-color: #3e3e3e;
-    background-image: none;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .modal.modal-wide .modal-dialog {
-  width: 100%;
-}
-.modal-wide .modal-body {
-  overflow-y: auto;
-}
-
-#tallModal .modal-body p { margin-bottom: 900px }
-</style>
 
 <div class="content_middle_rightbar" id="app">
     <div class="single_category wow fadeInDown">

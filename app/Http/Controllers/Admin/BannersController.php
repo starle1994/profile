@@ -50,7 +50,12 @@ class BannersController extends Controller {
 		$banner = Banners::orderBy('id','desc')->first();
 	    $request = $this->saveFiles($request);
 	    $input = $request->all();
-	    $number = $banner->id+1;
+	    if ($banner == null) {
+	    	$number = 1;
+	    }else{
+	    	$number = $banner->id+1;
+	    }
+	    
 	    $input['alias'] = 'list-'.$number;
 
 		Banners::create($input);

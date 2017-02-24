@@ -8,18 +8,20 @@
       <div  style="margin-top: 10px;">
               
           <!--start: Logo -->
-          <div class="logo col-lg-2 col-md-2 col-sm-2">
+          <div class="logo col-lg-3 col-md-3 col-sm-3 col-xs-6">
                   
               <a class="brand" href="#"><img src="{!! asset('css/img/logo-group.png') !!}" alt="Logo" class="logo"></a>
                   
           </div >
           <!--end: Logo -->
-          <div class="app-logo col-lg-9 col-md-8 col-sm-8" >
-            <img class="letgo" alt="" src="{!! asset('css/img/letgo.png') !!}" >
-            <img class="img" alt="" src="{!! asset('css/img/app/uranai.png') !!}" >
-            <img class="img" alt="" src="{!! asset('css/img/app/rino.png') !!}" >
-            <img class="img" alt="" src="{!! asset('css/img/app/uranai.png') !!}" >
-            <img class="img" alt="" src="{!! asset('css/img/app/rino.png') !!}" >
+         <div class="ol-lg-2 col-md-2 col-sm-2 col-xs-12 text-center"><img class="letgo img-responsive" alt="" src="{!! asset('css/img/letgo.png') !!}" ></div>
+          <div class="app-logo col-lg-6 col-md-6 col-sm-6 col-xs-10" >
+            @if($apps != null)
+                @foreach($apps as $app)
+                  <img class="img" alt="" src="{!! asset('uploads/'.$app->logo) !!}" >
+                @endforeach
+              @endif
+
           </div>
           <!--start: Logo -->
           <div class="col-lg-1 col-md-1 col-ms-2 image-lang" >

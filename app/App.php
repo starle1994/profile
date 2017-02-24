@@ -25,7 +25,8 @@ class App extends Model {
           'name',
           'description',
           'logo',
-          'banner'
+          'banner',
+          'alias'
     ];
     
 
