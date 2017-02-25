@@ -1,27 +1,25 @@
 <?php
 return [
 
-  // generic   
-  'whoops'  => 'Oops !',
-  'some_problems_with_input' => 'there are some problems with input!',
+ // generic   
+  'whoops'  => 'しまった！',
+  'some_problems_with_input' => 'インプットに幾つかの問題があります',
 
   // auth-login
-  'login-login' => 'Login',
-  'login-email' => 'Email',
-  'login-password' => 'Password',
-  'login-remember_me' => 'Remember Me',
-  'login-btnlogin' => 'Log In',
+  'login-login' => 'ログイン',  'login-email' => 'Eメール',
+  'login-password' => 'パスワード',
+  'login-remember_me' => '端末（ブラウザ）に記憶',
+  'login-btnlogin' => 'ログイン',
 
   // auth-password
-  'password-reset_password' => 'Reset password',
-  'password-email' => 'Email',
-  'password-btnsend_password' => 'Send Password Reset Link',
+  'password-reset_password' => 'パスワードをリセット（再設定）',
+  'password-email' => 'Eメール',
+  'password-btnsend_password' => 'パスワードリセットリンクを送る',
 
   // auth-reset
-  'reset-reset_password' => 'Reset password',
-  'reset-email' => 'Email',
-  'reset-password' => 'Password',  
-  'reset-confirm_password' => 'Confirm password',  
-  'reset-btnreset_password' => 'Reset password',
-
+  'reset-reset_password' => 'パスワードをリセット',
+  'reset-email' => 'Eメール',
+  'reset-password' => 'パスワード',
+  'reset-confirm_password' => 'パスワードを認証する',
+  'reset-btnreset_password' => 'パスワードをリセットする',
 ];
