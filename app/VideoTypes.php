@@ -8,7 +8,7 @@ use Laraveldaily\Quickadmin\Observers\UserActionsObserver;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class MyVideos extends Model {
+class VideoTypes extends Model {
 
     use SoftDeletes;
 
@@ -19,14 +19,11 @@ class MyVideos extends Model {
     */
     protected $dates = ['deleted_at'];
 
-    protected $table    = 'myvideos';
+    protected $table    = 'videotypes';
     
     protected $fillable = [
           'name',
-          'description',
-          'link',
-          'image',
-          'video_type',
+          'alias'
     ];
     
 
@@ -34,13 +31,10 @@ class MyVideos extends Model {
     {
         parent::boot();
 
-        MyVideos::observe(new UserActionsObserver);
+        VideoTypes::observe(new UserActionsObserver);
     }
     
-      public function videoTypes()
-    {
-        return $this->hasOne('App\VideoTypes', 'id', 'applications_id');
-    }
+    
     
     
 }
