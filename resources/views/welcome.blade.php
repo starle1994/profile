@@ -45,50 +45,49 @@
             <marquee direction="left"  style="font-size: 14px; margin-top: 25px;"><a href="" style=" color: #FFA500">RINO </a>-- <a href="" style=" color: #FFA500">URANAI</a> -- <a href="" style=" color: #FFA500">CONSULTANT </a>-- <a href="" style=" color: #FFA500">MATCHING</a></marquee>
           </div>
    
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-9">
-      <div class="content_middle">
-        
-        @include('content.videos')  
-      </div>
-      <div class="content_middle">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-4">
-          <a href="{{ route('categories.3') }}">
-            <div class="bs-example bs-example-tooltip cate" data-example-id="static-tooltips">
-              <img src="{!! asset('css/img/category/cate1.png') !!}" class="img-cate">
-              <div class="tooltip right" role="tooltip"> 
-                <div class="tooltip-arrow"></div> 
-                  <div class="tooltip-inner">{{ trans('user.category3')}}</div> 
-              </div> 
             </div>
-          </a>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="content_middle">
+                  
+                  @include('content.videos')  
+                </div>
+                <div class="content_middle">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                    <a href="{{ route('categories.3') }}">
+                      <div class="bs-example bs-example-tooltip cate" data-example-id="static-tooltips">
+                        <img src="{!! asset('css/img/category/cate1.png') !!}" class="img-cate">
+                        <div class="tooltip right" role="tooltip"> 
+                          <div class="tooltip-arrow"></div> 
+                            <div class="tooltip-inner">{{ trans('user.category3')}}</div> 
+                        </div> 
+                      </div>
+                    </a>
+                    </div>
+
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                      <marquee direction="left"  style="font-size: 14px; margin-top: 25px;"><a href="" style=" color: #FFA500">RINO </a>-- <a href="" style=" color: #FFA500">URANAI</a> -- <a href="" style=" color: #FFA500">CONSULTANT </a>-- <a href="" style=" color: #FFA500">MATCHING</a></marquee>
+                    </div>
+                  </div>
+                  @include('content.blogs')
+                </div>
+                <div class="content_bottom">
+              @include('content.blogs-v2')
+            </div>
+            </div>
+            
+               <div class="col-lg-3 col-md-3 col-sm-3" style="  padding-left: 0px !important; padding-right: 35px !important;">
+              @include('content.my-app')
+              <div style="margin-top: 20px;">
+                @include('content.schedule')
+                </div>
+
+              <div style="margin-top: 20px;">
+              @include('content.facebook')
+              </div>
+            </div>
+
           </div>
-
-          <div class="col-lg-8 col-md-8 col-sm-8">
-            <marquee direction="left"  style="font-size: 14px; margin-top: 25px;"><a href="" style=" color: #FFA500">RINO </a>-- <a href="" style=" color: #FFA500">URANAI</a> -- <a href="" style=" color: #FFA500">CONSULTANT </a>-- <a href="" style=" color: #FFA500">MATCHING</a></marquee>
-          </div>
-        </div>
-        @include('content.blogs')
-      </div>
-      <div class="content_bottom">
-    @include('content.blogs-v2')
-  </div>
-  </div>
-  <div class="row">
-     <div class="col-lg-3 col-md-3 col-sm-3" style="  padding-left: 0px !important; padding-right: 35px !important;">
-    @include('content.my-app')
-    <div style="margin-top: 20px;">
-      @include('content.schedule')
-      </div>
-
-    <div style="margin-top: 20px;">
-    @include('content.facebook')
-    </div>
-  </div>
-
-  </div>
-</div>
   
     <div class="content_top">
       <div class="row">

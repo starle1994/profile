@@ -2,29 +2,28 @@
 <div class="content_middle_rightbar" id="app">
     <div class="single_category wow fadeInDown">
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
+        <div class="panel panel-default item-video">
           <div class="panel-heading" role="tab" id="headingOne">
             <div class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                 APPLICATION
+              <a href="{{ route('categories.9') }}" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                 {{trans('user.category9')}}
               </a>
             </div>
           </div>
           <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body item-video" >
+            <div class="panel-body " >
              
               <ul class="catg1_nav">
-             @if($apps != null)
+              @if($apps != null)
                 @foreach($apps as $app)
-                <li  >
+                <li id="app_pop">
                 <a data-toggle="modal" href="#shortModal" >
                 <?php $link = 'uploads/'.$app->logo ?>
                 <div class="thumb-app" style="background-image:url({!! $link !!});"></div></a>
+                <input type="hidden" id="app_baner" value="{{$app->id}}">
                 </li >
-                
                 @endforeach
               @endif
-
               </ul>
       
             </div>
@@ -33,11 +32,13 @@
       </div>
     </div>
    <div id="shortModal" class="modal modal-wide fade">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <div class="modal-body">
-             <a href="{{ route('show.app.detail','rino-aplication') }}"><img src="{{ asset('uploads/a.jpg') }}" alt="" ></a>
+              <div id="pop">
+                
+              </div>
           </div>
       
         </div><!-- /.modal-content -->
@@ -45,3 +46,21 @@
     </div><!-- /.modal -->
   </div>
   
+<script>
+      $(document).ready(function() {
+        $('#app_pop').on('click', function(e){
+          var id = $('#app_baner').val();
+           $.ajax({
+            url: '{{ route('ajaxGetBanner') }}',
+                type: 'GET',
+                data: {id: id},
+                success: function (data) {
+                  console.log(data);
+                  $('#pop').empty();
+                  $('#pop').append('<a href="'+data.route+'">'); 
+                  $('#pop').append('<img src="'+data.src+'" class="img-responsive"></a>');    
+                },
+            });
+      });
+    });
+</script>

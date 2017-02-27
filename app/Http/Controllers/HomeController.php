@@ -15,6 +15,7 @@ use App\Projects;
 use App\Dreams;
 use App\DreamImages;
 use App\PicturesProject;
+use Response;
 
 class HomeController extends Controller
 {
@@ -145,6 +146,19 @@ class HomeController extends Controller
         $projects = Projects::where('alias', $alias)->first();
         $projects_image = PicturesProject::where('projects_id', $projects->id)->take(4)->get();
         return view('pages.project_images',compact('categories','projects','projects_image','apps'));
+     }
+
+     public function getBanner(Request $request)
+     {
+         $id = $request->id;
+         $data = App::where('id', $id)->first();
+         $route = route('show.app.detail',$data->alias);
+         $src = asset('uploads/'.$data->banner);
+         $result = [
+            'route' => $route,
+            'src'=>$src
+         ];
+        return Response::json($result);
      }
 
 }

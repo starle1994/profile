@@ -1,5 +1,4 @@
 
-
 <header>
 
       
@@ -7,28 +6,25 @@
       <div  style="margin-top: 10px;">
               
           <!--start: Logo -->
-
-          <div class="logo col-lg-3 col-md-3 col-sm-3 col-xs-6 text-center">
+          <div class="logo col-lg-3 col-md-3 col-sm-3">
                   
-              <img src="{!! asset('css/img/logo-group.png') !!}" alt="Logo" class="img-responsive">
+              <a class="brand" href="#"><img src="{!! asset('css/img/logo-group.png') !!}" alt="Logo" class="logo"></a>
                   
           </div >
-          <div class="ol-lg-2 col-md-2 col-sm-2 col-xs-12 text-center"><img class="letgo img-responsive" alt="" src="{!! asset('css/img/letgo.png') !!}" ></div>
-          <div class="app-logo col-lg-6 col-md-6 col-sm-6 col-xs-10" >
+          <div class="ol-lg-2 col-md-2 col-sm-2"><img class="letgo" alt="" src="{!! asset('css/img/letgo.png') !!}" ></div>
+          <div class="app-logo col-lg-6 col-md-6 col-sm-6" >
             @if($apps != null)
                 @foreach($apps as $app)
                   <img class="img" alt="" src="{!! asset('uploads/'.$app->logo) !!}" >
                 @endforeach
               @endif
-
           </div>
           <!--start: Logo -->
-          <div class="col-lg-1 col-md-1 col-ms-2 col-xs-2 image-lang" >
+          <div class="col-lg-1 col-md-1 col-ms-2 image-lang" >
                   
               <?php 
             $name   = '';
             $arr = explode('/', Request::path());
-
             for($i = 1; $i<count($arr); $i++){
                $name .= '/'.$arr[$i];
             }
