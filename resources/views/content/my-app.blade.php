@@ -2,19 +2,19 @@
 <div class="content_middle_rightbar" id="app">
     <div class="single_category wow fadeInDown">
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
+        <div class="panel panel-default item-video">
           <div class="panel-heading" role="tab" id="headingOne">
             <div class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                 APPLICATION
+              <a href="{{ route('categories.9') }}" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                 {{trans('user.category9')}}
               </a>
             </div>
           </div>
           <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body item-video" >
+            <div class="panel-body " >
              
               <ul class="catg1_nav">
-             @if($apps != null)
+              @if($apps != null)
                 @foreach($apps as $app)
                 <li id="app_pop">
                 <a data-toggle="modal" href="#shortModal" >
@@ -24,7 +24,6 @@
                 </li >
                 @endforeach
               @endif
-
               </ul>
       
             </div>
