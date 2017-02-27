@@ -1519,9 +1519,6 @@ form#newsletter input[type=submit] {
     background-position: center center;
     background-size: cover;
   }
-  .modal.modal-wide .modal-dialog {
-  width: 100%;
-}
 .modal-wide .modal-body {
   overflow-y: auto;
 }
@@ -2431,12 +2428,6 @@ form#newsletter input[type=submit] {
 
 .app-logo{
 	text-align:right; 
-}
-
-#app .modal-dialog {
-  width: 98%;
-  height: auto;
-  padding: 0;
 }
 
 #app .modal-content {
