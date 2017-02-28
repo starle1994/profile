@@ -24,7 +24,7 @@ class VideoTypesController extends Controller {
 	public function index(Request $request)
     {
         $videotypes = VideoTypes::all();
-
+ 
 		return view('admin.videotypes.index', compact('videotypes'));
 	}
 

@@ -57,8 +57,10 @@
                 success: function (data) {
                   console.log(data);
                   $('#pop').empty();
-                  $('#pop').append('<a href="'+data.route+'">'); 
-                  $('#pop').append('<img src="'+data.src+'" class="img-responsive"></a>');    
+                  var html = '<a href="'+data.route+'">';
+                  html +='<img src="'+data.src+'" class="img-responsive"></a>';
+                  
+                  $('#pop').append(html);    
                 },
             });
       });
