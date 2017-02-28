@@ -17,11 +17,11 @@ trait FileUploadTrait
             mkdir(public_path('uploads'), 0777);
             mkdir(public_path('uploads/thumb'), 0777);
         }
-        foreach ($request->all() as $key => $value) {
+         foreach ($request->all() as $key => $value) {
             if ($request->hasFile($key)) {
                 if ($request->has($key . '_w') && $request->has($key . '_h')) {
                     // Check file width
-                    $filename = time();
+                    $filename = time() . '-' . $request->file($key)->getClientOriginalName();
                     $file     = $request->file($key);
                     $image    = Image::make($file);
                     Image::make($file)->resize(50, 50)->save(public_path('uploads/thumb') . '/' . $filename);
@@ -41,7 +41,7 @@ trait FileUploadTrait
                     $image->save(public_path('uploads') . '/' . $filename);
                     $request = new Request(array_merge($request->all(), [$key => $filename]));
                 } else {
-                    $filename = time() ;
+                    $filename = time() . '-' . $request->file($key)->getClientOriginalName();
                     $request->file($key)->move(public_path('uploads'), $filename);
                     $request = new Request(array_merge($request->all(), [$key => $filename]));
                 }
