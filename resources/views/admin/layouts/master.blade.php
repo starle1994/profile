@@ -36,6 +36,6 @@
 @include('admin.partials.javascripts')
 
 @yield('javascript')
-@include('admin.partials.footer')
+
 
 

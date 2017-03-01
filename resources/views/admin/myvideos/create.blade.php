@@ -24,6 +24,19 @@
         {!! Form::text('name', old('name'), array('class'=>'form-control')) !!}
         
     </div>
+</div>
+<div class="form-group">
+    {!! Form::label('video_type', 'Type Video', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        <select name="video_type" id="SortBy">
+
+            <option value="0" class="control-label">----Select----</option>
+            @foreach($types as $type)
+                <option value="{{$type->id}}">{{$type->name}}</option>
+            @endforeach
+        </select>
+        
+    </div>
 </div><div class="form-group">
     {!! Form::label('description', 'description', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
@@ -31,12 +44,13 @@
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('link', 'description', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('link', 'link', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('link', old('link'), array('class'=>'form-control')) !!}
         
     </div>
-</div><div class="form-group">
+</div>
+<div class="form-group">
     {!! Form::label('image', 'image', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::file('image') !!}

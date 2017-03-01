@@ -39,7 +39,7 @@ class MyVideos extends Model {
     
       public function videoTypes()
     {
-        return $this->hasOne('App\VideoTypes', 'id', 'applications_id');
+        return $this->hasOne('App\VideoTypes', 'id', 'video_type');
     }
     
     

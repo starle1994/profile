@@ -10,7 +10,7 @@ use App\Http\Requests\CreateMyVideosRequest;
 use App\Http\Requests\UpdateMyVideosRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Traits\FileUploadTrait;
-
+use App\VideoTypes;
 
 class MyVideosController extends Controller {
 
@@ -23,7 +23,7 @@ class MyVideosController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $myvideos = MyVideos::all();
+        $myvideos = MyVideos::with("videoTypes")->get();
 
 		return view('admin.myvideos.index', compact('myvideos'));
 	}
@@ -35,9 +35,9 @@ class MyVideosController extends Controller {
 	 */
 	public function create()
 	{
+	     $types = VideoTypes::all();
 	    
-	    
-	    return view('admin.myvideos.create');
+	    return view('admin.myvideos.create',compact('types'));
 	}
 
 	/**

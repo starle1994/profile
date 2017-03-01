@@ -85,5 +85,39 @@
                 },
             });
       });
+        $('#app_pop3').on('click', function(e){
+          var id = $('#app_baner3').val();
+          console.log(id);
+           $.ajax({
+            url: '{{ route('ajaxGetBanner') }}',
+                type: 'GET',
+                data: {id: id},
+                success: function (data) {
+                  console.log(data);
+                  $('#pop').empty();
+                  var html = '<a href="'+data.route+'">';
+                  html +='<img src="'+data.src+'" class="img-responsive"></a>';
+                  
+                  $('#pop').append(html);    
+                },
+            });
+      });
+        $('#app_pop4').on('click', function(e){
+          var id = $('#app_baner4').val();
+          console.log(id);
+           $.ajax({
+            url: '{{ route('ajaxGetBanner') }}',
+                type: 'GET',
+                data: {id: id},
+                success: function (data) {
+                  console.log(data);
+                  $('#pop').empty();
+                  var html = '<a href="'+data.route+'">';
+                  html +='<img src="'+data.src+'" class="img-responsive"></a>';
+                  
+                  $('#pop').append(html);    
+                },
+            });
+      });
     });
 </script>
