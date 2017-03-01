@@ -91,7 +91,7 @@
   
     <div class="content_top">
   
-        <div class="col-lg-3 col-md-3 col-sm3">
+        <div class="col-lg-4 col-md-3 col-sm3">
         <a href="{{ route('categories.5') }}">
           <div class="bs-example bs-example-tooltip cate" data-example-id="static-tooltips">
             <img src="{!! asset('css/img/category/cate3.png') !!}" class="img-cate">
@@ -102,7 +102,7 @@
           </div>
         </a>
         </div>
-        <div class="col-lg-9 col-md-9 col-sm-9">
+        <div class="col-lg-8 col-md-9 col-sm-9">
 
       <marquee direction="left"  style="font-size: 14px; margin-top: 25px ; color: #E93E33; font-weight: bold;">スターリープロジェクトとはたくさんの人の夢に触れ、応援し合うプロジェクトです</marquee>
 
