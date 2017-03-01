@@ -15,11 +15,12 @@
              
               <ul class="catg1_nav">
               @if($apps != null)
+   
                 @foreach($apps as $app)
                 <li id="app_pop">
                 <a data-toggle="modal" href="#shortModal" >
                 <?php $link = 'uploads/'.$app->logo ?>
-                <div class="thumb-app" style="background-image:url({!! $link !!});"></div></a>
+                <img src="{{ asset('uploads') . '/'.  $app->logo }}"></a>
                 <input type="hidden" id="app_baner" value="{{$app->id}}">
                 </li >
                 @endforeach
