@@ -16,15 +16,14 @@
                  <div class="title-image">
                     <h3 class="post_titile"><a href="">{{$video->name}}</a></h3>
                     <div class="comments_box" > <span class="meta_date">{{$video->created_at}}</span></span> </div>
-                 </div>
-                 
+                 </div>   
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <div id="{{$target}}" class="modal fade in" data-keyboard="false" data-backdrop="static" >
-          <div class="modal-dialog">
+          <div class="modal-dialog" style="margin-top: 10%">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -33,9 +32,8 @@
               <div class="embed-responsive embed-responsive-16by9" class="modal-body" id="yt-player">
                 <iframe  src="{{$video->link}}" frameborder="0" allowfullscreen></iframe>
               </div>
-              <div class="modal-footer">
+              <div class="modal-footer text-center">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
               </div>
             </div>
           </div>

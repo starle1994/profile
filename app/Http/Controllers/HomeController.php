@@ -158,6 +158,7 @@ class HomeController extends Controller
             'route' => $route,
             'src'=>$src
          ];
+    
         return Response::json($result);
      }
 

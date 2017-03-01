@@ -3,7 +3,7 @@
 
       
       <!--start: Row -->
-      <div  style="margin-top: 10px;">
+      <div  style="margin-top: 5px;">
               
           <!--start: Logo -->
           <div class="logo col-lg-3 col-md-3 col-sm-3">

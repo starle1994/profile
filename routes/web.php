@@ -11,7 +11,12 @@
 |
 */
 
-Route::get('/', ['as'=>'index','uses'=>'HomeController@index']);
+Route::get('/', ['as' => 'user.home', function () {
+    
+    return redirect()->route('index');
+   
+}]);
+Route::get('/home', ['as'=>'index','uses'=>'HomeController@index']);
 
 Route::get('/image' ,['as'=>'categories.1','uses'=>'HomeController@showCompanyImage']);
 
