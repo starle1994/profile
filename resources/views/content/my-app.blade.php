@@ -17,9 +17,17 @@
               @if($apps != null)
                 <?php $i =1 ?>
                 @foreach($apps as $app)
-                  <?php $id = 'app_pop'.$i ;$id_ban = 'app_baner'.$i;?>
+                  <?php 
+                    $id = 'a';
+                    $id_ban = 'a';
+
+                    if ($app->banner != null) {
+                      $id = 'app_pop'.$i ;
+                      $id_ban = 'app_baner'.$i;
+                    }
+                  ?>
                   <li id="{{$id}}">
-                  <a data-toggle="modal" href="#shortModal" >
+                  <a data-toggle="modal" href="{{ ($app->banner == null) ? '' : '#shortModal'}}" >
                   <?php $link = 'uploads/'.$app->logo ?>
                   <img src="{{ asset('uploads') . '/'.  $app->logo }}" class="img-responsive"></a>
                   <input type="hidden" id="{{$id_ban}}" value="{{$app->id}}">

@@ -2,7 +2,7 @@
 
 @section('content')
 <style type="text/css">
-  .well { margin-top:20px; background-color: #E93E33; border-radius: 4px; border: none; border-bottom: 3px solid #eeeeee; box-shadow: none; margin-bottom: 30px; padding: 20px; color: #fff}
+  .well { margin-top:20px; background-color: #E93E33; border-radius: 4px; border: none; border-bottom: 3px solid #eeeeee; box-shadow: none; margin-bottom: 30px; padding: 20px; color: #fff; border-radius: 25px;}
 .well h2, .well h3, .well h4, .well h5, .well h6 { margin-top: 10px; color: #fff}
 </style>
 <div class="content_bottom app-detail">

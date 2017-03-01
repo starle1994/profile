@@ -24,7 +24,8 @@ class Videos extends Model {
     protected $fillable = [
           'name',
           'description',
-          'link'
+          'link',
+          'video_type',
     ];
     
 

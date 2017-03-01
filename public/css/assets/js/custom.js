@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
         slidesToShow: 1,
         slide: 'div',
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         cssEase: 'linear'
     });
     // slick slider2 call 
@@ -22,7 +22,7 @@ jQuery(document).ready(function() {
         infinite: true,
         speed: 500,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         fade: true,
         slide: 'div',
         cssEase: 'linear'

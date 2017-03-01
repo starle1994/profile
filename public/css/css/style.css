@@ -1241,7 +1241,7 @@ form#newsletter input[type=submit] {
 }
 
 .btn {
-  border-color: #c5c5c5;
+  border-color: #E93E33;
   border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
       background-color: #ffa500;
 }
@@ -1692,26 +1692,26 @@ form#newsletter input[type=submit] {
     display: inline-block;
 
   }
-  .thumb {
-	    width: 472px;
-	    height: 313px;
+    .thumb {
+    width: 550px;
+    height: 400px;
 
-	    background-color: #3e3e3e;
-	    background-image: none;
-	    background-repeat: no-repeat;
-	    background-position: center center;
-	    background-size: cover;
-	}
-	.thumb-smaller{
-	  width: 240px;
-	    height: 150px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.thumb-smaller{
 
-	    background-color: #3e3e3e;
-	    background-image: none;
-	    background-repeat: no-repeat;
-	    background-position: center center;
-	    background-size: cover;
-	}
+    height: 194px;
+	width: 270px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
 	.logo{
 	height: 100px;
 }
@@ -1789,26 +1789,26 @@ form#newsletter input[type=submit] {
 	.lang .jp{
 		width: 30px;
 	}
-	 .thumb {
-	    width: 469px;
-	    height: 313px;
+	  .thumb {
+    width: 570px;
+    height: 400px;
 
-	    background-color: #3e3e3e;
-	    background-image: none;
-	    background-repeat: no-repeat;
-	    background-position: center center;
-	    background-size: cover;
-	}
-	.thumb-smaller{
-	  width: 215px;
-	    height: 150px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.thumb-smaller{
 
-	    background-color: #3e3e3e;
-	    background-image: none;
-	    background-repeat: no-repeat;
-	    background-position: center center;
-	    background-size: cover;
-	} 
+    height: 194px;
+	width: 270px;
+    background-color: #3e3e3e;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
 	#big-image{
 		padding-right: 0px !important;
 	}

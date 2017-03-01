@@ -11,7 +11,7 @@
               <a class="brand" href="#"><img src="{!! asset('css/img/logo-group.png') !!}" alt="Logo" class="logo"></a>
                   
           </div >
-          <div class="ol-lg-2 col-md-2 col-sm-2"><img class="letgo" alt="" src="{!! asset('css/img/letgo.png') !!}" ></div>
+          <div class="ol-lg-2 col-md-2 col-sm-2"><img class="letgo" alt="" src="{!! asset('css/img/letgo.jpg') !!}" ></div>
           <div class="app-logo col-lg-6 col-md-6 col-sm-6" >
             @if($apps != null)
                 @foreach($apps as $app)

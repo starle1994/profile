@@ -14,11 +14,6 @@
     margin-bottom:20px;    
 }
 
-.company_image img {
-   padding: 2px 2px 2px 2px;
-    background-color: white;
-  margin-bottom:20px;
-}
 
 .gray img:hover{
   filter: gray;
@@ -40,7 +35,10 @@
 .thumb {
     width: 250px;
     height: 200px;
-
+ padding: 2px 2px 2px 2px;
+    background-color: white;
+  margin-bottom:20px;
+  margin-top: 20px;
     background-color: #3e3e3e;
     background-image: none;
     background-repeat: no-repeat;
