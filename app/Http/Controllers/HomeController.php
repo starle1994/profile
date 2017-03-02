@@ -18,6 +18,7 @@ use App\PicturesProject;
 use Response;
 use App\VideoTypes;
 
+
 class HomeController extends Controller
 {
     /**
@@ -38,7 +39,10 @@ class HomeController extends Controller
         $baners = Banners::all();
         $company_images = CompanyImages::take(4)->orderBy('id','desc')->get();
 
-        $videos = Videos::take(5)->orderBy('id','desc')->get();
+        $video_types = VideoTypes::all();
+        foreach ($video_types as $data) {
+            $videos[$data->name] = Videos::orderBy('id','desc')->where('video_type', $data->id)->paginate(4);
+        }
         $schedules = Schedule::orderBy('id', 'desc')->first();
         $new_blog = Blogs::take(3)->orderBy('id','desc')->get();
         $new_blog2 = [];
@@ -174,4 +178,29 @@ class HomeController extends Controller
         return Response::json($result);
      }
 
+     public function showDetaiCalander($value='')
+     {
+         $events = [];
+        $events[] = \Calendar::event(
+            "Valentine's Day", //event title
+            true, //full day event?
+            new \DateTime('2017-02-14'), //start time (you can also use Carbon instead of DateTime)
+            new \DateTime('2017-02-14'), //end time (you can also use Carbon instead of DateTime)
+            'stringEventId',
+            ['color'=> '#357ae8'] ,
+            ['imageurl'=>'http://localhost/profile/public/uploads/1487932237.jpg']//optionally, you can specify an event ID
+        );
+
+
+        $calendar = \Calendar::addEvents($events) //add an array with addEvents
+
+            ->setOptions([ //set fullcalendar options
+                'firstDay' => 1
+            ])->setCallbacks([ //set fullcalendar callback options (will not be JSON encoded)
+                'viewRender' => 'function() {alert("Callbacks!");}'
+            ]); 
+        $apps = App::all();
+        $categories = Category::where('actived', 1)->orderBy('id','desc')->get();
+        return view('pages.schedule', compact('calendar','apps','categories'));
+     }
 }

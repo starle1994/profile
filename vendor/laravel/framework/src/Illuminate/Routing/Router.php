@@ -298,18 +298,9 @@ class Router implements RegistrarContract
     public function auth()
     {
         // Authentication Routes...
-        $this->get('login', [
-            'as'   => 'get.login',
-            'uses' => 'Auth\LoginController@showLoginForm'
-        ])->name('login');
-        $this->post('login',[
-            'as'   => 'post.login',
-            'uses' => 'Auth\LoginController@login'
-        ]);
-        $this->post('logout', [
-            'as'   => 'logout',
-            'uses' => 'Auth\LoginController@logout'
-        ])->name('logout');
+        $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+        $this->post('login', 'Auth\LoginController@login');
+        $this->post('logout', 'Auth\LoginController@logout')->name('logout');
 
         // Registration Routes...
         $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');

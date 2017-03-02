@@ -42,6 +42,8 @@ Route::get('/project/{alias}' ,['as'=>'show.project.detail','uses'=>'HomeControl
 
 Route::get('get-banner',['as'=>'ajaxGetBanner','uses'=>'HomeController@getBanner']);
 
+Route::get('schedule',['as'=>'schedule','uses'=>'HomeController@showDetaiCalander']);
+
 Route::group([ 'middleware' => 'auth'], function () {
 	Route::get(config('quickadmin.homeRoute'), 'QuickadminController@index');
     Route::group([ 'middleware' => 'role'], function () {

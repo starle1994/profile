@@ -8,22 +8,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='{!! url('css/assets/css/bootstrap.min.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/assets/css/font-awesome.min.css') !!}' rel='stylesheet' type='text/css' />
-<link href='{!! url('css/assets/css/animate.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/assets/css/slick.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/assets/css/theme.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/assets/css/style.css') !!}' rel='stylesheet' type='text/css' />
-<link href='{!! url('css/css/style.css') !!}' rel='stylesheet' type='text/css' />
 <!--[if lt IE 9]>
 <script src="assets/js/html5shiv.min.js"></script>
 <script src="assets/js/respond.min.js"></script>
 <![endif]-->
 </head>
 <body>
-<div id="preloader">
-  <div id="status">&nbsp;</div>
-</div>
-    @include('layouts.header')
-  <div style="clear: both;"></div>
+  @include('layouts.header')
   <div class="body-content">
     <div class="container content">
 
