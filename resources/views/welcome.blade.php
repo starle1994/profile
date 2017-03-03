@@ -1,89 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-<style type="text/css">
-  .body-content {
-    background-color: #ddd;
-  }
-  .head-title {
-      background: #ff0000;
-      border-radius: 10px;
-      color: #fff;
-      font-size: 24px;
-      padding: 5px 15px;
-      z-index: 2;
-  }
-  .bg-white {
-    background-color: #fff;
-    padding-top: 20px;
-    padding-bottom: 25px;
-    margin-top: -5px;
-  }
-  .bg-white > p {
-    margin-top: 10px;
-  }
-  .main-content .bg-white {
-    padding-bottom: 0;
-      padding-top: 20px;
-      border-top: 1px dashed #ff0000;
-  }
-  .blog-content .bg-white {
-      border-top: none;
-      padding-bottom: 15px;
-  }
-  .blog-content {
-      margin-bottom: 30px;
-  }
-  .special-title {
-    margin-top: -5px;
-    z-index: 2;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  .block {
-      padding-bottom: 20px;
-      margin-bottom: 0;
-      display: flex;
-  }
-  .block li {
-    float: left;
-  }
-  .block .img {
-    width: 30%;
-    margin-right: 15px;
-  }
-  .block .description {
-    width: calc(70% - 15px);
-  }
-  .sidebar {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  .sidebar li {
-    margin-bottom: 30px;
-  }
-  .topic {
-    margin-bottom: 30px;
-  }
-  .blog {
-    margin-bottom: 30px;
-  }
-  .blog .bg-white{
-    padding-bottom: 20px;
-  }
-  @media (min-width: 1200px){
-
-    .container {
-        width: 970px !important;
-    }
-    .img img{
-      padding: 2px;
-      background-color: #fff;
-    }
-</style>
-
   @foreach($videos as $key => $values)
     <div class="row">
       <div class="col-md-12 special-title">
@@ -121,6 +38,10 @@
           <img width="100%" src="{!! asset('uploads/'.$app->logo) !!}"/>
         </li>
        @endforeach
+       <li>
+        @include('content.facebook')
+     
+       </li>
       </ul>
       <div class="main-content col-xs-12 col-sm-8 col-md-9">
         <div class="row topic">
