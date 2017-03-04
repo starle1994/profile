@@ -35,27 +35,29 @@ class HomeController extends Controller
     public function index()
     {
 
-        $categories = Category::where('actived', 1)->orderBy('id','desc')->get();
+        $categories = Category::where('actived', 1)->get();
         $baners = Banners::all();
-        $company_images = CompanyImages::take(4)->orderBy('id','desc')->get();
+      
+   
+       for ($i=0; $i <= 9;  $i = $i +3) { 
+      
+           $company_images[$i] = CompanyImages::limit(3)->offset($i)->orderBy('id','desc')->get();
+           $blogs[$i] = Blogs::limit(3)->offset($i)->orderBy('id','desc')->get();
+           $projects[$i] = Projects::limit(3)->offset($i)->orderBy('id','desc')->with('images')->get();
+       }
 
         $video_types = VideoTypes::all();
         foreach ($video_types as $data) {
             $videos[$data->name] = Videos::orderBy('id','desc')->where('video_type', $data->id)->paginate(4);
         }
         $schedules = Schedule::orderBy('id', 'desc')->first();
-        $new_blog = Blogs::take(3)->orderBy('id','desc')->get();
-        $new_blog2 = [];
-        if ($new_blog->isEmpty() == false) {
-            $new_blog2 = Blogs::limit(2)->offset($new_blog[0]->id-5)->orderBy('id','desc')->get();
-        }
-        $business = Blogs::limit(4)->orderBy('id','desc')->where('cate_id',6)->get();
-        $food = Blogs::limit(3)->orderBy('id','desc')->where('cate_id',7)->get();
-        $fashion = Blogs::limit(3)->orderBy('id','desc')->where('cate_id',8)->get();
-        $apps = App::all();
-        $projects = Projects::limit(6)->orderBy('id','desc')->with('images')->get();
 
-        return view('welcome', compact('categories', 'baners', 'company_images', 'videos', 'schedules','new_blog','new_blog2','business','food', 'fashion','apps','projects'));
+        $catego= Category::where('actived', null)->get();
+
+        $apps = App::all();
+        
+
+        return view('welcome', compact('categories', 'baners', 'company_images', 'videos', 'schedules','blogs','apps','projects'));
     }
 
     public function showCompanyImage()

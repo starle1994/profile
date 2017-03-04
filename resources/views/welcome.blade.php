@@ -119,28 +119,61 @@
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-md-12 special-title">
             <div class="head-title">Blog</div>
           </div>
         </div>
-      <div class="row blog">
-        <div class="col-md-12">
-            <div class="bg-white col-xs-12 col-md-4">
-              <img width="100%" src="{{ url('images/img.png') }}"/>
-              <p>description description description description description </p>
-            </div>
-            <div class="bg-white col-xs-12 col-md-4">
-              <img width="100%" src="{{ url('images/img.png') }}"/>
-              <p>description description description description description </p>
-            </div>
-            <div class="bg-white col-xs-12 col-md-4">
-              <img width="100%" src="{{ url('images/img.png') }}"/>
-              <p>description description description description description </p>
-            </div>
+        <div class=" blog">
+          <div class="col-md-12  bg-white">
+             <div class="carousel slide media-carousel" id="media">
+                <div class="carousel-inner ">
+                    <?php $i = 0 ;foreach ($blogs as $key => $values): ?>
+                      <div class="item  {{ ($i == 0) ? 'active' : '' }}">
+                        <div class="row">
+                        <?php foreach ($values as  $value): ?>
+                          <div class="col-md-4">
+                            <a class="thumbnail" href="#"><img alt=""  src="{!! asset('uploads/'.$value->images) !!}"> <p>{{$value->name}}</p></a>
+                          </div> 
+                        <?php endforeach ?>
+                         </div>
+                      </div>
+                      <?php $i++ ?>
+                    <?php endforeach ?>
+              </div>
+              <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+              <a data-slide="next" href="#media" class="right carousel-control">›</a>
+            </div>                          
           </div>
-      </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 special-title">
+            <div class="head-title">Blog</div>
+          </div>
+        </div>
+        <div class=" blog">
+          <div class="col-md-12  bg-white">
+             <div class="carousel slide media-carousel" id="media">
+                <div class="carousel-inner ">
+                    <?php $i = 0 ;foreach ($company_images as $key => $values): ?>
+                      <div class="item  {{ ($i == 0) ? 'active' : '' }}">
+                        <div class="row">
+                        <?php foreach ($values as  $value): ?>
+                          <div class="col-md-4">
+                            <a class="thumbnail" href="#"><img alt=""  src="{!! asset('uploads/'.$value->images) !!}"> <p>{{$value->name}}</p></a>
+                          </div> 
+                        <?php endforeach ?>
+                         </div>
+                      </div>
+                      <?php $i++ ?>
+                    <?php endforeach ?>
+              </div>
+              <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+              <a data-slide="next" href="#media" class="right carousel-control">›</a>
+            </div>                          
+          </div>
+        </div>
+        
 
       <div class="row">
           <div class="col-md-12 special-title">
@@ -150,16 +183,28 @@
       <div class="row blog-content">
         <div class="col-xs-12">
           <div class="col-xs-12 col-sm-6 bg-white">
-            <img width="100%" src="{{ url('images/img.png') }}"/>
+            <img width="100%" src="{!! asset('css/img/content/video.png') !!}"/>
           </div>
           <div class="col-xs-12 col-sm-6 bg-white">
-            <img width="100%" src="{{ url('images/img.png') }}"/>
+           <img width="100%" src="{!! asset('css/img/content/blog.png') !!}"/>
+          </div>
+         <div class="col-xs-12 col-sm-6 bg-white">
+            <img width="100%" src="{!! asset('css/img/content/app.png') !!}"/>
           </div>
           <div class="col-xs-12 col-sm-6 bg-white">
-            <img width="100%" src="{{ url('images/img.png') }}"/>
+           <img width="100%" src="{!! asset('css/img/content/photolist.png') !!}"/>
           </div>
           <div class="col-xs-12 col-sm-6 bg-white">
-            <img width="100%" src="{{ url('images/img.png') }}"/>
+            <img width="100%" src="{!! asset('css/img/content/schedule.png') !!}"/>
+          </div>
+          <div class="col-xs-12 col-sm-6 bg-white">
+           <img width="100%" src="{!! asset('css/img/content/starry-project.png') !!}"/>
+          </div>
+          <div class="col-xs-12 col-sm-6 bg-white">
+            <img width="100%" src="{!! asset('css/img/content/dream.png') !!}"/>
+          </div>
+          <div class="col-xs-12 col-sm-6 bg-white">
+           <img width="100%" src="{!! asset('css/img/content/contact.png') !!}"/>
           </div>
         </div>
       </div>
