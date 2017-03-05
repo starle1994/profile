@@ -22,9 +22,7 @@
             <div class="single_page_content banner-app">
               <div class="row">
               @foreach($projects as $images)
-            
-            
-
+    
                   <div class="row lock">
                     <div class="col-md-3">
                       <div class="overview-panel">

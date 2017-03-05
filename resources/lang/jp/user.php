@@ -38,5 +38,5 @@ return [
     'about_me'   => 'About Me',
     'view_app'   => 'アプリケーション',
 'content'   =>'Content',
-'topic'   =>'Topice',
+'topice'   =>'Topice',
 ];

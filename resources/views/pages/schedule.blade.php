@@ -12,6 +12,7 @@
 <link href='{!! url('css/assets/css/slick.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/assets/css/theme.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/assets/css/style.css') !!}' rel='stylesheet' type='text/css' />
+<link href='{!! url('css/css/style.css') !!}' rel='stylesheet' type='text/css' />
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
@@ -60,7 +61,7 @@
             }
             
          ?>
-                 <span class="lang"><a href="/jp{{$name}}"><img class="<?php echo $jp ?>" src="{{ asset('css/img/ja.gif') }}" /> </a></span>   
+               <span class="lang"><a href="/jp{{$name}}"><img class="<?php echo $jp ?>" src="{{ asset('css/img/ja.gif') }}" /> </a></span>   
                 <span class="lang"><a href="/en{{$name}}"><img class="<?php echo $en ?>" src="{{ asset('css/img/en.gif') }}" /> </a></span>
                 
                   
@@ -96,6 +97,7 @@
   </div>
   <!--end: Container-->   
 </header>
+  <div style="clear: both;"></div>  
   <div class="body-content">
     <div class="container content" style="background-color: #fff;">
 
