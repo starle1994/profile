@@ -35,7 +35,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        $categories = Category::where('actived', 1)->get();
+        $categories = Category::where('actived', 1)->orderBy('id','desc')->get();
         $baners = Banners::all();
       
    
@@ -43,6 +43,9 @@ class HomeController extends Controller
       
            $company_images[$i] = CompanyImages::limit(3)->offset($i)->orderBy('id','desc')->get();
            $blogs[$i] = Blogs::limit(3)->offset($i)->orderBy('id','desc')->get();
+       }
+
+        for ($i=0; $i <= 8;  $i = $i +2) { 
            $projects[$i] = Projects::limit(3)->offset($i)->orderBy('id','desc')->with('images')->get();
        }
 
@@ -152,9 +155,10 @@ class HomeController extends Controller
      public function showProject()
      {
        $apps = App::all();
+        $schedules = Schedule::orderBy('id', 'desc')->first();
          $categories = Category::where('actived', 1)->orderBy('id','desc')->get();
         $projects = Projects::all();
-        return view('pages.project', compact('categories','projects','apps'));
+        return view('pages.project', compact('categories','projects','apps','schedules'));
      }
 
       public function showProjectDetail($alias)
@@ -198,8 +202,6 @@ class HomeController extends Controller
 
             ->setOptions([ //set fullcalendar options
                 'firstDay' => 1
-            ])->setCallbacks([ //set fullcalendar callback options (will not be JSON encoded)
-                'viewRender' => 'function() {alert("Callbacks!");}'
             ]); 
         $apps = App::all();
         $categories = Category::where('actived', 1)->orderBy('id','desc')->get();

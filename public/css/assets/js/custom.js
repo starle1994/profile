@@ -9,20 +9,20 @@ jQuery(document).ready(function() {
     $('.slick_slider').slick({
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 600,
         slidesToShow: 1,
         slide: 'div',
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 10000,
         cssEase: 'linear'
     });
     // slick slider2 call 
     $('.slick_slider2').slick({
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 600,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 10000,
         fade: true,
         slide: 'div',
         cssEase: 'linear'

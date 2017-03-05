@@ -32,8 +32,9 @@ body {
     font-size: small;
 
 }
-.body-content{
-	background-color: #f8f8f8;
+.content{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
 }
 .contact h1, h2, h3, h4, h5, h6 {
 	font-family: "Boogaloo" !important;
@@ -2363,11 +2364,6 @@ form#newsletter input[type=submit] {
 	border-bottom: 1px dotted #E93E33;
 }
 
-.content {
-	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-	background-color: #ffffff;
-	padding-bottom: 20px;
-}
 
 .marquee{
 	font-size: 20px;
@@ -2403,11 +2399,6 @@ form#newsletter input[type=submit] {
  	padding-bottom: 20px;
  }
 
-
-
-#topbar #navarea{
-	margin-top: -20px;
-}
 
 #topbar .container{
 	padding-right: 0px !important;

@@ -10,7 +10,7 @@
             </div>
           </div>
           <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body" id="mygrid-wrapper-div">
+            <div class="panel-body" id="mygrid-wrapper-div" data-spy="scroll" style=" height: 250px;">
               @if($schedules != null)
                 {!! $schedules->content !!}
               @endif

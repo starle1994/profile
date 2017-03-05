@@ -14,15 +14,15 @@
 <link href='{!! url('css/assets/css/style.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/css/style.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('dist/css/lightbox.min.css') !!}' rel='stylesheet' type='text/css' />
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
+
 <!--[if lt IE 9]>
 <script src="assets/js/html5shiv.min.js"></script>
 <script src="assets/js/respond.min.js"></script>
 <![endif]-->
 </head>
+<style type="text/css">
+  .content{background-color: #fff}
+</style>
 <body>
 <div id="preloader">
   <div id="status">&nbsp;</div>

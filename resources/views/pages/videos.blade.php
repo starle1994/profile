@@ -17,10 +17,10 @@
    
   
       @foreach($videos as $key => $video)
-           <div class="archive_style_1" style="margin-bottom: 20px;">
+           <div class="archive_style_1 col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 20px;">
          
-      <h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span> <span class="title_text">{{$key}}</span> </h2>
-    </div>
+            <h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span> <span class="title_text">{{$key}}</span> </h2>
+          </div>
           <?php foreach ($video as $video): ?>
                @if($video != null)
                 <?php 
@@ -42,11 +42,9 @@
                   <div class="col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 30px">
                     <div class="content_middle_leftbar">
                       <div class="single_category wow fadeInDown">
-                        
-          
                           <div class="item-video">
-                              
-                            <div class="catgimg_container" data-toggle="modal" data-target="#myModal">
+                               <?php $target = 'myModal-'.$video->id ; $target_1= '#'.$target ?>
+                            <div class="catgimg_container" data-toggle="modal" data-target="{{$target_1}}">
                               <img src="{!! $thumbURL !!}" class="img-responsive">
                             </div>
                             <div class="title-image">
@@ -59,7 +57,7 @@
                       </div>
                     </div>
                   </div>
-                  <div id="myModal" class="modal fade" >
+                  <div id="{{$target}}" class="modal fade" data-backdrop="static"  >
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -81,8 +79,8 @@
 
  <script>
 $('.close').click(function () {
-  $('#myModal').hide();
-  $('#myModal iframe').attr("src", jQuery("#myModal iframe").attr("src"));
+  $('.modal').hide();
+  $('.modal iframe').attr("src", jQuery(".modal iframe").attr("src"));
 });
 </script>
 @endsection
