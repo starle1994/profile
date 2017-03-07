@@ -174,7 +174,7 @@
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
                           <div class="col-md-4 col-sm-4 col-xs-4">
-                            <a class="thumbnail" href="#"><img alt=""  src="{!! asset('uploads/thumb/'.$value->image) !!}"></a>
+                            <a class="thumbnail" href="#"><img alt=""  src="{!! asset('uploads/'.$value->image) !!}"></a>
                           </div> 
                         <?php endforeach ?>
                          </div>
