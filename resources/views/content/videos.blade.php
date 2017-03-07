@@ -14,10 +14,9 @@
 
           // YouTube video ID
           $youtubeVideoId = $urlArr[$urlArrNum - 1];
-          $id = explode('?', $youtubeVideoId)[0];
 
           // Generate youtube thumbnail url
-          $thumbURL = 'http://img.youtube.com/vi/'.$id.'/0.jpg';
+          $thumbURL = 'http://img.youtube.com/vi/'.$youtubeVideoId.'/0.jpg';
        ?>
         <div class="col-lg-4 col-md-4 col-sm-4 list-video" id="body-left{{$i++}}">
           <div class="content_middle_leftbar">

@@ -30,6 +30,7 @@
       <div class="col-md-12">
         @foreach($values as $value)
             <?php 
+              if ($value->image == null) {
                 $embedCode = '<iframe src="'.$value->link.'" frameborder="0" allowfullscreen></iframe>';
                 preg_match('/src="([^"]+)"/', $embedCode, $match);
 
@@ -43,6 +44,10 @@
 
                 // Generate youtube thumbnail url
                 $thumbURL = 'http://img.youtube.com/vi/'.$youtubeVideoId.'/0.jpg';
+              }else{
+                $thumbURL = asset('uploads/'.$value->image);
+              }
+                
                 $target = 'myModal-'.$value->id ; 
                 $target_1= '#'.$target ;
              ?>

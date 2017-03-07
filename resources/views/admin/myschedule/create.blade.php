@@ -35,10 +35,10 @@
 {!! Form::open(array('route' => config('quickadmin.route').'.myschedule.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
 
 <div class="form-group">
-    {!! Form::label('name_event', 'name event', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('name_event', 'event', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('name_event', old('name_event'), array('class'=>'form-control')) !!}
-        
+      
+         {!! Form::textarea('name_event', old('name_event'), array('class'=>'form-control ')) !!}
     </div>
 </div><div class="form-group">
     {!! Form::label('start_time', 'start_time', array('class'=>'col-sm-2 control-label')) !!}
