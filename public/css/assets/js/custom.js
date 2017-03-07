@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
     $('.slick_slider').slick({
         dots: true,
         infinite: true,
-        speed: 400,
+        speed: 600,
         slidesToShow: 1,
         slide: 'div',
         autoplay: true,
@@ -20,7 +20,7 @@ jQuery(document).ready(function() {
     $('.slick_slider2').slick({
         dots: true,
         infinite: true,
-        speed: 400,
+        speed: 600,
         autoplay: true,
         autoplaySpeed: 10000,
         fade: true,
