@@ -39,13 +39,6 @@
         
     </div>
 </div>
-
-<div class="form-group">
-    <div class="col-sm-10 col-sm-offset-2">
-      {!! Form::submit( trans('quickadmin::templates.templates-view_create-create') , array('class' => 'btn btn-primary')) !!}
-    </div>
-</div>
-
 {!! Form::close() !!}
 <script type="text/javascript">
         Dropzone.options.imageUpload = {
