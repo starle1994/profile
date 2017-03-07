@@ -19,6 +19,11 @@
 <script src="assets/js/respond.min.js"></script>
 <![endif]-->
 </head>
+<style type="text/css">
+  .modal-open{
+   padding-right: 0px !important;
+}
+</style>
 <body>
 <div id="preloader">
   <div id="status">&nbsp;</div>

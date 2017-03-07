@@ -10,7 +10,7 @@ use App\Http\Requests\CreateCompanyImagesRequest;
 use App\Http\Requests\UpdateCompanyImagesRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Traits\FileUploadTrait;
-
+use Image;
 
 class CompanyImagesController extends Controller {
 
@@ -47,10 +47,26 @@ class CompanyImagesController extends Controller {
 	 */
 	public function store(CreateCompanyImagesRequest $request)
 	{
-	    $request = $this->saveFiles($request);
-		CompanyImages::create($request->all());
+		$image = $request->file('file');
+        $name  = $request->get('name');
+        $description = $request->get('description');
 
-		return redirect()->route(config('quickadmin.route').'.companyimages.index');
+        $input['imagename'] = time().'-'.$image->getClientOriginalName();
+        $destinationPath = public_path('uploads/thumb');
+        $img = Image::make($image->getRealPath());
+        $img->resize(400, 300, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($destinationPath.'/'.$input['imagename']);
+        $destinationPath = public_path('uploads');
+            $image->move($destinationPath, $input['imagename']);
+
+        CompanyImages::create(['image'=>$input['imagename'],
+                                'name'=>$name,
+                                'description' =>$description
+                            ]);
+		return response()->json(['success'=>$input['imagename']]);
+
+
 	}
 
 	/**

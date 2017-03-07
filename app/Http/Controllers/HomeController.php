@@ -17,6 +17,7 @@ use App\DreamImages;
 use App\PicturesProject;
 use Response;
 use App\VideoTypes;
+use App\MySchedule;
 
 
 class HomeController extends Controller
@@ -187,15 +188,19 @@ class HomeController extends Controller
      public function showDetaiCalander($value='')
      {
          $events = [];
-        $events[] = \Calendar::event(
-            "Valentine's Day", //event title
-            true, //full day event?
-            new \DateTime('2017-02-14'), //start time (you can also use Carbon instead of DateTime)
-            new \DateTime('2017-02-14'), //end time (you can also use Carbon instead of DateTime)
-            'stringEventId',
-            ['color'=> '#357ae8'] ,
-            ['imageurl'=>'http://localhost/profile/public/uploads/1487932237.jpg']//optionally, you can specify an event ID
-        );
+         $schedules = MySchedule::all();
+        foreach ($schedules as $schedule) {
+             $events[] = \Calendar::event(
+                $schedule->name, //event title
+                false, //full day event?
+                new \DateTime($schedule->start_time), //start time (you can also use Carbon instead of DateTime)
+                new \DateTime($schedule->end_time), //end time (you can also use Carbon instead of DateTime)
+                'stringEventId',
+                ['color'=> $schedule->color] ,
+                ['imageurl'=>'http://localhost/profile/public/uploads/1487932237.jpg']//optionally, you can specify an event ID
+            );
+        }
+       
 
 
         $calendar = \Calendar::addEvents($events) //add an array with addEvents

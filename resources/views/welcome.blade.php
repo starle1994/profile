@@ -39,7 +39,7 @@
                 $target_1= '#'.$target ;
              ?>
 
-        <div class="bg-white col-xs-12 col-sm-3" data-toggle="modal" data-target="{{$target_1}}">
+        <div class="bg-white col-xs-6 col-sm-3 col-md-3" data-toggle="modal" data-target="{{$target_1}}">
             <img src="{!! $thumbURL !!}" class="img-responsive">
             <span class="td-video-play-ico">
                <img width="40" class="td-retina" src="{!! asset('css/img/ico-video-large.png') !!}" alt="video">
@@ -80,7 +80,7 @@
                       $id_ban = 'app_baner'.$i;
                     }
                   ?>
-                  <li id="{{$id}}">
+                  <li class="col-xs-6 col-sm-12 col-md-12" id="{{$id}}">
                   <a data-toggle="modal" href="{{ ($app->banner == null) ? '' : '#shortModal'}}" >
                   <?php $link = 'uploads/'.$app->logo ?>
                   <img src="{{ asset('uploads') . '/'.  $app->logo }}" class="img-responsive"></a>
@@ -97,7 +97,7 @@
       </ul>
       <div class="main-content col-xs-12 col-sm-8 col-md-9">
         <div class="row topic">
-          <div class="col-xs-12 col-md-6">
+          <div class="col-xs-12 col-md-6 col-sm-6">
             <div class="head-title col-md-12"><a href="{{ route('schedule')}}">{{trans('user.schedule')}}</a></div>
             <div class="panel-body  bg-white" id="mygrid-wrapper-div" data-spy="scroll" style="  overflow: auto;
     height: 250px;">
@@ -149,8 +149,8 @@
                       <div class="item  {{ ($i == 0) ? 'active' : '' }}">
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
-                          <div class="col-md-4">
-                            <a class="thumbnail" href="#"><img style="" alt=""  src="{!! asset('uploads/'.$value->image) !!}"></a>
+                          <div class="col-md-4 col-sm-4">
+                            <a class="thumbnail" href="#"><img alt=""  src="{!! asset('uploads/thumb/'.$value->image) !!}"></a>
                           </div> 
                         <?php endforeach ?>
                          </div>

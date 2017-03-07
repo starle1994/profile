@@ -44,6 +44,9 @@ Route::get('get-banner',['as'=>'ajaxGetBanner','uses'=>'HomeController@getBanner
 
 Route::get('schedule',['as'=>'schedule','uses'=>'HomeController@showDetaiCalander']);
 
+Route::get('upload-images',['as'=>'get.upload.images','uses'=>'Admin\CompanyImagesController@showGetUpload']);
+
+
 Route::group([ 'middleware' => 'auth'], function () {
 	Route::get(config('quickadmin.homeRoute'), 'QuickadminController@index');
     Route::group([ 'middleware' => 'role'], function () {

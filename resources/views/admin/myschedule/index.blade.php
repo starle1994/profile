@@ -2,8 +2,9 @@
 
 @section('content')
 
-<p>{!! link_to_route(config('quickadmin.route').'.companyimages.create', trans('quickadmin::templates.templates-view_index-add_new') , null, array('class' => 'btn btn-success')) !!}</p>
-@if ($companyimages->count())
+<p>{!! link_to_route(config('quickadmin.route').'.myschedule.create', trans('quickadmin::templates.templates-view_index-add_new') , null, array('class' => 'btn btn-success')) !!}</p>
+
+@if ($myschedule->count())
     <div class="portlet box green">
         <div class="portlet-title">
             <div class="caption">{{ trans('quickadmin::templates.templates-view_index-list') }}</div>
@@ -15,27 +16,29 @@
                         <th>
                             {!! Form::checkbox('delete_all',1,false,['class' => 'mass']) !!}
                         </th>
-                        <th>name</th>
-<th>description</th>
-<th>image</th>
+                        <th>name event</th>
+<th>start_time</th>
+<th>end_time</th>
+<th>color</th>
 
                         <th>&nbsp;</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    @foreach ($companyimages as $row)
+                    @foreach ($myschedule as $row)
                         <tr>
                             <td>
                                 {!! Form::checkbox('del-'.$row->id,1,false,['class' => 'single','data-id'=> $row->id]) !!}
                             </td>
-                            <td>{{ $row->name }}</td>
-<td>{{ $row->description }}</td>
-<td>@if($row->image != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->image }}">@endif</td>
+                            <td>{{ $row->name_event }}</td>
+<td>{{ $row->start_time }}</td>
+<td>{{ $row->end_time }}</td>
+<td>{{ $row->color }}</td>
 
                             <td>
-                                {!! link_to_route(config('quickadmin.route').'.companyimages.edit', trans('quickadmin::templates.templates-view_index-edit'), array($row->id), array('class' => 'btn btn-xs btn-info')) !!}
-                                {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'onsubmit' => "return confirm('".trans("quickadmin::templates.templates-view_index-are_you_sure")."');",  'route' => array(config('quickadmin.route').'.companyimages.destroy', $row->id))) !!}
+                                {!! link_to_route(config('quickadmin.route').'.myschedule.edit', trans('quickadmin::templates.templates-view_index-edit'), array($row->id), array('class' => 'btn btn-xs btn-info')) !!}
+                                {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'onsubmit' => "return confirm('".trans("quickadmin::templates.templates-view_index-are_you_sure")."');",  'route' => array(config('quickadmin.route').'.myschedule.destroy', $row->id))) !!}
                                 {!! Form::submit(trans('quickadmin::templates.templates-view_index-delete'), array('class' => 'btn btn-xs btn-danger')) !!}
                                 {!! Form::close() !!}
                             </td>
@@ -50,7 +53,7 @@
                     </button>
                 </div>
             </div>
-            {!! Form::open(['route' => config('quickadmin.route').'.companyimages.massDelete', 'method' => 'post', 'id' => 'massDelete']) !!}
+            {!! Form::open(['route' => config('quickadmin.route').'.myschedule.massDelete', 'method' => 'post', 'id' => 'massDelete']) !!}
                 <input type="hidden" id="send" name="toDelete">
             {!! Form::close() !!}
         </div>

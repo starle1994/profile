@@ -15,9 +15,7 @@
         @endif
     </div>
 </div>
-
-{!! Form::open(array('files' => true, 'route' => config('quickadmin.route').'.companyimages.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
-
+  {!! Form::open([ 'route' => config('quickadmin.route').'.companyimages.store', 'files' => true, 'enctype' => 'multipart/form-data', 'class' => 'dropzone', 'id' => 'image-upload' ]) !!}
 <div class="form-group">
     {!! Form::label('name', 'name', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
@@ -35,9 +33,9 @@
 <div class="form-group">
     {!! Form::label('image', 'image', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::file('image') !!}
-        {!! Form::hidden('image_w', 4096) !!}
-        {!! Form::hidden('image_h', 4096) !!}
+       <div>
+                <h3>Upload Multiple Image By Click On Box</h3>
+            </div>
         
     </div>
 </div>
@@ -49,5 +47,10 @@
 </div>
 
 {!! Form::close() !!}
-
+<script type="text/javascript">
+        Dropzone.options.imageUpload = {
+            maxFilesize         :       1,
+            acceptedFiles: ".jpeg,.jpg,.png,.gif"
+        };
+</script>
 @endsection
