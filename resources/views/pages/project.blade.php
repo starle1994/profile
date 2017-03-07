@@ -20,7 +20,6 @@
     </div>
       <div class="col-lg-12 col-md-12">
             <div class="single_page_content banner-app">
-              <div class="row">
               @foreach($projects as $images)
     
                   <div class="row lock">
@@ -37,10 +36,7 @@
                       </div>
                     </div>
                   </div>
-                 
-                  @endforeach
-              </div>
-              
+            @endforeach
           </div>
       </div>
 </div>

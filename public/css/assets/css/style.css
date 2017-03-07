@@ -59,7 +59,7 @@ img{border:none}
 .navbar-default .navbar-nav > li > a{border-right:1px dotted #fff; color:#fff; display:block; font-family:"Oswald",sans-serif; font-size:15px; text-decoration:none; text-transform:uppercase; border-top:2px solid transparent; border-bottom:2px solid transparent; margin-top:-2px; margin-bottom:-2px; padding-bottom:17px; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .dropdown-menu > li > a{color:#fff; font-family:"Oswald",sans-serif; padding:5px 15px; border-top:1px solid transparent; border-bottom:1px solid transparent; -webkit-transition:all 0.5s; -moz-transition:all 0.5s; -ms-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .navbar-default .navbar-toggle .icon-bar{background-color:#fff}
-#mainContent{ display:inline; float:left; width:100%; margin-top: 15px;}
+#mainContent{ display:inline; float:left; width:100%; margin-top: 15px;margin-bottom: 15px}
 .content_top{float:left; display:inline; width:100%}
 .latest_slider{float:left; display:inline; width:100%;}
 .single_iteam{position:relative}
@@ -430,7 +430,8 @@ span.meta_more:before{content:" "; font-family:FontAwesome; font-style:normal
     padding-bottom: 0;
       padding-top: 20px;
       border-top: 1px dashed #ff0000;
-      border-radius: 8px 
+       border-bottom-left-radius:8px;
+        border-bottom-right-radius:8px;
   }
   .blog-content .bg-white {
       border-top: none;

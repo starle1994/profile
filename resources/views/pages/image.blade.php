@@ -62,9 +62,14 @@
               </a>
           </div>
             @endforeach
-
+            <div style="clear: both;"></div>
+            <div class="pagination_area text-center">
+          <nav>
+          @include('content.pagination', ['paginator' => $company_images])
+          </nav>
         </div>
-        
+        </div>
+         
     </div>
 </div>
 

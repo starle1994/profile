@@ -55,16 +55,13 @@
           <img src="{!! asset('css/img/category/6-small-447.png') !!}" class="img-cate">
           <div class="tooltip right" role="tooltip"> 
             <div class="tooltip-arrow"></div> 
-              <div class="tooltip-inner">{{$derams->name}}</div> 
+              <div class="tooltip-inner">{{$dreams->name}}</div> 
           </div>
         </a>
       </div>
     </div>
       <div class="company_image">
-    <div class="archive_style_1" style="margin-bottom: 20px;">
-             
-      <h2> <span class="bold_line"><span></span></span> <span class="solid_line"></span> <span class="title_text">Images Collection</span> </h2>
-    </div>
+  
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
              @foreach($dreams_image as $image)

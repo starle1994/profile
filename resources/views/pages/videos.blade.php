@@ -1,19 +1,18 @@
 @extends('layouts.master-2')
 
 @section('content')
-<div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="bs-example bs-example-tooltip cate" data-example-id="static-tooltips">
-              <a href="{{ route('categories.1') }}">
-                <img src="{!! asset('css/img/category/cate2.png') !!}" class="img-cate">
-                <div class="tooltip right" role="tooltip"> 
-                  <div class="tooltip-arrow"></div> 
-                    <div class="tooltip-inner">{{trans('user.category2')}}</div> 
-                </div>
-              </a>
-             
-            </div>
+      <div class="bs-example bs-example-tooltip cate" data-example-id="static-tooltips">
+        <a href="{{ route('categories.1') }}">
+          <img src="{!! asset('css/img/category/cate2.png') !!}" class="img-cate">
+          <div class="tooltip right" role="tooltip"> 
+            <div class="tooltip-arrow"></div> 
+              <div class="tooltip-inner">{{trans('user.category2')}}</div> 
           </div>
+        </a>
+       
+      </div>
+    </div>
    
   
       @foreach($videos as $key => $video)
@@ -67,6 +66,9 @@
                         <div class="embed-responsive embed-responsive-16by9" class="modal-body" >
                           <iframe  src="{{$video->link}}" frameborder="0" allowfullscreen></iframe>
                         </div>
+                        <div class="modal-footer text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
                       </div>
                     </div>
                   </div>
@@ -75,8 +77,6 @@
        
       @endforeach
    
-</div>
-
  <script>
 $('.close').click(function () {
   $('.modal').hide();

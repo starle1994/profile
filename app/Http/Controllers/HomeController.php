@@ -54,7 +54,7 @@ class HomeController extends Controller
         foreach ($video_types as $data) {
             $videos[$data->name] = Videos::orderBy('id','desc')->where('video_type', $data->id)->paginate(4);
         }
-        $schedules = Schedule::orderBy('id', 'desc')->first();
+        $schedules = Schedule::orderBy('id', 'desc')->get();
 
         $catego= Category::where('actived', null)->get();
 
@@ -67,7 +67,7 @@ class HomeController extends Controller
     public function showCompanyImage()
     {
         $categories = Category::where('actived', 1)->orderBy('id','desc')->get();
-        $company_images = CompanyImages::orderBy('id','desc')->get();
+        $company_images = CompanyImages::orderBy('id','desc')->paginate(20);
          $apps = App::all();
         return view('pages.image', compact('categories', 'baners','apps', 'company_images'));
     }
@@ -190,11 +190,22 @@ class HomeController extends Controller
          $events = [];
          $schedules = MySchedule::all();
         foreach ($schedules as $schedule) {
+             if ($schedule->end_time == NULL) {
+                    $all_day = true;
+                    $start_time = new \DateTime($schedule->start_time);
+                    $end_time = new \DateTime($schedule->start_time);
+                }else{
+                    $all_day = false;
+                    $start_time = new \DateTime($schedule->start_time);
+                    $end_time = new \DateTime($schedule->end_time);
+                }
+
              $events[] = \Calendar::event(
-                $schedule->name, //event title
-                false, //full day event?
-                new \DateTime($schedule->start_time), //start time (you can also use Carbon instead of DateTime)
-                new \DateTime($schedule->end_time), //end time (you can also use Carbon instead of DateTime)
+               
+                $schedule->name_event, //event title
+                $all_day, //full day event?
+                $start_time, //start time (you can also use Carbon instead of DateTime)
+                $end_time, //end time (you can also use Carbon instead of DateTime
                 'stringEventId',
                 ['color'=> $schedule->color] ,
                 ['imageurl'=>'http://localhost/profile/public/uploads/1487932237.jpg']//optionally, you can specify an event ID

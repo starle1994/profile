@@ -1,6 +1,6 @@
 
 
-  <div class="content_bottom_right">
+  <div class="content_bottom_right shadow">
     <div class="single_bottom_rightbar">
       <div class="fb-page" data-href="https://www.facebook.com/dotrsg/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/dotrsg/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/dotrsg/">Rs group</a></blockquote></div>
     </div>

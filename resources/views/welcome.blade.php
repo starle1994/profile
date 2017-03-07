@@ -11,6 +11,14 @@
     left: 0;
     z-index: 1;
 }
+.shadow{
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+.banner{
+  padding-right: 0px;
+  padding-left: 0px;
+}
 </style>
   @foreach($videos as $key => $values)
     <div class="row">
@@ -80,7 +88,7 @@
                       $id_ban = 'app_baner'.$i;
                     }
                   ?>
-                  <li class="col-xs-6 col-sm-12 col-md-12" id="{{$id}}">
+                  <li class="col-xs-6 col-sm-12 col-md-12 banner" id="{{$id}}">
                   <a data-toggle="modal" href="{{ ($app->banner == null) ? '' : '#shortModal'}}" >
                   <?php $link = 'uploads/'.$app->logo ?>
                   <img src="{{ asset('uploads') . '/'.  $app->logo }}" class="img-responsive"></a>
@@ -97,38 +105,49 @@
       </ul>
       <div class="main-content col-xs-12 col-sm-8 col-md-9">
         <div class="row topic">
-          <div class="col-xs-12 col-md-6 col-sm-6">
+          <div class="col-xs-12 col-md-6 col-sm-6 ">
             <div class="head-title col-md-12"><a href="{{ route('schedule')}}">{{trans('user.schedule')}}</a></div>
-            <div class="panel-body  bg-white" id="mygrid-wrapper-div" data-spy="scroll" style="  overflow: auto;
-    height: 250px;">
+            <div class="panel-body shadow" id="mygrid-wrapper-div" data-spy="scroll" style="  overflow: auto;
+    height: 250px;background-color: #fff">
               <div class="col-md-12">
                 @if($schedules != null)
-                {!! $schedules->content !!}
+                
+                <?php foreach ($schedules as  $value): ?>
+                                    <div class="col-md-12 bg-white">
+                        <ul class="block">
+                          <strong>{{$value->start_time}}</strong>
+                          <li class="description">
+                           
+                           {{$value->name_event}}
+                          
+                          </li>
+                        </ul>
+                      </div>
+                <?php endforeach ?>
               @endif
               </div>
               
           </div>
         </div>
             
-          <div class="col-xs-12 col-md-6">
+          <div class="col-xs-12 col-md-6 col-sm-6">
             <div class="head-title col-md-12">{{trans('user.topice')}}</div>
-            <div class="panel-body  bg-white" id="mygrid-wrapper-div" data-spy="scroll" style="  overflow: auto;
-    height: 250px;">
-         <?php $i = 0 ;foreach ($blogs as $key => $values): ?>
-                        <?php foreach ($values as  $value): ?>
-                          <div class="col-md-12 bg-white">
-              <ul class="block">
-                <li class="img">
-                            <a  href="{{ route('show.blog.detail',$value->alias) }}"><img width="100%" alt=""  src="{!! asset('uploads/'.$value->images) !!}"> </a>
+            <div class="panel-body shadow " id="mygrid-wrapper-div" data-spy="scroll" style="  overflow: auto; height: 250px;background-color: #fff">
+                   <?php $i = 0 ;foreach ($blogs as $key => $values): ?>
+                                  <?php foreach ($values as  $value): ?>
+                                    <div class="col-md-12 bg-white">
+                        <ul class="block">
+                          <li class="img">
+                                      <a  href="{{ route('show.blog.detail',$value->alias) }}"><img width="100%" alt=""  src="{!! asset('uploads/'.$value->images) !!}"> </a>
+                                    </li>
+                          <li class="description">
+                           <a  href="{{ route('show.blog.detail',$value->alias) }}">
+                           {{$value->name}}
+                           </a>
                           </li>
-                <li class="description">
-                 <a  href="{{ route('show.blog.detail',$value->alias) }}">
-                 {{$value->name}}
-                 </a>
-                </li>
-              </ul>
-            </div>
-                        <?php endforeach ?>
+                        </ul>
+                      </div>
+                <?php endforeach ?>
                         
           
                     <?php endforeach ?>
@@ -143,13 +162,13 @@
           </div>
        
           <div class="col-md-12  ">
-             <div class="carousel slide media-carousel bg-white" id="media">
+             <div class="carousel slide media-carousel bg-white shadow" id="media">
                 <div class="carousel-inner ">
                     <?php $i = 0 ;foreach ($company_images as $key => $values): ?>
                       <div class="item  {{ ($i == 0) ? 'active' : '' }}">
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
-                          <div class="col-md-4 col-sm-4">
+                          <div class="col-md-4 col-sm-4 col-xs-4">
                             <a class="thumbnail" href="#"><img alt=""  src="{!! asset('uploads/thumb/'.$value->image) !!}"></a>
                           </div> 
                         <?php endforeach ?>
@@ -169,13 +188,13 @@
             <div class="head-title"><a href="{{ route('categories.3')}}">{{trans('user.category3')}}</a></div>
           </div>
           <div class="col-md-12  ">
-             <div class="carousel bg-white slide media-carousel" id="media1">
+             <div class="carousel bg-white slide media-carousel shadow" id="media1">
                 <div class="carousel-inner ">
                     <?php $i = 0 ;foreach ($blogs as $key => $values): ?>
                       <div class="item  {{ ($i == 0) ? 'active' : '' }}">
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
-                          <div class="col-md-4">
+                          <div class="col-md-4 col-sm-4 col-xs-4">
                             <a class="thumbnail" href="{{ route('show.blog.detail',$value->alias) }}"><img alt=""  src="{!! asset('uploads/'.$value->images) !!}"> <p>{{$value->name}}</p></a>
                           </div> 
                         <?php endforeach ?>
@@ -193,13 +212,13 @@
             <div class="head-title"><a href="{{ route('categories.4')}}">{{trans('user.category4')}}</a></div>
           </div>
           <div class="col-md-12  ">
-             <div class="carousel bg-white slide media-carousel" id="media2">
+             <div class="carousel bg-white slide media-carousel shadow" id="media2">
                 <div class="carousel-inner ">
                     <?php $i = 0 ;foreach ($projects as $key => $values): ?>
                       <div class="item  {{ ($i == 0) ? 'active' : '' }}">
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
-                          <div class="col-md-6">
+                          <div class="col-md-6 col-sm-6 col-xs-6">
                             <a class="thumbnail" href="#"><img alt=""  src="{!! asset('uploads/'.$value->image) !!}"></a>
                           </div> 
                         <?php endforeach ?>
@@ -221,44 +240,44 @@
             <div class="head-title">{{trans('user.content')}}</div>
           </div>
         </div>
-      <div class="row blog-content">
-        <div class="col-xs-12">
-          <div class="col-xs-12 col-sm-6 bg-white">
+      <div class="row blog-content ">
+        <div class="col-xs-12 ">
+          <div class="col-xs-6 col-sm-6 bg-white shadow ">
           <a href="{{ route('categories.2')}}">
             <img width="100%" src="{!! asset('css/img/content/video.png') !!}"/>
           </a>
           </div>
-          <div class="col-xs-12 col-sm-6 bg-white">
+          <div class="col-xs-6 col-sm-6 bg-white shadow ">
           <a href="{{ route('categories.3')}}">
            <img width="100%" src="{!! asset('css/img/content/blog.png') !!}"/>
            </a>
           </div>
-         <div class="col-xs-12 col-sm-6 bg-white">
+         <div class="col-xs-6 col-sm-6 bg-white shadow">
          <a href="{{ route('categories.9')}}">
             <img width="100%" src="{!! asset('css/img/content/app.png') !!}"/>
           </a>
           </div>
-          <div class="col-xs-12 col-sm-6 bg-white">
+          <div class="col-xs-6 col-sm-6 bg-white shadow">
           <a href="{{ route('categories.1')}}">
            <img width="100%" src="{!! asset('css/img/content/photolist.png') !!}"/>
            </a>
           </div>
-          <div class="col-xs-12 col-sm-6 bg-white">
+          <div class="col-xs-6 col-sm-6 bg-white shadow">
           <a href="{{ route('schedule')}}">
             <img width="100%" src="{!! asset('css/img/content/schedule.png') !!}"/>
             </a>
           </div>
-          <div class="col-xs-12 col-sm-6 bg-white">
+          <div class="col-xs-6 col-sm-6 bg-white shadow">
           <a href="{{ route('categories.5')}}">
            <img width="100%" src="{!! asset('css/img/content/starry-project.png') !!}"/>
            </a>
           </div>
-          <div class="col-xs-12 col-sm-6 bg-white" style=" border-bottom-left-radius:8px;">
+          <div class="col-xs-6 col-sm-6 bg-white shadow" style=" border-bottom-left-radius:8px;">
           <a href="{{ route('categories.4')}}">
             <img width="100%" src="{!! asset('css/img/content/dream.png') !!}"/>
             </a>
           </div>
-          <div class="col-xs-12 col-sm-6 bg-white" style=" border-bottom-right-radius:8px;">
+          <div class="col-xs-6 col-sm-6 bg-white shadow" style=" border-bottom-right-radius:8px;">
           <a href="{{ route('categories.10')}}">
            <img width="100%" src="{!! asset('css/img/content/contact.png') !!}"/>
            </a>

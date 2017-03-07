@@ -22,6 +22,9 @@
 </head>
 <style type="text/css">
   .content{background-color: #fff}
+  .modal-open{
+   padding-right: 0px !important;
+}
 </style>
 <body>
 <div id="preloader">

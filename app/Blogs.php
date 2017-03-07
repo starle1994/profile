@@ -26,7 +26,8 @@ class Blogs extends Model {
           'text',
           'description',
           'images',
-          'cate_id'
+          'cate_id',
+          'alias'
     ];
     
 

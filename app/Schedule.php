@@ -19,7 +19,7 @@ class Schedule extends Model {
     */
     protected $dates = ['deleted_at'];
 
-    protected $table    = 'schedule';
+    protected $table    = 'myschedule';
     
     protected $fillable = ['content'];
     

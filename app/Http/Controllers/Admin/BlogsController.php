@@ -47,8 +47,18 @@ class BlogsController extends Controller {
 	 */
 	public function store(CreateBlogsRequest $request)
 	{
+		$blogs = Blogs::orderBy('id','desc')->first();
 	    $request = $this->saveFiles($request);
-		Blogs::create($request->all());
+	    $input = $request->all();
+	    if ($blogs == null) {
+	    	$number = 1;
+	    }else{
+	    	$number = $blogs->id+1;
+	    }
+	    
+	    $input['alias'] = 'list-'.$number;
+	
+		Blogs::create($input);
 
 		return redirect()->route(config('quickadmin.route').'.blogs.index');
 	}

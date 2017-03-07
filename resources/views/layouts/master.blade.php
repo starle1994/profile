@@ -42,17 +42,13 @@
 <footer id="footer">
   @include('layouts.footer')
 </footer>
-    <script src='{!! url('css/assets/js/jquery.min.js') !!}' type='text/javascript'></script>
+     <script src='{!! url('css/assets/js/jquery.min.js') !!}' type='text/javascript'></script>
     <script src='{!! url('css/assets/js/bootstrap.min.js') !!}' type='text/javascript'></script>
     <script src='{!! url('css/assets/js/wow.min.js') !!}' type='text/javascript'></script>
     <script src='{!! url('css/assets/js/slick.min.js') !!}' type='text/javascript'></script>
     <script src='{!! url('css/assets/js/custom.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('js/flexslider.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('js/carousel.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('js/jquery.cslider.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('js/slider.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('js/custom.js') !!}' type='text/javascript'></script>
-
+  
+    <script src='{!! url('dist/js/lightbox-plus-jquery.min.js') !!}'></script>
 
  
 <script src='http://kenwheeler.github.io/slick/slick/slick.js'></script>

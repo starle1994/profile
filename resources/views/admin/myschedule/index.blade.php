@@ -33,7 +33,7 @@
                             </td>
                             <td>{{ $row->name_event }}</td>
 <td>{{ $row->start_time }}</td>
-<td>{{ $row->end_time }}</td>
+<td>{{ ($row->end_time == null) ?'': $row->end_time }}</td>
 <td>{{ $row->color }}</td>
 
                             <td>
