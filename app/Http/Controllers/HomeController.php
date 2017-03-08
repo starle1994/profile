@@ -90,7 +90,12 @@ class HomeController extends Controller
         if ($get_blog != null) {
             $cate = Category::where('id',$get_blog->cate_id)->first();
         }
-        $recent_post = Blogs::orderBy('id','desc')->where('cate_id',$cate->id)->take(10)->get();
+        if ($cate != null) {
+             $recent_post = Blogs::orderBy('id','desc')->where('cate_id',$cate->id)->take(10)->get();
+        }else{
+            $recent_post = Blogs::orderBy('id','desc')->take(10)->get();
+        }
+       
 
         return view('pages.blog_detail', compact('categories','get_blog', 'cate', 'recent_post','apps'));
     }

@@ -27,6 +27,7 @@ class Banners extends Model {
           'image',
           'text',
           'alias',
+          'app_id'
     ];
     
 
@@ -37,7 +38,11 @@ class Banners extends Model {
         Banners::observe(new UserActionsObserver);
     }
     
-    
+    public function applications()
+    {
+        return $this->hasOne('App\App', 'id', 'app_id');
+    }
+
     
     
 }
