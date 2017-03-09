@@ -174,7 +174,7 @@
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
                           <div class="col-md-4 col-sm-4 col-xs-4">
-                            <img alt=""  src="{!! asset('uploads/'.$value->image) !!}">
+                            <div class="thumb-smaller" style="background-image:url({!! asset('uploads/'.$value->image) !!});"></div>
                           </div> 
                         <?php endforeach ?>
                          </div>
@@ -223,9 +223,9 @@
                       <div class="item  {{ ($i == 0) ? 'active' : '' }}">
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
-                          <div class="col-md-6 col-sm-6 col-xs-6">
-                            <img alt=""  src="{!! asset('uploads/'.$value->image) !!}">
-                          </div> 
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="thumb-smaller" style="background-image:url({!! asset('uploads/'.$value->image) !!});"></div>
+                          </div>
                         <?php endforeach ?>
                          </div>
                       </div>
