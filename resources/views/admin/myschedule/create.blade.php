@@ -43,13 +43,13 @@
 </div><div class="form-group">
     {!! Form::label('start_time', 'start_time', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('start_time', old('start_time'), array('class'=>'form-control datetimepicker')) !!}
+        {!! Form::text('start_time', old('start_time'), array('class'=>'form-control datepicker')) !!}
         
     </div>
 </div><div class="form-group">
     {!! Form::label('end_time', 'end_time', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('end_time', old('end_time'), array('class'=>'form-control datetimepicker')) !!}
+        {!! Form::text('end_time', old('end_time'), array('class'=>'form-control datepicker')) !!}
         
     </div>
 </div><div class="form-group">

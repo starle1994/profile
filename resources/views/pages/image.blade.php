@@ -55,7 +55,7 @@
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
              @foreach($company_images as $image)
-           <div class="col-md-3 col-sm-12 col-xs-12 tilt">
+           <div class="col-md-3 col-sm-3 col-xs-6 tilt">
               <a class="example-image-link" href="{!! asset('uploads/'.$image->image) !!}" data-lightbox="example-set" data-title="{{$image->description}}">
                   
                   <div class="thumb img-responsive example-image" style="background-image:url({!! asset('uploads/'.$image->image) !!});"></div>
