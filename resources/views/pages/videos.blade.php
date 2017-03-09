@@ -23,6 +23,7 @@
           <?php foreach ($video as $video): ?>
                @if($video != null)
                 <?php 
+                  if ($video->image == null) {
                     $embedCode = '<iframe src="'.$video->link.'" frameborder="0" allowfullscreen></iframe>';
                     preg_match('/src="([^"]+)"/', $embedCode, $match);
 
@@ -36,6 +37,12 @@
 
                     // Generate youtube thumbnail url
                     $thumbURL = 'http://img.youtube.com/vi/'.$youtubeVideoId.'/0.jpg';
+                  }else{
+                    $thumbURL = asset('uploads/'.$video->image);
+                  }
+                    
+                    $target = 'myModal-'.$video->id ; 
+                    $target_1= '#'.$target ;
                  ?>
                
                   <div class="col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 30px">

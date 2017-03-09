@@ -224,7 +224,8 @@
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
                           <div class="col-md-4 col-sm-4 col-xs-4">
-                            <div class="thumb-smaller" style="background-image:url({!! asset('uploads/'.$value->image) !!});"></div>
+                          <a href="{{ route('dream.detail',$value->alias) }}">
+                            <div class="thumb-smaller" style="background-image:url({!! asset('uploads/'.$value->image) !!});"></div></a>
                           </div>
                         <?php endforeach ?>
                          </div>

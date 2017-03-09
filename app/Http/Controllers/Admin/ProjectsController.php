@@ -47,8 +47,18 @@ class ProjectsController extends Controller {
 	 */
 	public function store(CreateProjectsRequest $request)
 	{
+		$project = Projects::orderBy('id','desc')->first();
 	    $request = $this->saveFiles($request);
-		Projects::create($request->all());
+		$input = $request->all();
+		if ($project == null) {
+	    	$number = 1;
+	    }else{
+	    	$number = $project->id+1;
+	    }
+
+	    $input['alias'] = 'list-'.$number;
+	    
+		Projects::create($input);
 
 		return redirect()->route(config('quickadmin.route').'.projects.index');
 	}
