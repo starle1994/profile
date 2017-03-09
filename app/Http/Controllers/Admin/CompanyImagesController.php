@@ -47,11 +47,20 @@ class CompanyImagesController extends Controller {
 	 */
 	public function store(CreateCompanyImagesRequest $request)
 	{
+		$length =3;
 		$image = $request->file('file');
         $name  = $request->get('name');
         $description = $request->get('description');
+        $chars = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
+	    $chars_length = (strlen($chars) - 1);
+	    $string = $chars{rand(0, $chars_length)};
 
-        $input['imagename'] = time().'-'.$image->getClientOriginalName();
+	    for ($i = 1; $i < $length; $i = strlen($string))
+	    {
+	        $r = $chars{rand(0, $chars_length)};
+	        if ($r != $string{$i - 1}) $string .=  $r;
+	    }
+        $input['imagename'] = time().'-'.$string.'.'.$image->getClientOriginalExtension();
         $destinationPath = public_path('uploads/thumb');
         $img = Image::make($image->getRealPath());
         $img->resize(400, 300, function ($constraint) {
