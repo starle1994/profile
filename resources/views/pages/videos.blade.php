@@ -1,6 +1,17 @@
 @extends('layouts.master-2')
 
 @section('content')
+<style type="text/css">
+ .catgimg_container .td-video-play-ico > img {
+    position: absolute;
+    margin: auto;
+    top: -100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+</style>
     <div class="col-lg-12 col-md-12 col-sm-12">
       <div class="bs-example bs-example-tooltip cate" data-example-id="static-tooltips">
         <a href="{{ route('categories.1') }}">
@@ -45,7 +56,7 @@
                     $target_1= '#'.$target ;
                  ?>
                
-                  <div class="col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 30px">
+                  <div class="col-lg-3 col-md-3 col-sm-3  col-xs-6" style="margin-bottom: 30px">
                     <div class="content_middle_leftbar">
                       <div class="single_category wow fadeInDown">
                           <div class="item-video">
