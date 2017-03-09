@@ -33,73 +33,64 @@
 </div>
 
 {!! Form::open(array('route' => config('quickadmin.route').'.myschedule.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
-@for ($i =1 ; $i<=6; $i++)
-  <div class="col-sm-6">
-      
-  <div class="form-group">
-      {!! Form::label('name_event', 'event', array('class'=>'col-sm-2 control-label')) !!}
-      <div class="col-sm-10">
-        
-           {!! Form::textarea('name_event', old('name_event'), array('class'=>'form-control ')) !!}
-      </div>
-  </div><div class="form-group">
-      {!! Form::label('start_time', 'start_time', array('class'=>'col-sm-2 control-label')) !!}
-      <div class="col-sm-10">
-          {!! Form::text('start_time', old('start_time'), array('class'=>'form-control datepicker')) !!}
-          
-      </div>
-  </div><div class="form-group">
-      {!! Form::label('end_time', 'end_time', array('class'=>'col-sm-2 control-label')) !!}
-      <div class="col-sm-10">
-          {!! Form::text('end_time', old('end_time'), array('class'=>'form-control datepicker')) !!}
-          
-      </div>
-  </div><div class="form-group">
-      {!! Form::label('color', 'color', array('class'=>'col-sm-2 control-label')) !!}
-      <div class="col-sm-10">
-      <?php $color = 'color'.$i ?>
-          {!! Form::text('color', old('color'), array('class'=>'form-control','id'=>$color)) !!}
-          
-      </div>
-  </div>
-  
+
 <div class="form-group">
-   
-    <div class="col-sm-12">
+    {!! Form::label('name_event', 'event', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+      
+         {!! Form::textarea('name_event', old('name_event'), array('class'=>'form-control ')) !!}
+    </div>
+</div><div class="form-group">
+    {!! Form::label('start_time', 'start_time', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('start_time', old('start_time'), array('class'=>'form-control datetimepicker')) !!}
+        
+    </div>
+</div><div class="form-group">
+    {!! Form::label('end_time', 'end_time', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('end_time', old('end_time'), array('class'=>'form-control datetimepicker')) !!}
+        
+    </div>
+</div><div class="form-group">
+    {!! Form::label('color', 'color', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('color', old('color'), array('class'=>'form-control','id'=>'color')) !!}
+        
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
         <div class="box box-solid">
             <div class="box-body">
               <div class="btn-group" style="width: 100%; margin-bottom: 10px;">
                 <!--<button type="button" id="color-chooser-btn" class="btn btn-info btn-block dropdown-toggle" data-toggle="dropdown">Color <span class="caret"></span></button>-->
                 <ul class="fc-color-picker" id="color-chooser">
-                     <li  id="color0{{$i}}">
+                     <li  id="color0">
                         <input type="hidden" value="#00c0ef" id="aqua">
                         <a class="text-aqua" >
-                            <i class="fa fa-square" style="font-size: 20px"></i>
+                            <i class="fa fa-square" style="font-size: 30px"></i>
                         </a>
                     </li>
-                  <li id="color1{{$i}}"><input type="hidden" value="#0073b7" id="blue"><a class="text-blue" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
-                  <li id="color2{{$i}}"><input type="hidden" value="#3c8dbc" id="light_blue"><a class="text-light-blue" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
-                  <li id="color3{{$i}}"><input type="hidden" value="#39cccc" id="teal"><a class="text-teal" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
-                  <li id="color4{{$i}}"><input type="hidden" value="#f39c12" id="yellow"><a class="text-yellow" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
-                  <li id="color5{{$i}}"><input type="hidden" value="#ff851b" id="orange"><a class="text-orange" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
-                  <li id="color6{{$i}}"><input type="hidden" value="#00a65a" id="green"><a class="text-green" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
-                  <li id="color7{{$i}}"><input type="hidden" value="#01ff70" id="lime"><a class="text-lime" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
-                  <li id="color8{{$i}}"><input type="hidden" value="#dd4b39" id="red"><a class="text-red" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
-                  <li id="color9{{$i}}"><input type="hidden" value="#605ca8" id="purple"><a class="text-purple" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
-                  <li id="color10{{$i}}"><input type="hidden" value="#f012be" id="fuchsia"><a class="text-fuchsia" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
-                  <li id="color11{{$i}}"><input type="hidden" value="#777" id="muted"><a class="text-muted" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
-                  <li id="color12{{$i}}"><input type="hidden" value="#001f3f" id="navy"><a class="text-navy" ><i class="fa fa-square"  style="font-size: 20px"></i></a></li>
+                  <li id="color1"><input type="hidden" value="#0073b7" id="blue"><a class="text-blue" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
+                  <li id="color2"><input type="hidden" value="#3c8dbc" id="light_blue"><a class="text-light-blue" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
+                  <li id="color3"><input type="hidden" value="#39cccc" id="teal"><a class="text-teal" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
+                  <li id="color4"><input type="hidden" value="#f39c12" id="yellow"><a class="text-yellow" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
+                  <li id="color5"><input type="hidden" value="#ff851b" id="orange"><a class="text-orange" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
+                  <li id="color6"><input type="hidden" value="#00a65a" id="green"><a class="text-green" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
+                  <li id="color7"><input type="hidden" value="#01ff70" id="lime"><a class="text-lime" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
+                  <li id="color8"><input type="hidden" value="#dd4b39" id="red"><a class="text-red" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
+                  <li id="color9"><input type="hidden" value="#605ca8" id="purple"><a class="text-purple" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
+                  <li id="color10"><input type="hidden" value="#f012be" id="fuchsia"><a class="text-fuchsia" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
+                  <li id="color11"><input type="hidden" value="#777" id="muted"><a class="text-muted" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
+                  <li id="color12"><input type="hidden" value="#001f3f" id="navy"><a class="text-navy" ><i class="fa fa-square"  style="font-size: 30px"></i></a></li>
                 </ul>
               </div>
             </div>
           </div>
     </div>    
 </div>
-  <p>-------------------------------------------------------------------------------------------------</p>
-</div>
-@endfor
-
-
 
 <div class="form-group">
     <div class="col-sm-10 col-sm-offset-2">
@@ -110,63 +101,60 @@
 {!! Form::close() !!}
 <script>
     $(document).ready(function() {
-      for (var i = 1; i <=6; i++) {
-        var a ='#color0'.i;
-        $(a).on('click', function(e){
+        $('#color0').on('click', function(e){
           var color = $('#aqua').val();
-          console.log('hhhh');
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          $('#color').empty();
+          $('#color').val(color);
         }); 
-        $('#color1'.i).on('click', function(e){
+        $('#color1').on('click', function(e){
           var color = $('#blue').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          $('#color').empty();
+          $('#color').val(color);
         }); 
-        $('#color2'.i).on('click', function(e){
+        $('#color2').on('click', function(e){
           var color = $('#light_blue').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          $('#color').empty();
+          $('#color').val(color);
         });
-        $('#color3'.i).on('click', function(e){
+        $('#color3').on('click', function(e){
           var color = $('#teal').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          $('#color').empty();
+          $('#color').val(color);
         });
-        $('#color4'.i).on('click', function(e){
+        $('#color4').on('click', function(e){
           var color = $('#yellow').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          $('#color').empty();
+          $('#color').val(color);
         });      
-        $('#color5'.i).on('click', function(e){
+        $('#color5').on('click', function(e){
           var color = $('#orange').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          $('#color').empty();
+          $('#color').val(color);
         });
-        $('#color6'.i).on('click', function(e){
+        $('#color6').on('click', function(e){
           var color = $('#green').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          $('#color').empty();
+          $('#color').val(color);
         });
-        $('#color7'.i).on('click', function(e){
+        $('#color7').on('click', function(e){
           var color = $('#lime').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          $('#color').empty();
+          $('#color').val(color);
         });
-        $('#color8'.i).on('click', function(e){
+        $('#color8').on('click', function(e){
           var color = $('#red').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          $('#color').empty();
+          $('#color').val(color);
         });
         $('#color9').on('click', function(e){
           var color = $('#purple').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          $('#color').empty();
+          $('#color').val(color);
         });
         $('#color10').on('click', function(e){
           var color = $('#fuchsia').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          $('#color').empty();
+          $('#color').val(color);
         });
         $('#color11').on('click', function(e){
           var color = $('#muted').val();
@@ -178,8 +166,6 @@
           $('#color').empty();
           $('#color').val(color);
         });
-      }
-       
     });
 </script>
 @endsection
