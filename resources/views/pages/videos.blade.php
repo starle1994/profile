@@ -52,6 +52,9 @@
                                <?php $target = 'myModal-'.$video->id ; $target_1= '#'.$target ?>
                             <div class="catgimg_container" data-toggle="modal" data-target="{{$target_1}}">
                               <img src="{!! $thumbURL !!}" class="img-responsive">
+                              <span class="td-video-play-ico">
+                                 <img width="40" class="td-retina" src="{!! asset('css/img/ico-video-large.png') !!}" alt="video">
+                             </span>
                             </div>
                             <div class="title-image">
                               <p class="post_titile"><a href="">{{$video->name}}</a></p>
