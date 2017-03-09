@@ -147,7 +147,7 @@
                                     </li>
                           <li class="description">
                            <a  href="{{ route('show.blog.detail',$value->alias) }}">
-                           {{$value->name}}
+                           {{mb_substr($value->name,0,25)}}...
                            </a>
                           </li>
                         </ul>
@@ -168,13 +168,13 @@
        
           <div class="col-md-12  ">
              <div class="carousel slide media-carousel bg-white shadow" id="media">
-                <div class="carousel-inner ">
+                <div class="carousel-inner " style="padding-bottom: 20px;">
                     <?php $i = 0 ;foreach ($company_images as $key => $values): ?>
                       <div class="item  {{ ($i == 0) ? 'active' : '' }}">
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
                           <div class="col-md-4 col-sm-4 col-xs-4">
-                            <a class="thumbnail" href="#"><img alt=""  src="{!! asset('uploads/'.$value->image) !!}"></a>
+                            <img alt=""  src="{!! asset('uploads/'.$value->image) !!}">
                           </div> 
                         <?php endforeach ?>
                          </div>
@@ -200,7 +200,7 @@
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
                           <div class="col-md-4 col-sm-4 col-xs-4">
-                            <a class="thumbnail" href="{{ route('show.blog.detail',$value->alias) }}"><img alt=""  src="{!! asset('uploads/'.$value->images) !!}"> <p>{{$value->name}}</p></a>
+                            <a class="thumbnail" href="{{ route('show.blog.detail',$value->alias) }}"><img alt=""  src="{!! asset('uploads/'.$value->images) !!}"> {{mb_substr($value->name,0,25)}}...</a>
                           </div> 
                         <?php endforeach ?>
                          </div>
@@ -218,13 +218,13 @@
           </div>
           <div class="col-md-12  ">
              <div class="carousel bg-white slide media-carousel shadow" id="media2">
-                <div class="carousel-inner ">
+                <div class="carousel-inner " style="padding-bottom: 20px;">
                     <?php $i = 0 ;foreach ($projects as $key => $values): ?>
                       <div class="item  {{ ($i == 0) ? 'active' : '' }}">
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
                           <div class="col-md-6 col-sm-6 col-xs-6">
-                            <a class="thumbnail" href="#"><img alt=""  src="{!! asset('uploads/'.$value->image) !!}"></a>
+                            <img alt=""  src="{!! asset('uploads/'.$value->image) !!}">
                           </div> 
                         <?php endforeach ?>
                          </div>

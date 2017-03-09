@@ -14,9 +14,8 @@
                 <ul class="fashion_catgnav">
                   <li>
                     <div class="catgimg2_container"> <a href="{{ route('show.blog.detail',$log->alias) }}"><img alt="" src="{!! asset('uploads/thumb/'.$log->images) !!}"></a> </div>
-                    <h2 class="catg_titile"><a href="single.html">{{ $log->name}}</a></h2>
+                    <h2 class="catg_titile"><a href="{{ route('show.blog.detail',$log->alias) }}">{{mb_substr($log->name,0,25)}}...</a></h2>
                     <div class="comments_box"> <span class="meta_date">{{ $log->created_at}}</span> <span class="meta_more"><a  href="{{ route('show.blog.detail',$log->alias) }}">Read More...</a></span> </div>
-                    <p>{{ $log->text}}</p>
                   </li>
                 </ul>
               </div>
@@ -39,8 +38,7 @@
               <li>
                 <div class="media wow fadeInDown"> <a href="{{ route('show.blog.detail',$log->alias) }}" class="media-left"> <img alt="" src="{!! asset('uploads/thumb/'.$log->images) !!}"> </a>
                   <div class="media-body">
-                    <h4 class="media-heading"><a href="#">{{ $log->name}}</a></h4>
-                    <p>{{ $log->text}}</p>
+                    <h4 class="media-heading"><a href="#">{{mb_substr($log->name,0,25)}}...</a></h4>
                   </div>
                 </div>
               </li>
