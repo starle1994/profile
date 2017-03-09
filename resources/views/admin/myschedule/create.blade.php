@@ -39,26 +39,28 @@
   <div class="form-group">
       {!! Form::label('name_event', 'event', array('class'=>'col-sm-2 control-label')) !!}
       <div class="col-sm-10">
-        
-           {!! Form::textarea('name_event', old('name_event'), array('class'=>'form-control ')) !!}
+        <?php $name_event = 'name_event'.$i ?>
+           {!! Form::textarea($name_event, old('name_event'), array('class'=>'form-control ')) !!}
       </div>
   </div><div class="form-group">
       {!! Form::label('start_time', 'start_time', array('class'=>'col-sm-2 control-label')) !!}
       <div class="col-sm-10">
-          {!! Form::text('start_time', old('start_time'), array('class'=>'form-control datepicker')) !!}
+        <?php $start_time = 'start_time'.$i ?>
+         {!! Form::text($start_time, old('start_time'), array('class'=>'form-control datepicker')) !!}
           
       </div>
   </div><div class="form-group">
       {!! Form::label('end_time', 'end_time', array('class'=>'col-sm-2 control-label')) !!}
       <div class="col-sm-10">
-          {!! Form::text('end_time', old('end_time'), array('class'=>'form-control datepicker')) !!}
+      <?php $end_time = 'end_time'.$i ?>
+          {!! Form::text($end_time, old('end_time'), array('class'=>'form-control datepicker')) !!}
           
       </div>
   </div><div class="form-group">
       {!! Form::label('color', 'color', array('class'=>'col-sm-2 control-label')) !!}
       <div class="col-sm-10">
       <?php $color = 'color'.$i ?>
-          {!! Form::text('color', old('color'), array('class'=>'form-control','id'=>$color)) !!}
+          {!! Form::text($color, old('color'), array('class'=>'form-control','id'=>$color)) !!}
           
       </div>
   </div>
@@ -110,76 +112,549 @@
 {!! Form::close() !!}
 <script>
     $(document).ready(function() {
-      for (var i = 1; i <=6; i++) {
-        var a ='#color0'.i;
-        $(a).on('click', function(e){
+        $('#color01').on('click', function(e){
           var color = $('#aqua').val();
-          console.log('hhhh');
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
+          
+          $('#color1').empty();
+          $('#color1').val(color);
         }); 
-        $('#color1'.i).on('click', function(e){
-          var color = $('#blue').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
-        }); 
-        $('#color2'.i).on('click', function(e){
-          var color = $('#light_blue').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
-        });
-        $('#color3'.i).on('click', function(e){
-          var color = $('#teal').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
-        });
-        $('#color4'.i).on('click', function(e){
-          var color = $('#yellow').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
-        });      
-        $('#color5'.i).on('click', function(e){
-          var color = $('#orange').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
-        });
-        $('#color6'.i).on('click', function(e){
-          var color = $('#green').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
-        });
-        $('#color7'.i).on('click', function(e){
-          var color = $('#lime').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
-        });
-        $('#color8'.i).on('click', function(e){
-          var color = $('#red').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
-        });
-        $('#color9').on('click', function(e){
-          var color = $('#purple').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
-        });
-        $('#color10').on('click', function(e){
-          var color = $('#fuchsia').val();
-          $('#color'.i).empty();
-          $('#color'.i).val(color);
-        });
         $('#color11').on('click', function(e){
+          var color = $('#blue').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        }); 
+        $('#color21').on('click', function(e){
+          var color = $('#light_blue').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color31').on('click', function(e){
+          var color = $('#teal').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color41').on('click', function(e){
+          var color = $('#yellow').val();
+          $('#color').empty();
+          $('#color').val(color);
+        });      
+        $('#color51').on('click', function(e){
+          var color = $('#orange').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color61').on('click', function(e){
+          var color = $('#green').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color71').on('click', function(e){
+          var color = $('#lime').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color81').on('click', function(e){
+          var color = $('#red').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color91').on('click', function(e){
+          var color = $('#purple').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color101').on('click', function(e){
+          var color = $('#fuchsia').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color111').on('click', function(e){
           var color = $('#muted').val();
-          $('#color').empty();
-          $('#color').val(color);
+          $('#color1').empty();
+          $('#color1').val(color);
         });
-        $('#color12').on('click', function(e){
+        $('#color121').on('click', function(e){
           var color = $('#navy').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+
+        //
+        $('#color01').on('click', function(e){
+          var color = $('#aqua').val();
+          
+          $('#color1').empty();
+          $('#color1').val(color);
+        }); 
+        $('#color11').on('click', function(e){
+          var color = $('#blue').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        }); 
+        $('#color21').on('click', function(e){
+          var color = $('#light_blue').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color31').on('click', function(e){
+          var color = $('#teal').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color41').on('click', function(e){
+          var color = $('#yellow').val();
           $('#color').empty();
           $('#color').val(color);
+        });      
+        $('#color51').on('click', function(e){
+          var color = $('#orange').val();
+          $('#color1').empty();
+          $('#color1').val(color);
         });
-      }
-       
+        $('#color61').on('click', function(e){
+          var color = $('#green').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color71').on('click', function(e){
+          var color = $('#lime').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color81').on('click', function(e){
+          var color = $('#red').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color91').on('click', function(e){
+          var color = $('#purple').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color101').on('click', function(e){
+          var color = $('#fuchsia').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color111').on('click', function(e){
+          var color = $('#muted').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color121').on('click', function(e){
+          var color = $('#navy').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+
+        //
+
+        $('#color01').on('click', function(e){
+          var color = $('#aqua').val();
+          
+          $('#color1').empty();
+          $('#color1').val(color);
+        }); 
+        $('#color11').on('click', function(e){
+          var color = $('#blue').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        }); 
+        $('#color21').on('click', function(e){
+          var color = $('#light_blue').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color31').on('click', function(e){
+          var color = $('#teal').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color41').on('click', function(e){
+          var color = $('#yellow').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });      
+        $('#color51').on('click', function(e){
+          var color = $('#orange').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color61').on('click', function(e){
+          var color = $('#green').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color71').on('click', function(e){
+          var color = $('#lime').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color81').on('click', function(e){
+          var color = $('#red').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color91').on('click', function(e){
+          var color = $('#purple').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color101').on('click', function(e){
+          var color = $('#fuchsia').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color111').on('click', function(e){
+          var color = $('#muted').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+        $('#color121').on('click', function(e){
+          var color = $('#navy').val();
+          $('#color1').empty();
+          $('#color1').val(color);
+        });
+
+        //
+        $('#color02').on('click', function(e){
+          var color = $('#aqua').val();
+          
+          $('#color2').empty();
+          $('#color2').val(color);
+        }); 
+        $('#color12').on('click', function(e){
+          var color = $('#blue').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        }); 
+        $('#color22').on('click', function(e){
+          var color = $('#light_blue').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        });
+        $('#color32').on('click', function(e){
+          var color = $('#teal').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        });
+        $('#color42').on('click', function(e){
+          var color = $('#yellow').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        });      
+        $('#color52').on('click', function(e){
+          var color = $('#orange').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        });
+        $('#color62').on('click', function(e){
+          var color = $('#green').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        });
+        $('#color72').on('click', function(e){
+          var color = $('#lime').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        });
+        $('#color82').on('click', function(e){
+          var color = $('#red').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        });
+        $('#color92').on('click', function(e){
+          var color = $('#purple').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        });
+        $('#color102').on('click', function(e){
+          var color = $('#fuchsia').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        });
+        $('#color112').on('click', function(e){
+          var color = $('#muted').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        });
+        $('#color122').on('click', function(e){
+          var color = $('#navy').val();
+          $('#color2').empty();
+          $('#color2').val(color);
+        });
+
+        //
+        $('#color03').on('click', function(e){
+          var color = $('#aqua').val();
+          
+          $('#color3').empty();
+          $('#color3').val(color);
+        }); 
+        $('#color13').on('click', function(e){
+          var color = $('#blue').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        }); 
+        $('#color23').on('click', function(e){
+          var color = $('#light_blue').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        });
+        $('#color33').on('click', function(e){
+          var color = $('#teal').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        });
+        $('#color43').on('click', function(e){
+          var color = $('#yellow').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        });      
+        $('#color53').on('click', function(e){
+          var color = $('#orange').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        });
+        $('#color63').on('click', function(e){
+          var color = $('#green').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        });
+        $('#color73').on('click', function(e){
+          var color = $('#lime').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        });
+        $('#color83').on('click', function(e){
+          var color = $('#red').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        });
+        $('#color93').on('click', function(e){
+          var color = $('#purple').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        });
+        $('#color103').on('click', function(e){
+          var color = $('#fuchsia').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        });
+        $('#color113').on('click', function(e){
+          var color = $('#muted').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        });
+        $('#color123').on('click', function(e){
+          var color = $('#navy').val();
+          $('#color3').empty();
+          $('#color3').val(color);
+        });
+
+         //
+        $('#color04').on('click', function(e){
+          var color = $('#aqua').val();
+          
+          $('#color4').empty();
+          $('#color4').val(color);
+        }); 
+        $('#color14').on('click', function(e){
+          var color = $('#blue').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        }); 
+        $('#color24').on('click', function(e){
+          var color = $('#light_blue').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        });
+        $('#color34').on('click', function(e){
+          var color = $('#teal').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        });
+        $('#color44').on('click', function(e){
+          var color = $('#yellow').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        });      
+        $('#color54').on('click', function(e){
+          var color = $('#orange').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        });
+        $('#color64').on('click', function(e){
+          var color = $('#green').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        });
+        $('#color74').on('click', function(e){
+          var color = $('#lime').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        });
+        $('#color84').on('click', function(e){
+          var color = $('#red').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        });
+        $('#color94').on('click', function(e){
+          var color = $('#purple').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        });
+        $('#color104').on('click', function(e){
+          var color = $('#fuchsia').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        });
+        $('#color114').on('click', function(e){
+          var color = $('#muted').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        });
+        $('#color124').on('click', function(e){
+          var color = $('#navy').val();
+          $('#color4').empty();
+          $('#color4').val(color);
+        });
+
+         //
+        $('#color05').on('click', function(e){
+          var color = $('#aqua').val();
+          
+          $('#color5').empty();
+          $('#color5').val(color);
+        }); 
+        $('#color15').on('click', function(e){
+          var color = $('#blue').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        }); 
+        $('#color25').on('click', function(e){
+          var color = $('#light_blue').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        });
+        $('#color35').on('click', function(e){
+          var color = $('#teal').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        });
+        $('#color45').on('click', function(e){
+          var color = $('#yellow').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        });      
+        $('#color55').on('click', function(e){
+          var color = $('#orange').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        });
+        $('#color65').on('click', function(e){
+          var color = $('#green').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        });
+        $('#color75').on('click', function(e){
+          var color = $('#lime').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        });
+        $('#color85').on('click', function(e){
+          var color = $('#red').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        });
+        $('#color95').on('click', function(e){
+          var color = $('#purple').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        });
+        $('#color105').on('click', function(e){
+          var color = $('#fuchsia').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        });
+        $('#color115').on('click', function(e){
+          var color = $('#muted').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        });
+        $('#color125').on('click', function(e){
+          var color = $('#navy').val();
+          $('#color5').empty();
+          $('#color5').val(color);
+        });
+
+         //
+        $('#color06').on('click', function(e){
+          var color = $('#aqua').val();
+          
+          $('#color6').empty();
+          $('#color6').val(color);
+        }); 
+        $('#color16').on('click', function(e){
+          var color = $('#blue').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        }); 
+        $('#color26').on('click', function(e){
+          var color = $('#light_blue').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        });
+        $('#color36').on('click', function(e){
+          var color = $('#teal').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        });
+        $('#color46').on('click', function(e){
+          var color = $('#yellow').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        });      
+        $('#color56').on('click', function(e){
+          var color = $('#orange').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        });
+        $('#color66').on('click', function(e){
+          var color = $('#green').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        });
+        $('#color76').on('click', function(e){
+          var color = $('#lime').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        });
+        $('#color86').on('click', function(e){
+          var color = $('#red').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        });
+        $('#color96').on('click', function(e){
+          var color = $('#purple').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        });
+        $('#color106').on('click', function(e){
+          var color = $('#fuchsia').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        });
+        $('#color116').on('click', function(e){
+          var color = $('#muted').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        });
+        $('#color126').on('click', function(e){
+          var color = $('#navy').val();
+          $('#color6').empty();
+          $('#color6').val(color);
+        });
     });
 </script>
 @endsection

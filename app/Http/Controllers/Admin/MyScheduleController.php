@@ -49,6 +49,7 @@ class MyScheduleController extends Controller {
 	  if ($request->end_time == null) {
 	  	MySchedule::create(['name_event'=>$request->name_event,
           'start_time'=>$request->start_time,
+          'end_time'=> $en
           'color'=>$request->color]);
 	  }else{
 	  	MySchedule::create($request->all());
