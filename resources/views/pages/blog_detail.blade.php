@@ -22,17 +22,17 @@
         <div class="similar_post">
           <h2>May be you Like <i class="fa fa-thumbs-o-up"></i></h2>
           <ul class="small_catg similar_nav wow fadeInDown animated">
-          <?php for ($i=1; $i < $recent_post->count(); $i++) { ?>
+          <?php foreach ($recent_post as $recent): ?>
              <li>
-              <div class="media wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"> <a class="media-left related-img" href="#"><img src="{!! asset('uploads/thumb/'.$recent_post[$i]->images) !!}" alt=""></a>
+              <div class="media wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"> <a class="media-left related-img" href="#"><img src="{!! asset('uploads/'.$recent->images) !!}" alt=""></a>
                 <div class="media-body">
-                  <h4 class="media-heading"><a href="#">{{ $recent_post[$i]->name}} </a></h4>
-                  <p>{{ $recent_post[$i]->text }}  </p>
+                  <h4 class="media-heading"><a href="#">{{ $recent->name}} </a></h4>
+                  <p>{{ $recent->text }}  </p>
                 </div>
               </div>
             </li>
-          <?php } ?>
-           
+          <?php endforeach ?>
+                    
           </ul>
         </div>
       </div>

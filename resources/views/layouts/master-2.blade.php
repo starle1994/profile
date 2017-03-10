@@ -27,9 +27,6 @@
 }
 </style>
 <body>
-<div id="preloader">
-  <div id="status">&nbsp;</div>
-</div>
     @include('layouts.header-2')
   <div style="clear: both;"></div>
   <div class="body-content">
