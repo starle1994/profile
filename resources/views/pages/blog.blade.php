@@ -36,7 +36,7 @@
             <ul class="small_catg popular_catg wow fadeInDown">
              @foreach($new_blog as $log)
               <li>
-                <div class="media wow fadeInDown"> <a href="{{ route('show.blog.detail',$log->alias) }}" class="media-left"> <img alt="" src="{!! asset('uploads/thumb/'.$log->images) !!}"> </a>
+                <div class="media wow fadeInDown"> <a href="{{ route('show.blog.detail',$log->alias) }}" class="media-left"> <img alt="" src="{!! asset('uploads/'.$log->images) !!}"> </a>
                   <div class="media-body">
                     <h4 class="media-heading"><a href="#">{{mb_substr($log->name,0,25)}}...</a></h4>
                   </div>
