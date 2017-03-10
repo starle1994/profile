@@ -19,8 +19,6 @@
             </div>
           </div>
         </div>
-        
-        <div class="share_post"> <a class="facebook" href="#"><i class="fa fa-facebook"></i>Facebook</a> <a class="twitter" href="#"><i class="fa fa-twitter"></i>Twitter</a> <a class="googleplus" href="#"><i class="fa fa-google-plus"></i>Google+</a> <a class="linkedin" href="#"><i class="fa fa-linkedin"></i>LinkedIn</a> <a class="stumbleupon" href="#"><i class="fa fa-stumbleupon"></i>StumbleUpon</a> <a class="pinterest" href="#"><i class="fa fa-pinterest"></i>Pinterest</a> </div>
         <div class="similar_post">
           <h2>May be you Like <i class="fa fa-thumbs-o-up"></i></h2>
           <ul class="small_catg similar_nav wow fadeInDown animated">

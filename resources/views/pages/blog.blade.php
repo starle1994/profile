@@ -13,7 +13,7 @@
               <div class="business_category_left wow fadeInDown">
                 <ul class="fashion_catgnav">
                   <li>
-                    <div class="catgimg2_container"> <a href="{{ route('show.blog.detail',$log->alias) }}"><img alt="" src="{!! asset('uploads/thumb/'.$log->images) !!}"></a> </div>
+                    <div class="catgimg2_container"> <a href="{{ route('show.blog.detail',$log->alias) }}"><img alt="" src="{!! asset('uploads/'.$log->images) !!}"></a> </div>
                     <h2 class="catg_titile"><a href="{{ route('show.blog.detail',$log->alias) }}">{{mb_substr($log->name,0,25)}}...</a></h2>
                     <div class="comments_box"> <span class="meta_date">{{ $log->created_at}}</span> <span class="meta_more"><a  href="{{ route('show.blog.detail',$log->alias) }}">Read More...</a></span> </div>
                   </li>
