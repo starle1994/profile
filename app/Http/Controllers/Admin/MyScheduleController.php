@@ -23,7 +23,7 @@ class MyScheduleController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $myschedule = MySchedule::all();
+        $myschedule = MySchedule::orderBy('id','desc')->get();
 		return view('admin.myschedule.index', compact('myschedule'));
 	}
 
@@ -46,16 +46,19 @@ class MyScheduleController extends Controller {
 	 */
 	public function store(CreateMyScheduleRequest $request)
 	{
-	  if ($request->end_time == null) {
-	  	MySchedule::create(['name_event'=>$request->name_event,
-          'start_time'=>$request->start_time,
-          'end_time'=> $en
-          'color'=>$request->color]);
-	  }else{
-	  	MySchedule::create($request->all());
-
-	  }
-		
+		for ($i=1; $i <=6 ; $i++) { 
+			$name_event = 'name_event'.$i;
+			$start_time = 'start_time'.$i;
+			$end_time   = 'end_time'.$i;
+			$color 		= 'color'.$i;
+			if($request->$name_event != null && $request->$start_time != null) {
+				MySchedule::create(['name_event'=>$request->$name_event,
+          		'start_time'=>$request->$start_time,
+          		'end_time'=>null,
+             	'color'=>$request->$color]);
+			}
+			
+		}
 
 		return redirect()->route(config('quickadmin.route').'.myschedule.index');
 	}

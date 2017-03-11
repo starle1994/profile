@@ -19,6 +19,10 @@
   padding-right: 0px;
   padding-left: 0px;
 }
+.thumbnail{
+  height: 200px;
+  text-align: center;
+}
 </style>
   @foreach($videos as $key => $values)
     <div class="row">
@@ -139,20 +143,20 @@
             <div class="head-title col-md-12">{{trans('user.topice')}}</div>
             <div class="panel-body shadow " id="mygrid-wrapper-div" data-spy="scroll" style="  overflow: auto; height: 250px;background-color: #fff">
                    <?php $i = 0 ;foreach ($blogs as $key => $values): ?>
-                                  <?php foreach ($values as  $value): ?>
-                                    <div class="col-md-12 bg-white">
-                        <ul class="block">
-                          <li class="img">
-                                      <a  href="{{ route('show.blog.detail',$value->alias) }}"><img width="100%" alt=""  src="{!! asset('uploads/'.$value->images) !!}"> </a>
-                                    </li>
-                          <li class="description">
-                           <a  href="{{ route('show.blog.detail',$value->alias) }}">
-                           {{mb_substr($value->name,0,25)}}...
-                           </a>
-                          </li>
-                        </ul>
-                      </div>
-                <?php endforeach ?>
+                      <?php foreach ($values as  $value): ?>
+                        <div class="col-md-12 bg-white">
+                            <ul class="block">
+                              <li class="img">
+                                          <a  href="{{ route('show.blog.detail',$value->alias) }}"><img width="100%" alt=""  src="{!! asset('uploads/'.$value->images) !!}"> </a>
+                                        </li>
+                              <li class="description">
+                               <a  href="{{ route('show.blog.detail',$value->alias) }}">
+                               {{mb_substr($value->name,0,25)}}...
+                               </a>
+                              </li>
+                            </ul>
+                        </div>
+                    <?php endforeach ?>
                         
           
                     <?php endforeach ?>

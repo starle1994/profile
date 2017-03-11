@@ -23,7 +23,7 @@ class ProjectsController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $projects = Projects::all();
+        $projects = Projects::orderBy('id','desc')->get();
 
 		return view('admin.projects.index', compact('projects'));
 	}

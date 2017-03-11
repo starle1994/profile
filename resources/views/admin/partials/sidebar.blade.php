@@ -23,12 +23,6 @@
                         <span class="title">{{ trans('quickadmin::admin.partials-sidebar-roles') }}</span>
                     </a>
                 </li>
-                <li @if(Request::path() == config('quickadmin.route').'/actions') class="active" @endif>
-                    <a href="{{ url('jp/'.config('quickadmin.route').'/actions') }}">
-                        <i class="fa fa-users"></i>
-                        <span class="title">{{ trans('quickadmin::admin.partials-sidebar-user-actions') }}</span>
-                    </a>
-                </li>
             @endif
             @foreach($menus as $menu)
                 @if($menu->menu_type != 2 && is_null($menu->parent_id))

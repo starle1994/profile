@@ -23,7 +23,7 @@ class ContactsController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $contacts = Contacts::all();
+        $contacts = Contacts::orderBy('id','desc')->get();
 
 		return view('admin.contacts.index', compact('contacts'));
 	}

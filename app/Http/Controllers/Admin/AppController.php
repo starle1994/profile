@@ -23,7 +23,7 @@ class AppController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $app = App::all();
+        $app = App::orderBy('id','desc')->get();
 
 		return view('admin.app.index', compact('app'));
 	}

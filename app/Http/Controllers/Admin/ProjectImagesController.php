@@ -24,7 +24,7 @@ class ProjectImagesController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $projectimages = ProjectImages::with("projects")->get();
+        $projectimages = ProjectImages::with("projects")->orderBy('id','desc')->get();
 
 		return view('admin.projectimages.index', compact('projectimages'));
 	}

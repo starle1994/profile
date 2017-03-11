@@ -24,7 +24,7 @@ class DreamImagesController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $dreamimages = DreamImages::with("dreams")->get();
+        $dreamimages = DreamImages::with("dreams")->orderBy('id','desc')->get();
 
 		return view('admin.dreamimages.index', compact('dreamimages'));
 	}

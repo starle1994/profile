@@ -24,7 +24,7 @@ class ApplicationImagesController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $applicationimages = ApplicationImages::with("applications")->get();
+        $applicationimages = ApplicationImages::with("applications")->orderBy('id','desc')->get();
 
 		return view('admin.applicationimages.index', compact('applicationimages'));
 	}

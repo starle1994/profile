@@ -44,12 +44,7 @@
     <script src='{!! url('css/assets/js/bootstrap.min.js') !!}' type='text/javascript'></script>
     <script src='{!! url('css/assets/js/wow.min.js') !!}' type='text/javascript'></script>
     <script src='{!! url('css/assets/js/slick.min.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('css/assets/js/custom.js') !!}' type='text/javascript'></script>
-  
- 
-
- 
-     
+    <script src='{!! url('css/assets/js/custom.js') !!}' type='text/javascript'></script> 
 <script>
       $(document).ready(function() {
         $('#app_pop1').on('click', function(e){

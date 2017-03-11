@@ -23,7 +23,7 @@ class CompanyImagesController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $companyimages = CompanyImages::all();
+        $companyimages = CompanyImages::orderBy('id','desc')->get();
 
 		return view('admin.companyimages.index', compact('companyimages'));
 	}
