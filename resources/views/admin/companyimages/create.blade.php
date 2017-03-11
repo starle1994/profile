@@ -42,7 +42,7 @@
 {!! Form::close() !!}
 <script type="text/javascript">
         Dropzone.options.imageUpload = {
-            maxFilesize         :       1,
+            maxFilesize         :       10,
             acceptedFiles: ".jpeg,.jpg,.png,.gif"
         };
 </script>
