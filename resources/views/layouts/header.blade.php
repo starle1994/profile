@@ -7,7 +7,7 @@
           <!--start: Logo -->
           <div class="logo col-lg-3 col-md-3 col-sm-3 col-xs-8">
                   
-              <a class="brand" href="#"><img class="img-responsive" src="{!! asset('css/img/logo-group.png') !!}" alt="Logo" class="logo"></a>
+              <a class="brand" href="#"><img src="{!! asset('css/img/logo-group.png') !!}" alt="Logo" class="logo"></a>
                   
           </div >
           <div class="ol-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="letgo" alt="" src="{!! asset('css/img/letgo.jpg') !!}" ></div>
