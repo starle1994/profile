@@ -5,13 +5,13 @@
       <div  style="margin-top: 5px;  margin-bottom: 5px ;background-color: #fff">
               
           <!--start: Logo -->
-          <div class="logo col-lg-3 col-md-3 col-sm-3">
+          <div class="logo col-lg-3 col-md-3 col-sm-3 col-xs-8">
                   
-              <a class="brand" href="#"><img src="{!! asset('css/img/logo-group.png') !!}" alt="Logo" class="logo"></a>
+              <a class="brand" href="#"><img class="img-responsive" src="{!! asset('css/img/logo-group.png') !!}" alt="Logo" class="logo"></a>
                   
           </div >
-          <div class="ol-lg-2 col-md-2 col-sm-2"><img class="letgo" alt="" src="{!! asset('css/img/letgo.jpg') !!}" ></div>
-          <div class="app-logo col-lg-6 col-md-6 col-sm-6" >
+          <div class="ol-lg-2 col-md-2 col-sm-2 col-xs-4"><img class="letgo" alt="" src="{!! asset('css/img/letgo.jpg') !!}" ></div>
+          <div class="app-logo col-lg-6 col-md-6 col-sm-6 col-xs-10" >
             @if($apps != null)
                 @foreach($apps as $app)
                   <img class="img" alt="" src="{!! asset('uploads/'.$app->logo) !!}" >
@@ -19,7 +19,7 @@
               @endif
           </div>
           <!--start: Logo -->
-          <div class="col-lg-1 col-md-1 col-ms-2 image-lang" >
+          <div class="col-lg-1 col-md-1 col-ms-2 col-xs-2 image-lang" >
               <?php 
             $name   = '';
             $arr = explode('/', Request::path());

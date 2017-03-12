@@ -40,6 +40,6 @@ return [
     'view_app'   => 'アプリケーション', 
     'content'   =>'コンテンツ', 
     'topice'   =>'トピック', 
-    'phone_number' => 'Phone number',
-    'fax'          => 'Fax',
+    'phone_number' => '電話番号',
+    'fax'          => 'ファックス',
 ];
