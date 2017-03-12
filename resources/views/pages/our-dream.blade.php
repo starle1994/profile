@@ -26,7 +26,7 @@
                   <div class="col-md-3">
                   <a href="{{ route('dream.detail',$dream->alias) }}">
                     <div class="well">
-                        <img src="{!! asset('uploads/'.$dream->image) !!}" class="img-cate">
+                        <img src="{!! asset('uploads/'.$dream->image) !!}" >
                         <div><h3>{{$dream->name}}</h3></div>
                       </div>
                   </a>

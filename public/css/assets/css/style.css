@@ -51,7 +51,7 @@ img{border:none}
 #status{width:200px; height:200px; position:absolute; left:50%; top:50%; background-image:url("images/status.gif"); background-repeat:no-repeat; background-position:center; margin:-100px 0 0 -100px}
 .scrollToTop{bottom:105px; display:none; font-size:32px; font-weight:bold; height:50px; position:fixed; right:75px; text-align:center; text-decoration:none; width:50px; z-index:9; border:1px solid; -webkit-transition:all 0.5s; -moz-transition:all 0.5s; -ms-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .scrollToTop:hover, .scrollToTop:focus{text-decoration:none; outline:none}
-#navarea{float:left; display:inline; width:100%; background-color: #ff0000}
+#navarea{float:left; display:inline; width:100%;background-image: url('../css/images/category2.jpg');  background-repeat: no-repeat}
 .navbar-default{ border-radius:0; padding:0; margin-bottom:0px}
 .container-fluid{padding-left:0; padding-right:0}
 .navbar-collapse{padding-left:0; padding-right:0}
@@ -409,7 +409,7 @@ span.meta_more:before{content:" "; font-family:FontAwesome; font-style:normal
     background-color: #ddd;
   }
   .head-title {
-      background: #ff0000;
+      background-image: url('../css/images/category.jpg');
       border-top-right-radius: 8px;
     border-top-left-radius: 8px;
       color: #fff;
@@ -417,6 +417,7 @@ span.meta_more:before{content:" "; font-family:FontAwesome; font-style:normal
       padding: 5px 15px;
       z-index: 2;
   }
+
   .bg-white {
     background-color: #fff;
     padding-top: 20px;

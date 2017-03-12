@@ -23,6 +23,7 @@
   height: 200px;
   text-align: center;
 }
+
 </style>
   @foreach($videos as $key => $values)
     <div class="row">
@@ -178,7 +179,7 @@
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
                           <div class="col-md-4 col-sm-4 col-xs-4">
-                            <div class="thumb-smaller" style="background-image:url({!! asset('uploads/'.$value->image) !!});"></div>
+                            <div class="thumb-smaller img-thumbnail" style="background-image:url({!! asset('uploads/'.$value->image) !!});"></div>
                           </div> 
                         <?php endforeach ?>
                          </div>
@@ -229,7 +230,7 @@
                         <?php foreach ($values as  $value): ?>
                           <div class="col-md-4 col-sm-4 col-xs-4">
                           <a href="{{ route('dream.detail',$value->alias) }}">
-                            <div class="thumb-smaller" style="background-image:url({!! asset('uploads/'.$value->image) !!});"></div></a>
+                            <div class="thumb-smaller img-thumbnail" style="background-image:url({!! asset('uploads/'.$value->image) !!});"></div></a>
                           </div>
                         <?php endforeach ?>
                          </div>

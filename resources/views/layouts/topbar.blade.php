@@ -21,21 +21,21 @@
         var pathname = window.location.pathname;
         console.log(pathname.indexOf('/application'));
         if (pathname.indexOf('/home') != -1) {
-          $('#home').css({'background-color':'#fff', 'color':'#E93E33','border': '1px solid #E93E33' });
+          $('#home').css({'background-color':'#fff', 'color':'#6C0A09','border': '1px solid #6C0A09' });
         }else if(pathname.indexOf('/contact') != -1){
-          $('#categories-10').css({'background-color':'#fff', 'color':'#E93E33','border': '1px solid #E93E33'});
+          $('#categories-10').css({'background-color':'#fff', 'color':'#6C0A09','border': '1px solid #6C0A09'});
         } else if (pathname.indexOf('/application') != -1) {
-          $('#categories-9').css({'background-color':'#fff', 'color':'#E93E33','border': '1px solid #E93E33'});
+          $('#categories-9').css({'background-color':'#fff', 'color':'#6C0A09','border': '1px solid #6C0A09'});
         } else if (pathname.indexOf('/project') != -1) {
-          $('#categories-5').css({'background-color':'#fff', 'color':'#E93E33','border': '1px solid #E93E33'});
+          $('#categories-5').css({'background-color':'#fff', 'color':'#6C0A09','border': '1px solid #6C0A09'});
         } else if (pathname.indexOf('/our-dream') != -1) {
-          $('#categories-4').css({'background-color':'#fff', 'color':'#E93E33','border': '1px solid #E93E33'});
+          $('#categories-4').css({'background-color':'#fff', 'color':'#6C0A09','border': '1px solid #6C0A09'});
         } else if (pathname.indexOf('/blog') != -1) {
-          $('#categories-3').css({'background-color':'#fff', 'color':'#E93E33','border': '1px solid #E93E33'});
+          $('#categories-3').css({'background-color':'#fff', 'color':'#6C0A09','border': '1px solid #6C0A09'});
         } else if (pathname.indexOf('/video') != -1) {
-          $('#categories-2').css({'background-color':'#fff', 'color':'#E93E33','border': '1px solid #E93E33'});
+          $('#categories-2').css({'background-color':'#fff', 'color':'#6C0A09','border': '1px solid #6C0A09'});
         } else if (pathname.indexOf('/image') != -1) {
-          $('#categories-1').css({'background-color':'#fff', 'color':'#E93E33','border': '1px solid #E93E33'});
+          $('#categories-1').css({'background-color':'#fff', 'color':'#6C0A09','border': '1px solid #6C0A09'});
         }
      });
  </script>
