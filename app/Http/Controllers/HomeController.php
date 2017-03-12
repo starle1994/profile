@@ -47,7 +47,7 @@ class HomeController extends Controller
        }
 
         for ($i=0; $i <= 8;  $i = $i +2) { 
-           $projects[$i] = Dreams::limit(3)->offset($i)->orderBy('id','desc')->with('images')->get();
+           $projects[$i] = Dreams::limit(3)->offset($i)->with('images')->get();
        }
 
         $video_types = VideoTypes::all();
