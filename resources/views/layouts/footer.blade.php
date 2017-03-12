@@ -10,7 +10,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
           <div class="single_footer_top wow fadeInDown">
-            <h2>Labels</h2>
+            <h2><strong>{{trans('user.labels')}}</strong></h2>
             <ul class="labels_nav">
              @foreach($categories as $cate)
               <li><a href="#">{{trans($cate->name)}}</a></li>
@@ -20,7 +20,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
           <div class="single_footer_top wow fadeInRight">
-            <h2>About Us</h2>
+            <h2><strong>{{trans('user.about_me')}}</strong></h2>
             <p><span style="font-size: 20px">.Rs group</span>のメンバーは各々夢を持っています。その夢を叶える為に集まった集団です。
 みんなで夢を共有し応援し合います。そんな人達が集まったGroupです。 </p>
   <p>当サイトに掲載されている全てのデータの著作権は “Rs group” に属します。無断転載・複製を堅く禁じます。

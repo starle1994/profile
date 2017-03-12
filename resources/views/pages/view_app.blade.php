@@ -16,9 +16,11 @@
       <div class="col-lg-12 col-md-12">
           @foreach($apps as $app)
             <div class="single_page_content banner-app">
-              <a href="{{ route('show.app.detail',$app->alias) }}">
+              <?php if ($app->banner != null): ?>
+                <a href="{{ route('show.app.detail',$app->alias) }}">
                 <img class="img-center" src="{!! asset('uploads/'.$app->banner) !!}" alt="">
               </a>
+              <?php endif ?>
             </div>
           @endforeach
       </div>

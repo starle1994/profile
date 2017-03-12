@@ -18,7 +18,7 @@ use App\PicturesProject;
 use Response;
 use App\VideoTypes;
 use App\MySchedule;
-
+use App\CompanyContact;
 
 class HomeController extends Controller
 {
@@ -104,7 +104,8 @@ class HomeController extends Controller
     {
        $apps = App::all();
         $categories = Category::where('actived', 1)->orderBy('id','desc')->get();
-        return view('pages.contact',compact('categories','apps'));
+        $contact = CompanyContact::first();
+        return view('pages.contact',compact('categories','apps','contact'));
     }
 
     public function showVideo()

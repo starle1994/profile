@@ -7,9 +7,6 @@
 <meta name="google-site-verification" content="3HylZq9Dh1kwha5C6r44XbCm12CGdzvkGWk3A23MjJ4" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='{!! url('css/assets/css/bootstrap.min.css') !!}' rel='stylesheet' type='text/css' />
-<link href='{!! url('css/assets/css/font-awesome.min.css') !!}' rel='stylesheet' type='text/css' />
-<link href='{!! url('css/assets/css/animate.css') !!}' rel='stylesheet' type='text/css' />
-<link href='{!! url('css/assets/css/slick.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/assets/css/theme.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/assets/css/style.css') !!}' rel='stylesheet' type='text/css' />
 <link href='{!! url('css/css/style.css') !!}' rel='stylesheet' type='text/css' />
@@ -42,13 +39,6 @@
     <script src='{!! url('css/assets/js/jquery.min.js') !!}' type='text/javascript'></script>
     <script src='{!! url('css/assets/js/bootstrap.min.js') !!}' type='text/javascript'></script>
     <script src='{!! url('css/assets/js/wow.min.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('css/assets/js/slick.min.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('css/assets/js/custom.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('js/flexslider.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('js/carousel.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('js/jquery.cslider.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('js/slider.js') !!}' type='text/javascript'></script>
-    <script src='{!! url('js/custom.js') !!}' type='text/javascript'></script>
     <script src='{!! url('dist/js/lightbox-plus-jquery.min.js') !!}'></script>
 </body>
 </html>

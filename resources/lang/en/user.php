@@ -27,8 +27,9 @@ return [
     'read-more' => 'Read more',
     'contact_info'=> 'Contact Info',
     'contact_form'=> 'Contact Form',
+    'follow_us'   => 'Follow US!',
     'follow_me'   => 'Follow Me',
-    'Company Name'=>'Company Name',
+    'Company_Name'=>'Company Name',
     'Name'=>'Name',
     'Adress'=>'Adress',
     'Email'=>'Email',
@@ -39,4 +40,6 @@ return [
     'view_app'   => 'アプリケーション',
     'content'   =>'Content',
     'topice'   =>'Topice',
+    'phone_number' => 'Phone number',
+    'fax'          => 'Fax',
 ];
