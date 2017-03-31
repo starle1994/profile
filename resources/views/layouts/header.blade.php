@@ -1,4 +1,3 @@
-
 <header>
 
       
@@ -23,7 +22,6 @@
               <?php 
             $name   = '';
             $arr = explode('/', Request::path());
-
             for($i = 1; $i<count($arr); $i++){
                $name .= '/'.$arr[$i];
             }

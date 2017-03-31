@@ -40,12 +40,12 @@ class HomeController extends Controller
         $baners = Banners::all();
       
    
-       for ($i=0; $i <= 9;  $i = $i +3) { 
+       for ($i=0; $i <= 3;  $i = $i +3) { 
       
            $company_images[$i] = CompanyImages::limit(3)->offset($i)->orderBy('id','desc')->get();
            $blogs[$i] = Blogs::limit(3)->offset($i)->orderBy('id','desc')->get();
        }
-
+       
         for ($i=0; $i <= 8;  $i = $i +2) { 
            $projects[$i] = Dreams::limit(3)->offset($i)->with('images')->get();
        }
@@ -54,7 +54,7 @@ class HomeController extends Controller
         foreach ($video_types as $data) {
             $videos[$data->name] = Videos::orderBy('id','desc')->where('video_type', $data->id)->paginate(4);
         }
-        $schedules = Schedule::orderBy('id', 'desc')->get();
+        $schedules = Schedule::orderBy('id', 'desc')->limit(10)->get();
 
         $catego= Category::where('actived', null)->get();
 

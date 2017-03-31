@@ -24,8 +24,6 @@
        
       </div>
     </div>
-   
-  
       @foreach($videos as $key => $video)
            <div class="archive_style_1 col-lg-12 col-md-12 col-sm-12" style="margin-bottom: 20px;">
          
@@ -99,9 +97,9 @@
       @endforeach
    
  <script>
-$('.close').click(function () {
-  $('.modal').hide();
-  $('.modal iframe').attr("src", jQuery(".modal iframe").attr("src"));
-});
+$(".modal").on('hidden.bs.modal', function (e) {
+    var ele = $(this).find("iframe");
+    ele.attr("src",ele.attr("src"));
+  });
 </script>
 @endsection

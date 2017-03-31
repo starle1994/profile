@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
-
 use App\Http\Controllers\Controller;
 use Redirect;
 use Schema;
@@ -9,11 +7,7 @@ use App\MySchedule;
 use App\Http\Requests\CreateMyScheduleRequest;
 use App\Http\Requests\UpdateMyScheduleRequest;
 use Illuminate\Http\Request;
-
-
-
 class MyScheduleController extends Controller {
-
 	/**
 	 * Display a listing of myschedule
 	 *
@@ -23,11 +17,9 @@ class MyScheduleController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $myschedule = MySchedule::all();
-
+        $myschedule = MySchedule::orderBy('id','desc')->get();
 		return view('admin.myschedule.index', compact('myschedule'));
 	}
-
 	/**
 	 * Show the form for creating a new myschedule
 	 *
@@ -39,7 +31,6 @@ class MyScheduleController extends Controller {
 	    
 	    return view('admin.myschedule.create');
 	}
-
 	/**
 	 * Store a newly created myschedule in storage.
 	 *
@@ -47,12 +38,20 @@ class MyScheduleController extends Controller {
 	 */
 	public function store(CreateMyScheduleRequest $request)
 	{
-	    
-		MySchedule::create($request->all());
-
+		for ($i=1; $i <=6 ; $i++) { 
+			$name_event = 'name_event'.$i;
+			$start_time = 'start_time'.$i;
+			$end_time   = 'end_time'.$i;
+			$color 		= 'color'.$i;
+			if($request->$name_event != null && $request->$start_time != null) {
+				MySchedule::create(['name_event'=>$request->$name_event,
+          		'start_time'=>$request->$start_time,
+          		'end_time'=>null,
+             	'color'=>$request->$color]);
+			}
+		}
 		return redirect()->route(config('quickadmin.route').'.myschedule.index');
 	}
-
 	/**
 	 * Show the form for editing the specified myschedule.
 	 *
@@ -66,7 +65,6 @@ class MyScheduleController extends Controller {
 	    
 		return view('admin.myschedule.edit', compact('myschedule'));
 	}
-
 	/**
 	 * Update the specified myschedule in storage.
      * @param UpdateMyScheduleRequest|Request $request
@@ -76,14 +74,10 @@ class MyScheduleController extends Controller {
 	public function update($id, UpdateMyScheduleRequest $request)
 	{
 		$myschedule = MySchedule::findOrFail($id);
-
         
-
 		$myschedule->update($request->all());
-
 		return redirect()->route(config('quickadmin.route').'.myschedule.index');
 	}
-
 	/**
 	 * Remove the specified myschedule from storage.
 	 *
@@ -92,10 +86,8 @@ class MyScheduleController extends Controller {
 	public function destroy($id)
 	{
 		MySchedule::destroy($id);
-
 		return redirect()->route(config('quickadmin.route').'.myschedule.index');
 	}
-
     /**
      * Mass delete function from index page
      * @param Request $request
@@ -110,8 +102,6 @@ class MyScheduleController extends Controller {
         } else {
             MySchedule::whereNotNull('id')->delete();
         }
-
         return redirect()->route(config('quickadmin.route').'.myschedule.index');
     }
-
 }

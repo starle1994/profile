@@ -3,7 +3,7 @@
       <div  style="margin-top: 5px;">
               
           <!--start: Logo -->
-          <div class="logo col-lg-3 col-md-3 col-sm-3">
+          <div class="logo col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 5px">
                   
               <a class="brand" href="#"><img src="{!! asset('css/img/logo-group.png') !!}" alt="Logo" class="logo"></a>
                   
@@ -43,7 +43,7 @@
        
       </div>
       <!--end: Row -->
-
+<br>
   <div style="clear: both;"></div>
   <div >
     <div id="navarea">  
