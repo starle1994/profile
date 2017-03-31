@@ -36,6 +36,9 @@ Route::get('/project' ,['as'=>'categories.5','uses'=>'HomeController@showProject
 Route::get('/application' ,['as'=>'categories.9','uses'=>'HomeController@showApp']);
 
 Route::get('/contact' ,['as'=>'categories.10','uses'=>'HomeController@contact']);
+
+Route::post('/contact-post' ,['as'=>'post.contact','uses'=>'Admin\ContactsController@store']);
+
 Route::get('/application/{alias}' ,['as'=>'show.app.detail','uses'=>'HomeController@showAppdetail']);
 
 Route::get('/project/{alias}' ,['as'=>'show.project.detail','uses'=>'HomeController@showProjectDetail']);

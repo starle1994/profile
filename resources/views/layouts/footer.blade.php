@@ -24,7 +24,7 @@
             <p><span style="font-size: 20px">.Rs group</span>のメンバーは各々夢を持っています。その夢を叶える為に集まった集団です。
 みんなで夢を共有し応援し合います。そんな人達が集まったGroupです。 </p>
   <p>当サイトに掲載されている全てのデータの著作権は “Rs group” に属します。無断転載・複製を堅く禁じます。
-ご意見ご感想、ご要望等は</p><a href="mailto:www.dotrsgroup@gmail.com">www.dotrsgroup@gmail.com</a>まで</p>
+ご意見ご感想、ご要望等は</p><a href="mailto:info@dotrsgroup.com">info@dotrsgroup.com </a>まで</p>
           </div>
         </div>
       </div>

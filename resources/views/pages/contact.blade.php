@@ -30,10 +30,20 @@
 				</div>
 				<!-- end: Contact Info -->		
 
-{!! Form::open(array('route' => config('quickadmin.route').'.contacts.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
+{!! Form::open(array('route' =>'post.contact', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
 				<!-- start: Contact Form -->
 				<div class="col-lg-4 col-md-4">
 					<div class="title"><h3>{{ trans('user.contact_form') }}</h3></div>
+					@if ($errors->any())
+			        	<div class="alert alert-danger">
+			        	    <ul>
+			                    {!! implode('', $errors->all('<li class="error">:message</li>')) !!}
+			                </ul>
+			        	</div>
+			        @endif
+			        @if ( session()->has('message') )
+    <div class="alert alert-success alert-dismissable">{{ session()->get('message') }}</div>
+@endif
 
 					<!-- start: Contact Form -->
 					<div id="contact-form">

@@ -50,7 +50,8 @@ class ContactsController extends Controller {
 	    
 		Contacts::create($request->all());
 
-		return redirect()->route(config('quickadmin.route').'.contacts.index');
+		return redirect()->route('categories.10')->with('message', 'Success');
+;
 	}
 
 	/**
