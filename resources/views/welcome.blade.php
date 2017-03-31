@@ -205,7 +205,9 @@
                         <div class="row">
                         <?php foreach ($values as  $value): ?>
                           <div class="col-md-4 col-sm-4 col-xs-4">
-                            <a class="thumbnail" href="{{ route('show.blog.detail',$value->alias) }}"><img alt=""  src="{!! asset('uploads/'.$value->images) !!}"> {{mb_substr($value->name,0,25)}}...</a>
+                            <a class="thumbnail" href="{{ route('show.blog.detail',$value->alias) }}">
+                            <div class="thumb-smaller img-thumbnail" style="background-image:url({!! asset('uploads/'.$value->images) !!});"></div>
+                            {{mb_substr($value->name,0,25)}}...</a>
                           </div> 
                         <?php endforeach ?>
                          </div>
