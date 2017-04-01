@@ -158,11 +158,8 @@
                             </ul>
                         </div>
                     <?php endforeach ?>
-                        
-          
-                    <?php endforeach ?>
-    </div>
-           
+                <?php endforeach ?>
+              </div>
           </div>
         </div>
 
