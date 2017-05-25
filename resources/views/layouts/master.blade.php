@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>.RsGroup</title>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-8855221633077463",
+    google_ad_client: "ca-pub-5695332076027487",
     enable_page_level_ads: true
   });
 </script>
+<title>.RsGroup</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="google-site-verification" content="3HylZq9Dh1kwha5C6r44XbCm12CGdzvkGWk3A23MjJ4" />
